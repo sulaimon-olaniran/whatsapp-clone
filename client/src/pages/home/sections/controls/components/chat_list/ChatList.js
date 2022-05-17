@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {Fragment, useState} from "react";
 import {useSelector} from "react-redux";
 //import {useDebounce} from "use-debounce";
 
@@ -65,27 +65,35 @@ const ControlsChatListComponent = ({handleSetActiveControl, chats}) => {
         />
       </div>
 
-      {archievedChats.length > 0 && (
-        <div
-          className="archive-chats-button-container"
-          onClick={() => handleSetActiveControl("archived chat")}
-        >
-          <ArchiveIcon />
-          <div>
-            <p>Archived</p>
+      {chats.length > 0 ? (
+        <Fragment>
+          {archievedChats.length > 0 && (
+            <div
+              className="archive-chats-button-container"
+              onClick={() => handleSetActiveControl("archived chat")}
+            >
+              <ArchiveIcon />
+              <div>
+                <p>Archived</p>
+              </div>
+            </div>
+          )}
+
+          <div className="chat-list-body-container">
+            {sortedPinnedChats.map(chat => {
+              return <ChatListEachChat key={chat._id} chat={chat} />;
+            })}
+
+            {unpinnedChats.map(chat => {
+              return <ChatListEachChat key={chat._id} chat={chat} />;
+            })}
           </div>
+        </Fragment>
+      ) : (
+        <div className="chats-list-no-chat-container">
+          <p>You have no chats or message - start a new chat</p>
         </div>
       )}
-
-      <div className="chat-list-body-container">
-        {sortedPinnedChats.map(chat => {
-          return <ChatListEachChat key={chat._id} chat={chat} />;
-        })}
-
-        {unpinnedChats.map(chat => {
-          return <ChatListEachChat key={chat._id} chat={chat} />;
-        })}
-      </div>
     </div>
   );
 };

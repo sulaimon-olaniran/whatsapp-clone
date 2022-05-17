@@ -1,10 +1,9 @@
-import {Fragment, useState} from "react";
+//import {Fragment, useState} from "react";
 import {useDispatch} from "react-redux";
-import {useDrag, DragPreviewImage} from "react-dnd";
-import Draggable from "react-draggable";
-import MediasDialogComponent from "../../../../../../../../../components/medias_dialog/MediasDialog";
+// import {useDrag, DragPreviewImage} from "react-dnd";
+// import Draggable from "react-draggable";
+// import MediasDialogComponent from "../../../../../../../../../components/medias_dialog/MediasDialog";
 
-import {ItemTypes} from "../../../../ItemTypes";
 import {OPEN_MESSAGES_MEDIAS_DIALOG} from "../../../../../../../../../store/types/app";
 
 const ContactMediaComponent = ({media}) => {

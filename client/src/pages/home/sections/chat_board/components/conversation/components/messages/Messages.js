@@ -29,16 +29,16 @@ const ConversationMessagesComponent = ({
   const {messages} = currentChat;
 
   const sortedMessages = messages.sort((a, b) => {
-    const compA = new Date(a.time);
-    const compB = new Date(b.time);
+    const compA = moment(a.time);
+    const compB = moment(b.time);
     return compA - compB;
   });
 
   const groupedMessages = groupArrayByDatesFunction(sortedMessages, "D");
   //console.log(groupedMessages);
   const sortedGroupedMessages = groupedMessages.sort((a, b) => {
-    const compA = new Date(a[0].time);
-    const compB = new Date(b[0].time);
+    const compA = moment(a[0].time);
+    const compB = moment(b[0].time);
     return compA - compB;
   });
 
