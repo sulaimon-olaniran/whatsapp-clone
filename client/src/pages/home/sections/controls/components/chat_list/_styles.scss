@@ -1,0 +1,108 @@
+.controls-chat-list-component-dark-theme {
+  width: 100%;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+
+  .chat-list-search-container {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: 1px solid $darkBorderColor;
+    padding-bottom: 5px;
+  }
+
+  .archive-chats-button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 3rem;
+    padding-left: 25px;
+
+    svg {
+      color: #00a884;
+    }
+
+    div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      overflow: hidden;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #e9edef;
+      margin-left: 25px;
+      border-bottom: 1px solid $darkBorderColor;
+    }
+  }
+
+  .chat-list-body-container {
+    width: 100%;
+    min-height: 5rem;
+    //margin-top: 10px;
+    overflow-y: scroll;
+  }
+}
+
+//*********************************************************** LIGHT THEME STYLES *******************************************//
+
+.controls-chat-list-component-light-theme {
+  width: 100%;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+
+  .chat-list-search-container {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: 1px solid $lightBorderColor;
+    padding-bottom: 5px;
+  }
+
+  .archive-chats-button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 3rem;
+    padding-left: 25px;
+
+    svg {
+      color: #00a884;
+    }
+
+    div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      overflow: hidden;
+      font-size: 15.8px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #292929;
+      font-weight: 500;
+      margin-left: 25px;
+      border-bottom: 1px solid $darkBorderColor;
+    }
+  }
+
+  .chat-list-body-container {
+    width: 100%;
+    min-height: 5rem;
+    //margin-top: 10px;
+    overflow-y: scroll;
+  }
+}
+
+@import "./each_chat/styles";

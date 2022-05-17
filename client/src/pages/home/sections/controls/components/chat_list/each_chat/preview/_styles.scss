@@ -1,0 +1,127 @@
+.message-preview-dark-theme {
+  display: flex;
+  //flex-grow: 1;
+  width: 90%;
+  height: 100%;
+
+  svg {
+    margin-right: 3px;
+  }
+
+  .message-preview-text-type {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    //flex-grow: 1;
+    overflow: hidden;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 100%;
+    transition: text-overflow 0.5s ease-in-out;
+
+    svg {
+      color: #8696a0;
+      width: 20px;
+      height: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #8696a0;
+      text-overflow: ellipsis;
+      width: 100%;
+      overflow-y: hidden;
+      line-height: 20px;
+
+      .emoji-text {
+        font-size: 1.3rem;
+        margin-right: 1px;
+      }
+    }
+
+    span {
+      font-size: 14px;
+      color: green;
+    }
+
+    svg {
+      margin-right: 2px;
+    }
+  }
+}
+
+.preview-message-is-unseen {
+  .message-preview-text-type {
+    p {
+      color: #d1d7db;
+      font-weight: 500;
+      //font-style: oblique;
+    }
+  }
+}
+
+//******************************************* LIGHT THEME STYLES *****************************************//
+
+.message-preview-light-theme {
+  display: flex;
+  //flex-grow: 1;
+  width: 90%;
+  height: 100%;
+
+  svg {
+    margin-right: 3px;
+  }
+
+  .message-preview-text-type {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    //flex-grow: 1;
+    overflow: hidden;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 100%;
+    transition: text-overflow 0.5s ease-in-out;
+
+    svg {
+      color: #8e969b;
+      width: 20px;
+      height: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #8e969b;
+      text-overflow: ellipsis;
+      width: 100%;
+      overflow-y: hidden;
+      line-height: 20px;
+
+      .emoji-text {
+        font-size: 1.3rem;
+        margin-right: 1px;
+      }
+    }
+
+    span {
+      font-size: 14px;
+      color: green;
+    }
+
+    svg {
+      margin-right: 2px;
+    }
+  }
+}
+
+.preview-message-is-unseen {
+  .message-preview-text-type {
+    p {
+      color: #afafaf;
+      font-weight: 500;
+      //font-style: oblique;
+    }
+  }
+}

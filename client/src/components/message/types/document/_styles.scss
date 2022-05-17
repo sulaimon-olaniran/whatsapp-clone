@@ -1,0 +1,229 @@
+.message-document-type-dark-theme {
+  width: 336px;
+  width: 100%;
+  border-radius: 7.5px;
+  position: relative;
+
+  .message-document-type-body-container {
+    width: 100%;
+    background-color: #025144;
+
+    .document-type-body-document-container {
+      height: 100px;
+      width: 100%;
+      overflow: hidden;
+
+      .react-pdf__Document {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .react-pdf__Page {
+          width: 100%;
+          height: 100%;
+          height: 480px;
+          canvas {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(11, 20, 26, 0.15);
+            //11,20,26
+          }
+
+          .react-pdf__Page__annotations {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .document-type-body-document-name {
+      padding: 15px 19px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 26px;
+        height: 30px;
+        display: block;
+        margin-right: 10px;
+      }
+
+      p {
+        color: #e9edef;
+        position: relative;
+        flex: none;
+        font-size: 14.2px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  .message-document-type-footer-container {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+
+    .document-footer-info-container {
+      display: flex;
+      align-items: center;
+      height: 15px;
+      font-size: 0.6875rem;
+      white-space: nowrap;
+      line-height: 17px;
+      color: #ffffff99;
+      span {
+        margin: 0 8px;
+        color: #8a898999;
+      }
+    }
+
+    .message-document-type-time-container {
+      position: relative;
+      z-index: 10;
+      color: #ffffff99;
+      height: 15px;
+      font-size: 0.6875rem;
+      white-space: nowrap;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 16px;
+        height: 15px;
+        margin-left: 2px;
+      }
+
+      P {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+.document-was-received {
+  .message-document-type-body-container {
+    background-color: #1d282f;
+  }
+}
+
+//******************************************************** LIGHT THEME STYLES **********************************************
+
+.message-document-type-light-theme {
+  width: 336px;
+  width: 100%;
+  border-radius: 7.5px;
+  position: relative;
+
+  .message-document-type-body-container {
+    width: 100%;
+    background-color: #d1f4cc;
+
+    .document-type-body-document-container {
+      height: 100px;
+      width: 100%;
+      overflow: hidden;
+
+      .react-pdf__Document {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .react-pdf__Page {
+          width: 100%;
+          height: 100%;
+          height: 480px;
+          canvas {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(11, 20, 26, 0.15);
+            //11,20,26
+          }
+
+          .react-pdf__Page__annotations {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .document-type-body-document-name {
+      padding: 15px 19px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 26px;
+        height: 30px;
+        display: block;
+        margin-right: 10px;
+      }
+
+      p {
+        color: $darkText;
+        position: relative;
+        flex: none;
+        font-size: 14.2px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  .message-document-type-footer-container {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+
+    .document-footer-info-container {
+      display: flex;
+      align-items: center;
+      height: 15px;
+      font-size: 0.6875rem;
+      white-space: nowrap;
+      line-height: 17px;
+      color: $darkGrayText;
+      span {
+        margin: 0 8px;
+        color: #8a898999;
+      }
+    }
+
+    .message-document-type-time-container {
+      position: relative;
+      z-index: 10;
+      color: #667781;
+      height: 15px;
+      font-size: 0.6875rem;
+      white-space: nowrap;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 16px;
+        height: 15px;
+        margin-left: 2px;
+      }
+
+      P {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+.document-was-received {
+  .message-document-type-body-container {
+    background-color: $subSecondaryLightBackground;
+  }
+}

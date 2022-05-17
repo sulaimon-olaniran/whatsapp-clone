@@ -1,0 +1,17 @@
+.input-emojis-component-container {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.emojis-content-container-dark-theme {
+  background-color: #233138;
+  width: 380px;
+  height: 340px;
+}
+
+.emojis-content-container-light-theme {
+  background-color: $subSecondaryLightBackground;
+  width: 380px;
+  height: 340px;
+}

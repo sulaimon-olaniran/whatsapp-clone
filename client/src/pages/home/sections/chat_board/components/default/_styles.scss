@@ -1,0 +1,199 @@
+.chat-board-default-dark-theme {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 6px solid #037c62;
+  position: relative;
+  background-color: inherit;
+
+  .app-information-container {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .heading-text-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 35px;
+      h1 {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 37.5px;
+        color: #e9edefe0;
+      }
+
+      p {
+        padding: 5px 8px;
+        background-color: #364147;
+        border-radius: 999px;
+        font-size: 10px;
+        font-weight: 700;
+        color: #8696a0;
+        vertical-align: center;
+        margin-left: 10px;
+      }
+    }
+
+    .first-information-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px;
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #8696a0;
+      }
+    }
+
+    .second-information-container {
+      width: 100%;
+      border-top: 1px solid $darkBorderColor;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #8696a0;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 25px;
+      padding-top: 20px;
+
+      svg {
+        margin-right: 5px;
+      }
+
+      span {
+        color: #00a884;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .default-footer-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    color: #667781;
+    font-size: 14px;
+    line-height: 20px;
+
+    p {
+      margin-left: 5px;
+    }
+  }
+}
+
+// ************************************************ LIGHT THEME STYLES **********************************
+
+.chat-board-default-light-theme {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-bottom: 6px solid #3cc065;
+  position: relative;
+
+  .app-information-container {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .heading-text-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 35px;
+      h1 {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 37.5px;
+        color: $darkGrayText;
+      }
+
+      p {
+        padding: 5px 8px;
+        background-color: #e8e8e8;
+        border-radius: 999px;
+        font-size: 10px;
+        font-weight: 700;
+        color: #8696a0;
+        vertical-align: center;
+        margin-left: 10px;
+      }
+    }
+
+    .first-information-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 25px;
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #738088;
+      }
+    }
+
+    .second-information-container {
+      width: 100%;
+      border-top: 1px solid $lightBorderColor;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #707e86;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 25px;
+      padding-top: 20px;
+
+      svg {
+        margin-right: 5px;
+      }
+
+      span {
+        color: #00a884;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .default-footer-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    color: #667781;
+    font-size: 14px;
+    line-height: 20px;
+
+    p {
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.privacy-select-component-dark-theme {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .privacy-select-component-sub-header {
+    width: 100%;
+    height: 3rem;
+    //background-color: #111b21;
+    padding: 0 20px;
+    margin: 15px 0;
+    h3 {
+      color: #54656f;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+
+  .privacy-select-component-body {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    //align-items: center;
+
+    .MuiFormControlLabel-root {
+      margin-bottom: 15px;
+    }
+
+    .MuiRadio-root {
+      color: #d1d7db;
+    }
+
+    .MuiTypography-root {
+      color: #d1d7db;
+      margin-left: 10px;
+    }
+
+    .Mui-checked {
+      color: $primaryGreen;
+    }
+  }
+}
+
+/////************************* LIGHT THEME STYLES **************************************
+
+.privacy-select-component-light-theme {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .privacy-select-component-sub-header {
+    width: 100%;
+    height: 3rem;
+    //background-color: #111b21;
+    padding: 0 20px;
+    margin: 15px 0;
+    h3 {
+      color: #54656f;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+
+  .privacy-select-component-body {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    //align-items: center;
+
+    .MuiFormControlLabel-root {
+      margin-bottom: 15px;
+    }
+
+    .MuiRadio-root {
+      color: #7c7c7c;
+    }
+
+    .MuiTypography-root {
+      color: $darkText;
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+
+    .Mui-checked {
+      color: $primaryGreen;
+    }
+  }
+}

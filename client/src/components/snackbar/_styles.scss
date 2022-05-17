@@ -1,0 +1,22 @@
+.snackbar-component-dark-theme {
+  background-color: $secondaryDarkBackground;
+  background: rgba(0, 0, 0, 0.7);
+
+  .MuiSnackbar-root {
+    background-color: inherit;
+    .MuiPaper-root {
+      min-width: 100px;
+    }
+  }
+}
+
+.snackbar-component-light-theme {
+  background: rgba(0, 0, 0, 0.7);
+
+  .MuiSnackbar-root {
+    background-color: inherit;
+    .MuiPaper-root {
+      min-width: 100px;
+    }
+  }
+}

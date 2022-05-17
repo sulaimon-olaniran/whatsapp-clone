@@ -1,0 +1,213 @@
+.emojis-component-dark-theme-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  .emojis-component-header-container {
+    width: 100%;
+    min-height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .emojis-component-header-list-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px 0;
+
+      button {
+        color: $primaryIconColor;
+        padding: 3px 8px;
+      }
+
+      .active-emoji-header {
+        border-bottom: 3px solid $subPrimaryGreen;
+        border-radius: 0;
+      }
+    }
+
+    .emojis-component-search-container {
+      width: 95%;
+      min-height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $subPrimaryDarkBackground;
+      border-radius: 6px;
+      padding: 0 10px;
+
+      input {
+        width: 90%;
+        height: 100%;
+        color: $lightGrayText;
+        font-size: 0.9rem;
+      }
+
+      button {
+        width: 20px;
+        height: 20px;
+        color: $primaryIconColor;
+        .MuiSvgIcon-root {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  .emojis-component-list-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    .emoji-types-lists-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin: 10px;
+        color: #667781;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+      }
+
+      .emoji-types-lists-body-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 8px;
+
+        button {
+          color: white;
+          font-size: 1.7rem;
+          margin: 2px 4px;
+        }
+      }
+    }
+  }
+
+  .is-chat-input {
+    .emoji-types-lists-container {
+      .emoji-types-lists-body-container {
+        button {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+//****************************************** LIGHT THEME STYLES **********************************
+
+.emojis-component-light-theme-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  .emojis-component-header-container {
+    width: 100%;
+    min-height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .emojis-component-header-list-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px 0;
+
+      button {
+        color: $secondaryIconColor;
+        padding: 3px 8px;
+      }
+
+      .active-emoji-header {
+        border-bottom: 3px solid $subPrimaryGreen;
+        border-radius: 0;
+      }
+    }
+
+    .emojis-component-search-container {
+      width: 95%;
+      min-height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      border-radius: 6px;
+      padding: 0 10px;
+
+      input {
+        width: 90%;
+        height: 100%;
+        color: $darkGrayText;
+        font-size: 0.9rem;
+      }
+
+      button {
+        width: 20px;
+        height: 20px;
+        color: $primaryIconColor;
+        .MuiSvgIcon-root {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  .emojis-component-list-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    .emoji-types-lists-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin: 10px;
+        color: #667781;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+      }
+
+      .emoji-types-lists-body-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 8px;
+
+        button {
+          color: white;
+          font-size: 1.7rem;
+          margin: 2px 4px;
+        }
+      }
+    }
+  }
+
+  .is-chat-input {
+    .emoji-types-lists-container {
+      .emoji-types-lists-body-container {
+        button {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

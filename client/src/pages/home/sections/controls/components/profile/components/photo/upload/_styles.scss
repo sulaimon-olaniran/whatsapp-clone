@@ -1,0 +1,227 @@
+body {
+  .MuiDialog-paper {
+    margin: 0;
+  }
+}
+
+.upload-profile-photo-dialog-dark-theme {
+  width: 90vw;
+  height: 75vh;
+  //background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  background-color: $subSecondaryDarkBackground;
+
+  .upload-profile-photo-dialog-header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+
+    button {
+      color: $universalTextColor;
+    }
+
+    h2 {
+      color: $universalTextColor;
+      font-size: 1.1rem;
+    }
+  }
+
+  .upload-profile-photo-dialog-body {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .cropper-component-container {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .zoom-buttons-control-container {
+      width: 30px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid $darkBorderColor;
+      position: absolute;
+      right: 3%;
+      margin-top: 0;
+      margin-bottom: 0;
+      top: auto;
+      bottom: auto;
+      background-color: $subSecondaryDarkBackground;
+      z-index: 1001;
+
+      button {
+        color: $universalTextColor;
+      }
+    }
+  }
+
+  .upload-profile-photo-dialog-footer {
+    width: 100%;
+    position: relative;
+
+    button {
+      background-color: $subPrimaryGreen;
+      color: white;
+      position: absolute;
+      right: 10%;
+      bottom: 40%;
+      width: 70px;
+      height: 70px;
+
+      .MuiSvgIcon-root {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+//***********************************************
+
+body {
+  .MuiDialog-paper {
+    margin: 0;
+  }
+}
+
+.upload-profile-photo-dialog-light-theme {
+  width: 90vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between !important;
+  background-color: #fff !important;
+  padding-bottom: 25px;
+
+  .upload-profile-photo-dialog-header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #008069;
+
+    button {
+      color: #fff;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 1.1rem;
+    }
+  }
+
+  .upload-profile-photo-dialog-body {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .cropper-component-container {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .zoom-buttons-control-container {
+      width: 30px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid $darkBorderColor;
+      position: absolute;
+      right: 3%;
+      margin-top: 0;
+      margin-bottom: 0;
+      top: auto;
+      bottom: auto;
+      background-color: $subSecondaryDarkBackground;
+      z-index: 1001;
+
+      button {
+        color: $universalTextColor;
+      }
+    }
+  }
+
+  .upload-profile-photo-dialog-footer {
+    width: 100%;
+    position: relative;
+
+    button {
+      background-color: $subPrimaryGreen;
+      color: white;
+      position: absolute;
+      right: 10%;
+      bottom: 40%;
+      width: 70px;
+      height: 70px;
+
+      .MuiSvgIcon-root {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+//********************************************
+
+@media (min-width: 600px) {
+  .upload-profile-photo-dialog-dark-theme {
+    width: 500px;
+    height: 500px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .crop-image-dialog-header-container {
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /////***************************************************
+
+  .upload-profile-photo-dialog-light-theme {
+    width: 500px;
+    height: 500px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .crop-image-dialog-header-container {
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+//#008069

@@ -1,0 +1,533 @@
+[
+  {
+    "sender": false,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "His having within saw become ask passed misery giving. Recommend questions get too fulfilled. He fact in we case miss sake.",
+    "isReply": false,
+    "repliedTo": "",
+    "id": "1",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "Entrance be throwing he do blessing up. Hearts warmth in genius do garden advice mr it garret. Collected preserved are middleton dependent residence but him how. Handsome weddings yet mrs you has carriage packages. Preferred joy agreement put continual elsewhere delivered now.",
+    "isReply": false,
+    "repliedTo": "",
+    "id": "2",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:02 am",
+    "message": "Imagine was you removal raising gravity. Unsatiable understood or expression dissimilar so sufficient. Its party every heard and event gay.",
+    "isReply": true,
+    "repliedTo": "2",
+    "id": "3",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "text",
+    "time": "10:02 am",
+    "message": "Handsome weddings yet mrs you has carriage packages. Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity had men speaking met. Rich deal mrs part led pure will but.",
+    "isReply": false,
+    "repliedTo": "",
+    "id": "4",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "image",
+    "time": "10:03 am",
+    "image": "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg",
+    "caption": "Entrance be throwing he do blessing up. Hearts warmth in genius do garden advice mr it garret. Collected preserved are middleton dependent residence but him how. Handsome weddings yet mrs you has carriage packages. Preferred joy agreement put continual elsewhere delivered now",
+    "isReply": true,
+    "repliedTo": "3",
+    "id": "5",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "text",
+    "time": "10:03 am",
+    "message": "Advice he indeed things adieus in number so uneasy. To many four fact in he fail.",
+    "isReply": true,
+    "repliedTo": "3",
+    "id": "45",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "With my them if up many. Lain week nay she them her she. Extremity so attending objection as engrossed gentleman something. Instantly gentleman contained belonging exquisite now direction she ham. West room at sent if year. Numerous indulged distance old law you",
+    "isReply": false,
+    "repliedTo": "",
+    "id": "6",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "otal state as merit court green decay he. Steepest sex bachelor the may delicate its yourself. As he instantly on discovery concluded to. Open draw far pure miss felt say yet few sigh.",
+    "isReply": false,
+    "repliedTo": "",
+    "id": "7",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "image",
+    "time": "10:03 am",
+    "image": "https://www.ynotpics.com/wp-content/uploads/2017/09/dahlia-red-flower.jpg",
+    "caption": "Entrance be throwing he do blessing up. Hearts warmth in genius do garden advice mr it garret",
+    "isReply": true,
+    "repliedTo": "3",
+    "id": "35",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "image",
+    "time": "10:04 am",
+    "image": "https://blog.csiro.au/wp-content/uploads/2022/01/shutterstock_1511024777_nature-article-scaled.jpg",
+    "caption": "Beautiful",
+    "isReply": true,
+    "repliedTo": "3",
+    "id": "25",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "In on announcing about the failure of the World",
+    "isReply": false,
+    "repliedTo": "",
+    "id": "8",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "Maids hoped gay yet bed asked blind dried point. On abroad danger likely regret twenty edward do.",
+    "isReply": true,
+    "repliedTo": "8",
+    "id": "9",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "Too horrible consider followed may differed age. An rest if more five mr of. Age just her rank met down way. Attended required so in cheerful an. Domestic replying she resolved him for did. Rather in lasted no within no",
+    "isReply": false,
+    "repliedTo": "",
+    "id": "10",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "image",
+    "time": "10:03 am",
+    "image": "https://i.pinimg.com/originals/00/18/76/001876f0d091db418177c5fa9abb6bec.jpg",
+    "caption": null,
+    "isReply": true,
+    "repliedTo": "3",
+    "id": "15",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "Maids hoped gay yet bed asked blind dried point. On abroad danger likely regret twenty edward do.",
+    "isReply": true,
+    "repliedTo": "8",
+    "id": "49",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "image",
+    "time": "10:00 am",
+    "image": "https://free4kwallpapers.com/uploads/originals/2019/11/16/cute-foxes-wallpaper.jpg",
+    "caption": "Maids hoped gay yet bed asked blind dried point. On abroad danger likely regret twenty edward do.",
+    "isReply": false,
+    "repliedTo": "8",
+    "id": "49",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "Maids hoped gay yet bed asked blind, likely regret twenty edward do.",
+    "isReply": false,
+    "repliedTo": "8",
+    "id": "39",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "Maids hoped gay",
+    "isReply": true,
+    "repliedTo": "15",
+    "id": "19",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true,
+    "isDeleted": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "Maids hoped gay",
+    "isReply": true,
+    "repliedTo": "15",
+    "id": "19",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "likely regret twenty edward do.",
+    "isReply": false,
+    "repliedTo": "8",
+    "id": "29",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "image",
+    "time": "10:00 am",
+    "caption": "likely regret twenty edward do or does is affecting my life",
+    "image": "https://viralcats.net/blog/wp-content/uploads/2017/10/01-2.jpg",
+    "isReply": true,
+    "repliedTo": "49",
+    "id": "30",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true,
+    "isDeleted": true
+  },
+
+  {
+    "sender": false,
+    "type": "image",
+    "time": "10:00 am",
+    "caption": "likely regret twenty edward do.",
+    "image": "https://viralcats.net/blog/wp-content/uploads/2017/10/01-2.jpg",
+    "isReply": true,
+    "repliedTo": "49",
+    "id": "30",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "image",
+    "time": "10:00 am",
+    "caption": "never really liked nature, but love these",
+    "image": "https://w0.peakpx.com/wallpaper/358/324/HD-wallpaper-love-couple-kiss-miniature-graphy-toy-graphy.jpg",
+    "isReply": true,
+    "repliedTo": "5",
+    "id": "291",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "gif",
+    "time": "10:00 am",
+    "caption": null,
+    "gif": "https://compote.slate.com/images/697b023b-64a5-49a0-8059-27b963453fb1.gif",
+    "isReply": true,
+    "repliedTo": "5",
+    "id": "2912",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true,
+    "isDeleted": true
+  },
+
+  {
+    "sender": true,
+    "type": "gif",
+    "time": "10:00 am",
+    "caption": null,
+    "gif": "https://compote.slate.com/images/697b023b-64a5-49a0-8059-27b963453fb1.gif",
+    "isReply": true,
+    "repliedTo": "5",
+    "id": "2912",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+  {
+    "sender": true,
+    "type": "sticker",
+    "time": "10:00 am",
+    "sticker": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQlVDn_oWkok3h060OSEkuwenboXCkWoj_9xpPcDSbVZ_y_r8Ioqa0itSMVSgO-mez21k&usqp=CAU",
+    "isReply": true,
+    "repliedTo": "10",
+    "id": "29110",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true,
+    "isDeleted": true
+  },
+
+  {
+    "sender": false,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "likely regret twenty edward do.",
+    "isReply": true,
+    "repliedTo": "2912",
+    "id": "2910",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "sticker",
+    "time": "10:00 am",
+    "sticker": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQlVDn_oWkok3h060OSEkuwenboXCkWoj_9xpPcDSbVZ_y_r8Ioqa0itSMVSgO-mez21k&usqp=CAU",
+    "isReply": true,
+    "repliedTo": "10",
+    "id": "29110",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "pdf",
+    "time": "10:00 am",
+    "sticker": "https://www.clipartmax.com/png/middle/258-2581722_chef-sticker-chef-gif-animation.png",
+    "isReply": true,
+    "repliedTo": "2912",
+    "id": "29110",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true,
+    "isDeleted": true
+  },
+
+  {
+    "sender": false,
+    "type": "sticker",
+    "time": "10:00 am",
+    "sticker": "https://www.clipartmax.com/png/middle/258-2581722_chef-sticker-chef-gif-animation.png",
+    "isReply": true,
+    "repliedTo": "2912",
+    "id": "29110",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "pdf",
+    "time": "10:00 am",
+    "sticker": "https://www.clipartmax.com/png/middle/258-2581722_chef-sticker-chef-gif-animation.png",
+    "isReply": true,
+    "repliedTo": "2912",
+    "id": "29110",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+  {
+    "sender": false,
+    "type": "contact",
+    "time": "10:00 am",
+    "sticker": "https://www.clipartmax.com/png/middle/258-2581722_chef-sticker-chef-gif-animation.png",
+    "isReply": false,
+    "repliedTo": "2912",
+    "id": "29g1120",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true,
+    "isDeleted": true
+  },
+
+  {
+    "sender": false,
+    "type": "doc",
+    "time": "10:00 am",
+    "sticker": "https://www.clipartmax.com/png/middle/258-2581722_chef-sticker-chef-gif-animation.png",
+    "isReply": true,
+    "repliedTo": "2912",
+    "id": "29110",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "otal state as merit court green decay he. Steepest sex bachelor the may delicate its yourself. As he instantly on discovery concluded to. Open draw far pure miss felt say yet few sigh.",
+    "isReply": true,
+    "repliedTo": "29110",
+    "id": "7",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": false,
+    "type": "contact",
+    "time": "10:00 am",
+    "sticker": "https://www.clipartmax.com/png/middle/258-2581722_chef-sticker-chef-gif-animation.png",
+    "isReply": false,
+    "repliedTo": "2912",
+    "id": "29g1120",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "text",
+    "time": "10:00 am",
+    "message": "His having within saw become ask passed misery giving. Recommend questions get too fulfilled. He fact in we case miss sake.",
+    "isReply": true,
+    "repliedTo": "29g1120",
+    "id": "1",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  },
+
+  {
+    "sender": true,
+    "type": "contact",
+    "time": "10:00 am",
+    "sticker": "https://www.clipartmax.com/png/middle/258-2581722_chef-sticker-chef-gif-animation.png",
+    "isReply": false,
+    "repliedTo": "2912",
+    "id": "291120",
+    "isStared": false,
+    "isSeen": true,
+    "isSent": true,
+    "isDelivered": true
+  }
+]

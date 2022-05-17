@@ -1,0 +1,16 @@
+.universal-loader-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.show-universal-loader {
+  display: flex;
+}

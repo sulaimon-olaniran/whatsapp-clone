@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.auth-pages-dark-theme-container {
+  width: 100%;
+  min-height: 100vh;
+
+  .auth-pages-header-container {
+    background-color: $subPrimaryGreen;
+    min-height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2vh;
+
+      p {
+        color: white;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-left: 15px;
+        line-height: 1.5;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .auth-pages-body-container {
+    background-color: $primaryDarkBackground;
+    min-height: 80vh;
+    width: 100%;
+    position: relative;
+
+    .auth-pages-body-form-container {
+      width: 600px;
+      min-height: 500px;
+      max-height: 700px;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: -10vh;
+      border-radius: 6px;
+      z-index: 2;
+      background-color: $primaryLightBackground;
+      box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 19%),
+        0 12px 15px 0 rgba(0, 0, 0, 24%);
+
+      h1 {
+        font-size: 16px;
+        color: $textGreen;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+
+      .auth-pages-body-form-avatar-container {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $subPrimaryGreen;
+        border-radius: 50%;
+        margin-bottom: 10px;
+
+        .MuiAvatar-root {
+          width: 80px;
+          height: 80px;
+          .Mui-focused {
+            .MuiOutlinedInput-notchedOutline {
+              border-color: $secondaryGreen !important;
+            }
+          }
+        }
+      }
+
+      form {
+        width: 80%;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px 0;
+
+        .MuiFormControl-root {
+          margin-bottom: 20px;
+        }
+
+        .form-phone-input-container {
+          width: 90%;
+          margin-bottom: 20px;
+          .PhoneInput {
+            font-family: "Roboto", sans-serif;
+            width: 100%;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.4375em;
+            letter-spacing: 0.00938em;
+            color: rgba(0, 0, 0, 0.87);
+            box-sizing: border-box;
+            position: relative;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.23);
+            padding: 0 8px;
+
+            input {
+              border: none;
+              background: none;
+              height: 1.4375em;
+              padding: 16.5px 14px;
+              box-sizing: content-box;
+              font: inherit;
+              letter-spacing: inherit;
+              color: rgba(0, 0, 0, 0.87);
+            }
+            input:focus {
+              outline: none;
+            }
+            input::placeholder {
+              color: rgba(170, 170, 170, 0.87);
+              font-weight: 400;
+            }
+          }
+
+          .input-active {
+            border: 2px solid #5fc8bc;
+          }
+
+          .PhoneInput:hover {
+            border-color: #808080;
+          }
+          .input-active:hover {
+            border-color: #5fc8bc;
+          }
+
+          small {
+            color: $errorTextColor;
+            font-weight: 400;
+            font-size: 0.73rem;
+            line-height: 1.66;
+            letter-spacing: 0.03333em;
+            text-align: left;
+            margin-top: 3px;
+            margin-right: 14px;
+            margin-bottom: 0;
+            margin-left: 14px;
+          }
+        }
+
+        button {
+          background-color: $primaryGreen;
+          min-height: 40px;
+          min-width: 70%;
+          .MuiCircularProgress-root {
+            width: 24px;
+            height: 24px;
+            color: white;
+          }
+        }
+
+        button:hover {
+          background-color: $secondaryGreen;
+        }
+
+        .MuiFormControl-root {
+          width: 90%;
+        }
+      }
+    }
+
+    .auth-pages-body-footer-container,
+    .auth-pages-error-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        color: $darkGrayText;
+        font-size: $normalFontSize;
+      }
+      small {
+        color: $errorTextColor;
+      }
+    }
+  }
+}
+
+//******************STYLES FOR LIGHT THEME********************
+
+.auth-pages-light-theme-container {
+  .auth-pages-body-container {
+    background-color: $secondaryLightBackground;
+
+    .auth-pages-body-form-container {
+      box-shadow: 0 17px 50px 0 rgba(122, 122, 122, 0.19),
+        0 12px 15px 0 rgba(97, 96, 96, 0.24);
+    }
+  }
+}

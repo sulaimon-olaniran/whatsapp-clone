@@ -1,0 +1,187 @@
+.reply-contact-type-container-dark-theme {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  .reply-contact-type-details-container {
+    padding: 2px 3px 5px -3px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    //align-items: center;
+    min-height: 42px;
+    max-height: 92px;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 15px;
+
+    .reply-contact-type-sender-container {
+      max-width: 100%;
+      font-size: 12.8px;
+      font-weight: 500;
+      line-height: 20px;
+      display: inline-flex;
+      color: #53bdeb;
+    }
+
+    .reply-contact-type-caption-container {
+      .reply-contact-type-caption-text {
+        max-height: 70px;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        -webkit-font-smoothing: antialiased;
+        color: #ffffff99;
+        font-size: 12.6px;
+        line-height: 20px;
+        vertical-align: initial;
+
+        .caption-icon {
+          display: inline-block;
+          flex: none;
+          vertical-align: top;
+          margin-right: 3px;
+          color: #ffffff99;
+        }
+        span {
+          font: inherit;
+          font-size: 100%;
+          vertical-align: initial;
+          outline: none;
+          padding: 0;
+          margin: 0;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .reply-contact-type-contact-container {
+    width: 58px;
+    height: 58px;
+    border-top-right-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    overflow: hidden;
+    padding-bottom: 3px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      .background-path {
+        fill: #6a7175;
+      }
+
+      .person-path {
+        fill: #cfd4d6;
+      }
+    }
+  }
+}
+
+.reply-contact-type-message-sent-dark {
+  .reply-contact-type-details-container {
+    .reply-contact-type-sender-container {
+      color: #06cf9c;
+    }
+  }
+}
+
+//************************************* LIGHT THEME STYLES ********************************
+
+.reply-contact-type-container-light-theme {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  .reply-contact-type-details-container {
+    padding: 2px 3px 5px -3px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    //align-items: center;
+    min-height: 42px;
+    max-height: 92px;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 15px;
+
+    .reply-contact-type-sender-container {
+      max-width: 100%;
+      font-size: 12.8px;
+      font-weight: 500;
+      line-height: 20px;
+      display: inline-flex;
+      color: #06cf9c;
+    }
+
+    .reply-contact-type-caption-container {
+      .reply-contact-type-caption-text {
+        max-height: 70px;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        -webkit-font-smoothing: antialiased;
+        color: $darkText;
+        font-size: 12.6px;
+        line-height: 20px;
+        vertical-align: initial;
+
+        .caption-icon {
+          display: inline-block;
+          flex: none;
+          vertical-align: top;
+          margin-right: 3px;
+          color: $darkGrayText;
+        }
+        span {
+          font: inherit;
+          font-size: 100%;
+          vertical-align: initial;
+          outline: none;
+          padding: 0;
+          margin: 0;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .reply-contact-type-contact-container {
+    width: 58px;
+    height: 58px;
+    border-top-right-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    overflow: hidden;
+    padding-bottom: 3px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      .background-path {
+        fill: #6a7175;
+      }
+
+      .person-path {
+        fill: #cfd4d6;
+      }
+    }
+  }
+}
+
+.reply-contact-type-message-sent-light {
+  .reply-contact-type-details-container {
+    .reply-contact-type-sender-container {
+      color: #53bdeb;
+    }
+  }
+}

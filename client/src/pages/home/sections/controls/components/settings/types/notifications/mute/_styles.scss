@@ -1,0 +1,101 @@
+.mute-notifications-dialog-dark-theme {
+  width: 400px;
+  height: auto;
+  background-color: #3b4a54;
+  padding: 22px 24px 20px;
+
+  h1 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #d1d7db;
+    line-height: 25px;
+  }
+
+  .MuiButton-outlined {
+    border-color: $darkBorderColor;
+    color: #00a884;
+    font-weight: 600;
+  }
+
+  .MuiButton-outlined:hover {
+    background-color: #495b66;
+    border-color: $darkBorderColor;
+  }
+
+  .MuiButton-contained {
+    background-color: #00a884;
+    color: #111b21;
+    letter-spacing: 1.25px;
+    white-space: pre-wrap;
+    font-weight: 600;
+  }
+
+  .MuiButton-contained:hover {
+    background-color: #4ac7ac;
+  }
+
+  .mute-notification-unmuted-container {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //align-items: center;
+
+    .unmuted-body-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+
+      .MuiRadio-root {
+        color: #d1d7db;
+      }
+
+      .MuiTypography-root {
+        color: #d1d7db;
+      }
+
+      .Mui-checked {
+        color: #49a1c8;
+      }
+    }
+
+    .unmuted-footer-container {
+      display: flex;
+      height: auto;
+      align-items: center;
+      justify-content: space-between;
+
+      .MuiButton-outlined {
+        width: 30%;
+      }
+
+      .MuiButton-contained {
+        width: 65%;
+      }
+    }
+  }
+
+  .mute-notification-muted-container {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .muted-footer-container {
+      display: flex;
+      height: auto;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      .MuiButton-outlined,
+      .MuiButton-contained {
+        width: 35%;
+      }
+      .MuiButton-contained {
+        margin-left: 10px;
+      }
+    }
+  }
+}

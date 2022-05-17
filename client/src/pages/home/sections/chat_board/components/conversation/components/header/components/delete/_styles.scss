@@ -1,0 +1,107 @@
+.delete-chat-dialog-dark-theme {
+  padding: 22px 24px 20px;
+  background-color: #3b4a54;
+  width: 400px;
+
+  h1 {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #d1d7db;
+  }
+
+  .delete-chat-dialog-body-container {
+    font-size: 14.2px;
+    line-height: 20px;
+    color: #8696a0;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  .delete-chat-dialog-footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 1.25px;
+    }
+
+    .MuiButton-outlined {
+      border-color: #8696a026;
+      color: #00a884;
+    }
+
+    .MuiButton-outlined:hover {
+      color: #06cf9c;
+    }
+
+    .MuiButton-contained {
+      background-color: #00a884;
+      color: #111b21;
+      margin-left: 5px;
+    }
+
+    .MuiButton-contained:hover {
+      background-color: #06cf9c;
+    }
+  }
+}
+
+//************************************************* LIGHT THEME STYLES ********************************************//
+
+.delete-chat-dialog-light-theme {
+  padding: 22px 24px 20px;
+  background-color: #fff;
+  width: 400px;
+
+  h1 {
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $darkText;
+  }
+
+  .delete-chat-dialog-body-container {
+    font-size: 14.2px;
+    line-height: 20px;
+    color: $darkGrayText;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  .delete-chat-dialog-footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 1.25px;
+    }
+
+    .MuiButton-outlined {
+      border-color: #8696a026;
+      color: #00a884;
+    }
+
+    .MuiButton-outlined:hover {
+      color: #06cf9c;
+    }
+
+    .MuiButton-contained {
+      background-color: #00a884;
+      color: #fff;
+      margin-left: 5px;
+    }
+
+    .MuiButton-contained:hover {
+      background-color: #06cf9c;
+    }
+  }
+}

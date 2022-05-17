@@ -1,0 +1,36 @@
+.contact-media-component-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+  //z-index: 99999;
+
+  .main-media-component-container {
+    width: 100%;
+    height: 100%;
+    //border-radius: 10px;
+    background-position: 50%;
+    background-size: cover;
+  }
+
+  .draggable-media-component-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-position: 50%;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .is-dragging {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    z-index: 1000;
+  }
+}

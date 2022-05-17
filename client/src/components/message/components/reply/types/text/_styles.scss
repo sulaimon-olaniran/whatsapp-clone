@@ -1,0 +1,97 @@
+.reply-text-type-container-dark-theme {
+  width: auto;
+  height: auto;
+  padding: 10px;
+
+  .reply-text-type-sender-container {
+    max-width: 100%;
+    font-size: 12.8px;
+    font-weight: 500;
+    line-height: 20px;
+    display: inline-flex;
+    color: #53bdeb;
+  }
+
+  .reply-text-type-message-container {
+    max-height: 70px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -webkit-font-smoothing: antialiased;
+    color: #ffffff99;
+    font-size: 12.6px;
+    line-height: 20px;
+    vertical-align: initial;
+    svg {
+      height: 16px;
+      width: 16px;
+      margin-right: 3px;
+    }
+  }
+}
+
+.reply-text-type-message-sent {
+  .reply-text-type-sender-container {
+    color: #06cf9c;
+  }
+}
+
+.reply-text-from-input {
+  .reply-text-type-message-container {
+    -webkit-line-clamp: 2;
+  }
+}
+
+//**************************************** LIGHT THEME STYLES ***************************************
+
+.reply-text-type-container-light-theme {
+  width: auto;
+  height: auto;
+  padding: 10px;
+
+  .reply-text-type-sender-container {
+    max-width: 100%;
+    font-size: 12.8px;
+    font-weight: 500;
+    line-height: 20px;
+    display: inline-flex;
+    color: #06cf9c;
+  }
+
+  .reply-text-type-message-container {
+    max-height: 70px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -webkit-font-smoothing: antialiased;
+    color: $darkText;
+    font-size: 12.6px;
+    line-height: 20px;
+    vertical-align: initial;
+    svg {
+      height: 16px;
+      width: 16px;
+      margin-right: 3px;
+    }
+  }
+}
+
+.reply-text-type-message-sent {
+  .reply-text-type-sender-container {
+    color: #53bdeb;
+  }
+}
+
+.reply-text-from-input {
+  .reply-text-type-message-container {
+    -webkit-line-clamp: 2;
+  }
+}

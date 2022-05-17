@@ -1,0 +1,143 @@
+.conversation-disappearing-messages-dark-theme {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .conversation-disappearing-messages-body-container {
+    width: 100%;
+    height: calc(100% - 7rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .disappearing-messages-icon-container {
+      width: 200px;
+      color: #d1d7db;
+      margin-top: 25px;
+    }
+
+    .disappearing-messages-details-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 15px 25px 15px 25px;
+      margin-top: 25px;
+      h1 {
+        color: #00a884;
+        font-weight: 400;
+        font-size: 0.875rem;
+      }
+
+      p {
+        color: #8696a0;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        margin-top: 20px;
+
+        span {
+          color: #53bdeb;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .disappearing-messages-actions-container {
+      width: 100%;
+      padding: 0 25px;
+
+      .MuiFormControlLabel-root {
+        margin-bottom: 10px;
+        color: #d1d7db;
+
+        .MuiTypography-root {
+          margin-left: 10px;
+        }
+
+        .MuiRadio-root {
+          color: #d1d7db;
+        }
+
+        .Mui-checked {
+          color: #00a884;
+        }
+      }
+    }
+  }
+}
+
+//********************************************************************** LIGHT THEME STYLES *****************************************
+
+.conversation-disappearing-messages-light-theme {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .conversation-disappearing-messages-body-container {
+    width: 100%;
+    height: calc(100% - 7rem);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+
+    .disappearing-messages-icon-container {
+      width: 200px;
+      color: #d1d7db;
+      margin-top: 25px;
+    }
+
+    .disappearing-messages-details-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 15px 25px 15px 25px;
+      margin-top: 25px;
+      h1 {
+        color: #00a884;
+        font-weight: 400;
+        font-size: 0.875rem;
+      }
+
+      p {
+        color: $darkGrayText;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        margin-top: 20px;
+
+        span {
+          color: #53bdeb;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .disappearing-messages-actions-container {
+      width: 100%;
+      padding: 0 25px;
+
+      .MuiFormControlLabel-root {
+        margin-bottom: 10px;
+        color: $darkGrayText;
+
+        .MuiTypography-root {
+          margin-left: 10px;
+        }
+
+        .MuiRadio-root {
+          color: $darkGrayText;
+        }
+
+        .Mui-checked {
+          color: #00a884;
+        }
+      }
+    }
+  }
+}

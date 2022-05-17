@@ -1,0 +1,301 @@
+.conversation-contact-info-component-light-theme {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .conversation-contact-info-header-container {
+    width: 100%;
+    height: 4rem;
+    border-bottom: 1px solid $lightBorderColor;
+    display: flex;
+    background-color: #f0f2f5;
+    align-items: center;
+    padding-left: 20px;
+
+    button {
+      color: $darkGrayText;
+    }
+
+    p {
+      color: $darkText;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: normal;
+      margin-left: 30px;
+    }
+  }
+
+  .conversation-contact-information-body-container {
+    width: 100%;
+    height: calc(100% - 4rem);
+    padding-bottom: 2rem;
+    overflow-y: scroll;
+    //
+    animation: $slide-down 0.8s ease-in;
+
+    .contact-information-profile-container {
+      width: 100%;
+      min-height: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 35px;
+      padding-bottom: 20px;
+      background-color: #fff;
+      margin-bottom: 8px;
+
+      .MuiAvatar-root {
+        width: 200px;
+        height: 200px;
+      }
+
+      .profile-name-number-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8px;
+
+        h2 {
+          font-size: 24px;
+          font-weight: 400;
+          color: $darkText;
+        }
+
+        p {
+          color: $darkGrayText;
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .contact-information-about-container {
+      width: 100%;
+      min-height: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #fff;
+      padding: 10px 15px 15px 25px;
+      margin-bottom: 8px;
+
+      h4 {
+        color: $darkText;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        color: $darkGrayText;
+        margin-top: 20px;
+      }
+    }
+
+    .contact-information-media-links-docs {
+      width: 100%;
+      min-height: 5rem;
+      background-color: #fff;
+      padding: 15px 15px 15px 25px;
+      display: flex;
+      flex-direction: column;
+
+      .media-links-docs-button {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        p {
+          font-size: 14px;
+          line-height: normal;
+          color: $darkText;
+        }
+
+        div {
+          color: $darkGrayText;
+          display: flex;
+          align-items: center;
+
+          .MuiSvgIcon-root {
+            width: 16px;
+            height: 16px;
+          }
+
+          p {
+            font-size: 14px;
+            color: inherit;
+          }
+        }
+      }
+
+      .media-links-docs-medias-container {
+        width: 100%;
+        min-height: 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+
+        .each-media-container {
+          overflow: hidden;
+          border-radius: 10px;
+          width: calc((100% / 3) - 10px);
+          height: 100px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .starred-messages-button-container {
+      width: 100%;
+      min-height: 4rem;
+      background-color: #fff;
+      padding: 10px 15px 10px 25px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      justify-content: space-between;
+      color: $darkGrayText;
+
+      .MuiSvgIcon-root {
+        width: 16px;
+        height: 16px;
+        fill: $darkGrayText;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: 14px;
+          color: $darkText;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .conversation-information-actions-container {
+      width: 100%;
+      min-height: 12rem;
+      background-color: #fff;
+      padding: 10px 15px 10px 25px;
+      margin-top: 8px;
+
+      .each-conversation-information-action {
+        width: 100%;
+        min-height: 4rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        color: $darkGrayText;
+
+        .MuiSvgIcon-root {
+          width: 16px;
+          height: 16px;
+          fill: $darkGrayText;
+        }
+
+        .MuiSwitch-thumb {
+          color: rgb(219, 219, 219);
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 20px;
+
+            small {
+              font-size: 14px;
+              margin-top: 5px;
+            }
+
+            p {
+              margin: 0;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            color: $darkText;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+
+    .conversation-account-actions-container {
+      width: 100%;
+      min-height: 8rem;
+      background-color: #fff;
+      margin-top: 8px;
+
+      .each-conversation-account-action {
+        width: 100%;
+        min-height: 4rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: #f0465a;
+        padding: 10px 15px 10px 25px;
+
+        p {
+          margin-left: 20px;
+        }
+      }
+
+      .each-conversation-account-action:hover {
+        background-color: $subSecondaryLightBackground;
+      }
+    }
+
+    .conversation-delete-action-container {
+      width: 100%;
+      min-height: 4rem;
+      background-color: #fff;
+      padding: 10px 15px 10px 25px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      color: #f15c6d;
+      cursor: pointer;
+
+      p {
+        margin-left: 20px;
+      }
+    }
+
+    .conversation-delete-action-container:hover {
+      background-color: $subSecondaryLightBackground;
+    }
+  }
+
+  .conversation-information-slide-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: $subSecondaryLightBackground;
+  }
+}

@@ -1,0 +1,140 @@
+.conversation-contact-actions-dialog-light-theme {
+  width: 400px;
+  min-height: 100px;
+  background-color: #fff;
+  padding: 22px 24px 20px;
+  display: flex;
+  flex-direction: column;
+
+  .block-contact-container {
+    p {
+      color: $darkText;
+      font-size: 14.2px;
+      line-height: 20px;
+    }
+  }
+
+  .report-contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .report-contact-header-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $lightBorderColor;
+
+      h1 {
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 400;
+        color: $darkText;
+        margin-bottom: 20px;
+      }
+
+      .header-container-checkbox-action {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        span {
+          padding: 0;
+          margin: 0;
+        }
+
+        .MuiCheckbox-root {
+          color: $darkText;
+        }
+
+        .Mui-checked {
+          color: #00a884;
+        }
+
+        p {
+          color: $darkText;
+          font-size: 14px;
+          line-height: 20px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .report-contact-body-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      p,
+      span {
+        color: $darkGrayText;
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      span {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .delete-chat-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 400;
+      color: $darkText;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $darkGrayText;
+      line-height: 20px;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  .conversation-contact-actions-dialog-buttons-container {
+    width: 100%;
+    display: flex;
+    height: auto;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 3rem;
+
+    button {
+      margin-right: 5px;
+    }
+
+    .MuiButton-outlined {
+      border-color: $darkBorderColor;
+      color: #00a884;
+      font-weight: 600;
+    }
+
+    .MuiButton-outlined:hover {
+      background-color: $subSecondaryLightBackground;
+      border-color: $darkBorderColor;
+    }
+
+    .MuiButton-contained {
+      background-color: #00a884;
+      color: #fff;
+      letter-spacing: 1.25px;
+      white-space: pre-wrap;
+      font-weight: 600;
+    }
+
+    .MuiButton-contained:hover {
+      background-color: #4ac7ac;
+    }
+  }
+}

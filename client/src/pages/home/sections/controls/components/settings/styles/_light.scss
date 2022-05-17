@@ -1,0 +1,91 @@
+.controls-settings-component-light-theme-container {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  position: relative;
+
+  .controls-settings-component-body-container {
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .settings-profile-settings-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+
+      .settings-user-profile-details {
+        margin-left: 20px;
+        cursor: pointer;
+        p {
+          font-size: 1.2rem;
+          line-height: 28px;
+          color: $darkText;
+          margin-bottom: 5px;
+        }
+
+        small {
+          font-size: 1rem;
+          line-height: 20px;
+          color: $darkGrayText;
+        }
+      }
+    }
+
+    .settings-profile-settings-container:hover {
+      background-color: $subSecondaryLightBackground;
+    }
+
+    .each-setting-container {
+      width: 100%;
+      height: 4rem;
+      //padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      button {
+        margin-left: 10px;
+        color: #8696a0;
+      }
+
+      div {
+        width: 85%;
+        height: 100%;
+        border-bottom: 1px solid $darkBorderColor;
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: 1rem;
+          color: $darkGrayText;
+        }
+      }
+    }
+
+    .each-setting-container:hover {
+      background-color: $subSecondaryLightBackground;
+
+      div {
+        border: none;
+      }
+    }
+  }
+
+  .settings-setting-display-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    //z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+}

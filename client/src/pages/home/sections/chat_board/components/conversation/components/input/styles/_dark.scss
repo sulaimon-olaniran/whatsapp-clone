@@ -1,0 +1,155 @@
+.input-component-contact-is-blocked-dark-theme {
+  width: 100%;
+  height: 62px;
+  background-color: #202c33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 62px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8696a0;
+}
+.conversation-message-input-component-dark-theme {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .input-component-emojis-gifs-stickers-container {
+    width: 100%;
+    min-height: 0;
+    height: 0;
+    background-color: #202c33;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat-emojis-is-active {
+    height: 320px;
+  }
+
+  .input-component-reply-message-container {
+    width: 100%;
+    min-height: 0;
+    height: 0;
+    background-color: #202c33;
+    transition: all 0.3s ease-in-out;
+
+    .input-component-reply-message-inner-container {
+      width: 100%;
+      min-height: 100%;
+      padding: 15px 15px 15px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .input-component-reply-message-message {
+      min-height: 50px;
+      max-height: 90px;
+      width: calc(100% - 60px);
+      //width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      color: rgb(221, 224, 224);
+    }
+  }
+
+  .reply-message-is-active {
+    min-height: 100px;
+    //border-top: 1px solid $darkBorderColor;
+    box-shadow: 0 0 5px 0 #151d22;
+  }
+
+  .input-component-main-input-container {
+    min-height: 62px;
+    background-color: #202c33;
+    display: flex;
+    padding: 10px;
+    z-index: 999;
+
+    .message-input-insert-options-buttons-container {
+      width: 0;
+      min-width: 80px;
+      min-height: 100%;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+      margin-right: 15px;
+
+      button {
+        width: 40px;
+        height: 40px;
+        color: #8696a0;
+      }
+
+      section {
+        display: flex;
+        width: 120px;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .options-expanded {
+      min-width: 220px;
+    }
+
+    .message-input-textfield-input-container {
+      width: 0;
+      min-width: 0;
+      min-height: calc(100% - 20px);
+      //height: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1 1;
+
+      button {
+        width: 40px;
+        height: 40px;
+        color: #8696a0;
+      }
+
+      .text-input-textarea-container {
+        width: calc(100% - 50px);
+        height: 100%;
+        border: 1px solid #2a3942;
+        background-color: #2a3942;
+        border-radius: 8px;
+        // padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0 10px;
+      }
+
+      textarea {
+        // min-height: 40px;
+        width: 100%;
+        background: none;
+        border: none;
+        font-size: 16px;
+        color: #d1d7db;
+        outline: none;
+        font-family: "Open Sans", sans-serif;
+        resize: none;
+        line-height: 24px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.hide-conversation-message-input {
+  display: none;
+}

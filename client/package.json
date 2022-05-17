@@ -1,0 +1,78 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/material": "^5.3.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@toast-ui/react-image-editor": "^3.15.2",
+    "axios": "^0.25.0",
+    "emoji-tree": "^1.1.2",
+    "fabric": "^4.6.0",
+    "fabricjs-react": "^1.0.8",
+    "formik": "^2.2.9",
+    "jwt-decode": "^3.1.2",
+    "material-ui-phone-number": "^3.0.0",
+    "moment": "^2.29.1",
+    "node-sass": "^7.0.1",
+    "pdfjs-dist": "^2.13.216",
+    "pintura": "^0.3.10",
+    "pusher-js": "^7.1.0-beta",
+    "react": "^17.0.2",
+    "react-cropper": "^2.1.8",
+    "react-dnd": "^15.1.1",
+    "react-dnd-html5-backend": "^15.1.2",
+    "react-dom": "^17.0.2",
+    "react-draggable": "^4.4.4",
+    "react-helmet": "^6.1.0",
+    "react-highlight-words": "^0.18.0",
+    "react-page-visibility": "^7.0.0",
+    "react-pdf": "^5.7.1",
+    "react-pdf-to-image": "^1.0.2",
+    "react-phone-number-input": "^3.1.44",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "react-scroll-into-view": "^1.12.0",
+    "react-textarea-autosize": "^8.3.3",
+    "react-virtualized": "^9.22.3",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
+    "use-debounce": "^7.0.1",
+    "uuid": "^8.3.2",
+    "web-vitals": "^2.1.3",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/pdfjs-dist": "^2.10.378"
+  }
+}

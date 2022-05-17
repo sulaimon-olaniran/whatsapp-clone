@@ -1,0 +1,243 @@
+.message-text-type-dark-theme {
+  max-width: 100%;
+  height: auto;
+  border-radius: 7.5px;
+  position: relative;
+  // padding: 6px 7px 8px 9px;
+
+  .message-text-type-emoji-only {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    #message-text-emoji-only-text {
+      .emoji-text {
+        font-size: 3rem;
+        margin-right: 1px;
+      }
+    }
+
+    .animate-emoji-text {
+      animation: 2s ease 0s infinite $beating-heart;
+    }
+
+    .message-text-type-emoji-only-time {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      z-index: 10;
+      color: #ffffff99;
+      height: 15px;
+      font-size: 0.6875rem;
+      white-space: nowrap;
+      line-height: 17px;
+
+      svg {
+        width: 16px;
+        height: 15px;
+        margin-left: 2px;
+      }
+
+      P {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .emoji-only-2 {
+    height: 60px;
+    width: 100px;
+    #message-text-emoji-only-text {
+      .emoji-text {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .emoji-only-3 {
+    height: 50px;
+    width: 100px;
+    #message-text-emoji-only-text {
+      .emoji-text {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .text-type-message-container {
+    width: 100%;
+    display: flex;
+
+    P {
+      display: inline-block;
+      font-size: 13px;
+      line-height: 19px;
+      color: #e9edef;
+      max-width: 100%;
+
+      .emoji-text {
+        font-size: 1.3rem;
+        margin-right: 1px;
+      }
+
+      .space {
+        display: inline-block;
+        width: 85px;
+        min-height: 1px;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .message-time-container {
+    float: right;
+    margin: -10px 0 -5px 4px;
+    position: relative;
+    z-index: 10;
+    color: #ffffff99;
+    height: 15px;
+    font-size: 0.6875rem;
+    white-space: nowrap;
+    line-height: 17px;
+    display: flex;
+
+    svg {
+      width: 16px;
+      height: 15px;
+      margin-left: 2px;
+    }
+
+    P {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+// **************************************************** LIGHT THEME STYLES *********************************
+
+.message-text-type-light-theme {
+  max-width: 100%;
+  height: auto;
+  border-radius: 7.5px;
+  position: relative;
+  // padding: 6px 7px 8px 9px;
+
+  .message-text-type-emoji-only {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    #message-text-emoji-only-text {
+      .emoji-text {
+        font-size: 3rem;
+        margin-right: 1px;
+      }
+    }
+
+    .animate-emoji-text {
+      animation: 2s ease 0s infinite $beating-heart;
+    }
+
+    .message-text-type-emoji-only-time {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      z-index: 10;
+      color: #667781;
+      height: 15px;
+      font-size: 0.6875rem;
+      white-space: nowrap;
+      line-height: 17px;
+
+      svg {
+        width: 16px;
+        height: 15px;
+        margin-left: 2px;
+      }
+
+      P {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .emoji-only-2 {
+    height: 60px;
+    width: 100px;
+    #message-text-emoji-only-text {
+      .emoji-text {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .emoji-only-3 {
+    height: 50px;
+    width: 100px;
+    #message-text-emoji-only-text {
+      .emoji-text {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .text-type-message-container {
+    width: 100%;
+    display: flex;
+
+    P {
+      display: inline-block;
+      font-size: 13px;
+      line-height: 19px;
+      color: $darkText;
+      max-width: 100%;
+
+      .emoji-text {
+        font-size: 1.3rem;
+        margin-right: 1px;
+      }
+
+      .space {
+        display: inline-block;
+        width: 85px;
+        min-height: 1px;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .message-time-container {
+    float: right;
+    margin: -10px 0 -5px 4px;
+    position: relative;
+    z-index: 10;
+    color: #667781;
+    height: 15px;
+    font-size: 0.6875rem;
+    white-space: nowrap;
+    line-height: 17px;
+    display: flex;
+
+    svg {
+      width: 16px;
+      height: 15px;
+      margin-left: 2px;
+    }
+
+    P {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}

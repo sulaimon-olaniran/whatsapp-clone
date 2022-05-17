@@ -1,0 +1,181 @@
+.conversation-insert-camera-component-dark-theme {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+
+  .conversation-insert-camera-header {
+    width: 100%;
+    height: 3rem;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202c33;
+
+    .insert-camera-header-left-section {
+      display: flex;
+      align-items: center;
+      button {
+        color: #d9dee0;
+      }
+
+      h1 {
+        color: white;
+        font-size: 17px;
+        font-weight: 500;
+        margin-left: 20px;
+      }
+    }
+
+    .insert-camera-header-right-section {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      button {
+        color: #d9dee0;
+        text-transform: capitalize;
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .conversation-insert-camera-body {
+    width: 100%;
+    //height: 375px;
+    padding: 10px;
+
+    video {
+      width: 100%;
+      //height: 100%;
+      height: auto;
+    }
+  }
+
+  .conversation-insert-camera-footer {
+    width: 100%;
+    height: 5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+    canvas {
+      display: none;
+    }
+
+    button {
+      background-color: $subPrimaryGreen;
+      color: white;
+      width: 70px;
+      height: 70px;
+
+      .MuiSvgIcon-root {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .show-capture-button {
+    visibility: visible;
+  }
+}
+
+//********************************************************* LIGHT THEME STYLES **********************************************
+
+.conversation-insert-camera-component-light-theme {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+
+  .conversation-insert-camera-header {
+    width: 100%;
+    height: 3rem;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #008069;
+
+    .insert-camera-header-left-section {
+      display: flex;
+      align-items: center;
+      button {
+        color: #d9dee0;
+      }
+
+      h1 {
+        color: white;
+        font-size: 17px;
+        font-weight: 500;
+        margin-left: 20px;
+      }
+    }
+
+    .insert-camera-header-right-section {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      button {
+        color: #d9dee0;
+        text-transform: capitalize;
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .conversation-insert-camera-body {
+    width: 100%;
+    //height: 375px;
+    padding: 10px;
+
+    video {
+      width: 100%;
+      //height: 100%;
+      height: auto;
+    }
+  }
+
+  .conversation-insert-camera-footer {
+    width: 100%;
+    height: 5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+    canvas {
+      display: none;
+    }
+
+    button {
+      background-color: $subPrimaryGreen;
+      color: white;
+      width: 70px;
+      height: 70px;
+
+      .MuiSvgIcon-root {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .show-capture-button {
+    visibility: visible;
+  }
+}
+
+@import "./photo/styles";

@@ -1,0 +1,16 @@
+@import "./styles/dark";
+@import "./styles/light";
+
+@import "./types/gif/styles";
+@import "./types/text/styles";
+@import "./types/image/styles";
+@import "./types/sticker/styles";
+@import "./types/contact/styles";
+@import "./types/document/styles";
+
+@import "./components/reply/styles";
+@import "./components/failed/styles";
+@import "./components/status/styles";
+@import "./components/deleted/styles";
+@import "./components/options/styles";
+@import "./components/delete_message/styles";

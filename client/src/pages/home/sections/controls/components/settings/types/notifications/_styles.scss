@@ -1,0 +1,153 @@
+.notification-settings-dark-theme {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .notification-settings-body {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+
+    .each-notification-settings-option {
+      width: 100%;
+      min-height: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-left: 25px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      span {
+        padding: 0;
+      }
+
+      .MuiSvgIcon-root {
+        fill: $lightGrayText;
+      }
+
+      div {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          color: $lightGrayText;
+          font-size: 0.95rem;
+          line-height: 20px;
+        }
+
+        span {
+          color: #8696a0;
+          font-size: 14px;
+          margin-top: 5px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .is-checked {
+      .MuiSvgIcon-root {
+        fill: $primaryGreen;
+      }
+    }
+
+    .is-disabled {
+      .MuiSvgIcon-root {
+        fill: $darkGrayText;
+      }
+
+      div {
+        p {
+          color: #667781;
+          opacity: 0.6;
+        }
+
+        span {
+          color: #8696a0;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+
+//****************************************** LIGHT THEME STYLES *****************************************//
+
+.notification-settings-light-theme {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .notification-settings-body {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+
+    .each-notification-settings-option {
+      width: 100%;
+      min-height: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-left: 25px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      span {
+        padding: 0;
+      }
+
+      .MuiSvgIcon-root {
+        fill: gray;
+      }
+
+      div {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          color: $darkText;
+          font-size: 0.95rem;
+          line-height: 20px;
+        }
+
+        span {
+          color: #8696a0;
+          font-size: 14px;
+          margin-top: 5px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .is-checked {
+      .MuiSvgIcon-root {
+        fill: $primaryGreen;
+      }
+    }
+
+    .is-disabled {
+      .MuiSvgIcon-root {
+        fill: $darkGrayText;
+      }
+
+      div {
+        p {
+          color: #667781;
+          opacity: 0.6;
+        }
+
+        span {
+          color: #8696a0;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+
+@import "./mute/styles";

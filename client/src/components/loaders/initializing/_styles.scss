@@ -1,0 +1,335 @@
+.initializing-app-loader-dark-theme {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $secondaryDarkBackground;
+
+  .initializing-app-loader-contents-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #5b5b5b;
+
+    .loader-icons-container {
+      width: 300px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+
+      .each-loader-icon {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.6s ease-out;
+      }
+
+      .initializing-icon,
+      .laptop-icon {
+        display: none;
+      }
+    }
+
+    .is-connecting {
+      .whatsapp-icon {
+        transform: translateX(-100px);
+      }
+    }
+
+    .is-initializing {
+      .whatsapp-icon {
+        display: none;
+      }
+
+      .initializing-icon {
+        display: flex;
+      }
+    }
+
+    .stop-initializing {
+      .initializing-icon {
+        transform: translateX(-95px);
+      }
+    }
+
+    .is-completed {
+      .initializing-icon {
+        display: none;
+      }
+
+      .laptop-icon {
+        display: flex;
+      }
+    }
+
+    .loader-line-container {
+      min-height: 1.5px;
+      width: 90%;
+      margin: 25px 0;
+
+      .MuiLinearProgress-root {
+        height: 3px;
+        background-color: #8a8989;
+
+        .MuiLinearProgress-bar1Determinate {
+          background-color: #01685e;
+        }
+      }
+    }
+
+    .loader-info-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        min-height: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #cfd0d0;
+        margin-bottom: 7px;
+      }
+
+      span {
+        font-size: 14px;
+        line-height: 20px;
+        color: #667781;
+      }
+    }
+  }
+
+  @keyframes load {
+    0% {
+      fill: #5c5c5c;
+    }
+    50% {
+      fill: #222e35;
+    }
+    100% {
+      fill: #5e5e5e;
+    }
+  }
+
+  svg {
+    .all-circles .circle1 {
+      animation: load 1s infinite;
+    }
+
+    .all-circles .circle2 {
+      animation: load 1s infinite;
+      animation-delay: 0.2s;
+    }
+
+    .all-circles .circle3 {
+      animation: load 1s infinite;
+      animation-delay: 0.4s;
+    }
+    .all-circles .circle4 {
+      animation: load 1s infinite;
+      animation-delay: 0.6s;
+    }
+
+    .all-circles .circle5 {
+      animation: load 1s infinite;
+      animation-delay: 0.8s;
+    }
+
+    .all-circles .circle6 {
+      animation: load 1s infinite;
+      animation-delay: 1s;
+    }
+
+    .all-circles .circle7 {
+      animation: load 1s infinite;
+      animation-delay: 1.2s;
+    }
+
+    .all-circles .circle8 {
+      animation: load 1s infinite;
+      animation-delay: 1.4s;
+    }
+  }
+}
+
+//************************************************** LIGHT THEME STYLES ******************************************
+
+.initializing-app-loader-light-theme {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+
+  .initializing-app-loader-contents-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #9c9c9c;
+
+    .loader-icons-container {
+      width: 300px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+
+      .each-loader-icon {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.6s ease-out;
+      }
+
+      .initializing-icon,
+      .laptop-icon {
+        display: none;
+      }
+    }
+
+    .is-connecting {
+      .whatsapp-icon {
+        transform: translateX(-100px);
+      }
+    }
+
+    .is-initializing {
+      .whatsapp-icon {
+        display: none;
+      }
+
+      .initializing-icon {
+        display: flex;
+      }
+    }
+
+    .stop-initializing {
+      .initializing-icon {
+        transform: translateX(-95px);
+      }
+    }
+
+    .is-completed {
+      .initializing-icon {
+        display: none;
+      }
+
+      .laptop-icon {
+        display: flex;
+      }
+    }
+
+    .loader-line-container {
+      min-height: 1.5px;
+      width: 90%;
+      margin: 25px 0;
+
+      .MuiLinearProgress-root {
+        height: 3px;
+        background-color: #c7c7c7;
+
+        .MuiLinearProgress-bar1Determinate {
+          background-color: #56cabe;
+        }
+      }
+    }
+
+    .loader-info-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        min-height: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #8e8e8e;
+        margin-bottom: 7px;
+      }
+
+      span {
+        font-size: 14px;
+        line-height: 20px;
+        color: #667781;
+      }
+    }
+  }
+
+  @keyframes load {
+    0% {
+      fill: #a2a2a2;
+    }
+    50% {
+      fill: #658292;
+    }
+    100% {
+      fill: #989898;
+    }
+  }
+
+  svg {
+    .all-circles .circle1 {
+      animation: load 1s infinite;
+    }
+
+    .all-circles .circle2 {
+      animation: load 1s infinite;
+      animation-delay: 0.2s;
+    }
+
+    .all-circles .circle3 {
+      animation: load 1s infinite;
+      animation-delay: 0.4s;
+    }
+    .all-circles .circle4 {
+      animation: load 1s infinite;
+      animation-delay: 0.6s;
+    }
+
+    .all-circles .circle5 {
+      animation: load 1s infinite;
+      animation-delay: 0.8s;
+    }
+
+    .all-circles .circle6 {
+      animation: load 1s infinite;
+      animation-delay: 1s;
+    }
+
+    .all-circles .circle7 {
+      animation: load 1s infinite;
+      animation-delay: 1.2s;
+    }
+
+    .all-circles .circle8 {
+      animation: load 1s infinite;
+      animation-delay: 1.4s;
+    }
+  }
+}

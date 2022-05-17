@@ -1,0 +1,223 @@
+.controls-profile-component-dark-theme-container {
+  width: 100%;
+  height: 100%;
+  background-color: $headerDarkBackground;
+
+  .controls-profile-component-body-container {
+    min-height: calc(100% - 7rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //padding: 15px;
+    padding-top: 3.5rem;
+
+    .profile-component-avatar-container {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .avatar-container-action-button {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        color: white;
+        background-color: rgba(52, 70, 81, 0.3);
+        z-index: 1;
+        p {
+          text-align: center;
+          text-transform: uppercase;
+          margin-top: 8px;
+          font-size: 0.8rem;
+        }
+      }
+
+      .avatar-update-loader-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        color: white;
+        background-color: rgba(52, 70, 81, 0.5);
+        z-index: 1;
+
+        .MuiCircularProgress-root {
+          color: $primaryGreen;
+        }
+      }
+
+      .show-button {
+        display: flex;
+      }
+    }
+
+    .profile-component-avatar-container:hover {
+      .avatar-container-action-button {
+        display: flex;
+      }
+    }
+
+    .control-profile-name-about-container {
+      width: 100%;
+      min-height: 300px;
+      margin-top: 3.5rem;
+      animation: $slide-up 1.2s;
+
+      .profile-name-information {
+        width: 100%;
+        color: #8696a0;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          width: 80%;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+      }
+
+      .profile-name-about-inner-container {
+        width: 100%;
+        padding: 15px;
+        background-color: inherit;
+        //margin-bottom: 20px;
+
+        .name-about-input-container {
+          width: 100%;
+          min-height: 3rem;
+
+          .input-label-container {
+            p {
+              font-size: 0.85rem;
+              color: $subPrimaryGreen;
+            }
+          }
+
+          .input-textfield-container {
+            width: 100%;
+            min-height: 2rem;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0 10px 0;
+            position: relative;
+
+            .input-textfield-updating-container {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              left: 0;
+              top: 0;
+              color: white;
+              z-index: 1;
+
+              .MuiCircularProgress-root {
+                color: $primaryGreen;
+              }
+            }
+
+            input,
+            textarea {
+              height: 100%;
+              min-width: 70%;
+              max-width: 80%;
+              background: none;
+              border: none;
+              font-size: 16px;
+              color: #d1d7db;
+              outline: none;
+              font-family: "Open Sans", sans-serif;
+            }
+
+            textarea {
+              resize: none;
+              max-width: 80%;
+              min-height: 3rem;
+              line-height: 24px;
+              font-size: 15px;
+              //padding-bottom: 8px;
+              //font-family: "Open Sans", sans-serif;
+            }
+
+            .input-button-actions-container {
+              display: flex;
+              height: 2rem;
+              align-items: center;
+              justify-content: center;
+              button {
+                font-size: 0.9em;
+                color: #8696a0;
+                .MuiSvgIcon-root {
+                  width: 22px;
+                  height: 22px;
+                }
+              }
+            }
+          }
+
+          .input-active {
+            border-bottom: 2px solid $primaryGreen;
+          }
+
+          .input-footer-details-container {
+            width: 100%;
+            p {
+              color: #8696a0;
+              font-size: 0.95rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.photo-popper-options-container {
+  width: 180px;
+  min-height: 100px;
+  background-color: inherit;
+  padding: 10px 0;
+  background-color: $subPrimaryDarkBackground;
+
+  button {
+    min-width: 100%;
+    height: 46px;
+    text-transform: capitalize;
+    color: #d1d7db;
+    justify-content: flex-start;
+    border-radius: 0;
+
+    p {
+      padding-left: 15px;
+    }
+  }
+
+  button:hover {
+    background-color: $secondaryDarkBackground;
+  }
+}

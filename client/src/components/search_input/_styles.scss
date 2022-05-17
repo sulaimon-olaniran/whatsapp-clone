@@ -1,0 +1,39 @@
+.search-input-component-dark-theme {
+  width: 95%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #202c33;
+  margin: 8px 0;
+  padding-right: 5px;
+
+  input {
+    height: 100%;
+    width: 90%;
+    color: #d1d7db;
+    font-size: 14px;
+  }
+}
+
+//*************************************** LIGHT THEME STYLES **************************************//
+
+.search-input-component-light-theme {
+  width: 95%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f2f5;
+  margin: 8px 0;
+  padding-right: 5px;
+
+  input {
+    height: 100%;
+    width: 90%;
+    color: #3b4a54;
+    font-size: 14px;
+  }
+}

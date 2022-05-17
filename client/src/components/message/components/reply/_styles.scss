@@ -1,0 +1,123 @@
+.message-reply-component-dark-theme {
+  background-color: #1d282f;
+  border-radius: 7.5px;
+  //padding: 5px 5px 7px 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  .message-reply-image-type-container {
+    display: flex;
+    justify-content: space-between;
+    max-height: 70px;
+
+    .reply-image-caption-container {
+      display: flex;
+    }
+
+    .reply-image-container {
+      min-width: 58px;
+      max-height: 100%;
+      background-size: cover;
+      background-position: 50%;
+
+      div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50%;
+        border-top-right-radius: 7.5px;
+        border-bottom-right-radius: 7.5px;
+      }
+    }
+  }
+}
+
+//STYLES OF THE ORIGINAL MESSAGE THE REPLY GETS TAGGED TO
+.original-message-was-sent-dark {
+  background-color: #025144;
+}
+
+//STYLES WHEN THE REPLY WAS A MESSAGE ORIGINALLY RECEIVED
+.reply-was-received-dark {
+  border-left: 4px solid #53bdeb;
+}
+
+//STYLES WHEN THE REPLY WAS A MESSAGE ORIGINALLY SENT
+.reply-was-sent-dark {
+  border-left: 4px solid #06cf9c;
+}
+
+.reply-is-input-dark {
+  // height: 100%;
+  max-height: 100px;
+  width: 100%;
+  background-color: #111b21;
+  margin: 0;
+}
+
+///******************************************************* LIGHT THEME STYLES ****************************************
+
+.message-reply-component-light-theme {
+  background-color: $subSecondaryLightBackground;
+  border-radius: 7.5px;
+  //padding: 5px 5px 7px 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  .message-reply-image-type-container {
+    display: flex;
+    justify-content: space-between;
+    max-height: 70px;
+
+    .reply-image-caption-container {
+      display: flex;
+    }
+
+    .reply-image-container {
+      min-width: 58px;
+      max-height: 100%;
+      background-size: cover;
+      background-position: 50%;
+
+      div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50%;
+        border-top-right-radius: 7.5px;
+        border-bottom-right-radius: 7.5px;
+      }
+    }
+  }
+}
+
+//STYLES OF THE ORIGINAL MESSAGE THE REPLY GETS TAGGED TO
+.original-message-was-sent-light {
+  background-color: #d1f4cc;
+}
+
+//STYLES WHEN THE REPLY WAS A MESSAGE ORIGINALLY RECEIVED
+.reply-was-sent-light {
+  border-left: 4px solid #53bdeb;
+}
+
+//STYLES WHEN THE REPLY WAS A MESSAGE ORIGINALLY SENT
+.reply-was-received-light {
+  border-left: 4px solid #06cf9c;
+}
+
+.reply-is-input-light {
+  // height: 100%;
+  max-height: 100px;
+  width: 100%;
+  background-color: #e8e4e4;
+  margin: 0;
+}
+
+@import "./types/text/styles";
+@import "./types/gif_image/styles";
+@import "./types/sticker/styles";
+@import "./types/contact/styles";
+@import "./types/document/styles";

@@ -1,0 +1,195 @@
+.privacy-block-contact-component-dark-theme {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .privacy-block-contact-component-dialog-button {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: 1px solid $darkBorderColor;
+    cursor: pointer;
+    color: #8696a0;
+
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-left: 25px;
+      color: $lightGrayText;
+    }
+  }
+
+  .privacy-block-contact-component-dialog-button:hover {
+    background-color: $subPrimaryDarkBackground;
+  }
+
+  .privacy-block-contact-blocked-contacts-list {
+    width: 100%;
+    max-height: calc(100% - 15rem);
+    overflow-y: scroll;
+  }
+
+  .privacy-block-contact-no-contacts {
+    width: 100%;
+    height: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    div {
+      width: 160px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #182229;
+      color: #727a7e;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #667781;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  .privacy-block-contact-footer {
+    width: 80%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    //padding: 0 20px;
+
+    p {
+      color: #667781;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+}
+
+//STYLES FOR SELECT CONTACT TO BLOCK DIALOG **************************************************
+
+.privacy-block-contact-select-contact-dialog-dark-theme {
+  width: 440px;
+  min-height: 75vh;
+  background-color: #0b1419;
+
+  .contact-select-contact-header {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #d9dee0;
+    //justify-content: space-between;
+    border-bottom: 1px solid $darkBorderColor;
+
+    .contact-select-header-actions-container {
+      width: 100%;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      background-color: #202c33;
+      padding: 0 20px;
+      color: #d9dee0;
+
+      button {
+        color: #d9dee0;
+      }
+
+      p {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-left: 10px;
+      }
+    }
+
+    .contact-select-header-search-input {
+      width: 95%;
+      height: 2.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 8px 0;
+    }
+  }
+
+  .contact-select-contact-body {
+    width: 100%;
+    height: calc(75vh - 7rem);
+    overflow-y: scroll;
+  }
+}
+
+.privacy-unblock-contact-dialog-dark-theme {
+  width: 400px;
+  padding: 22px 24px 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  // padding: 20px 0;
+  background-color: #3b4a54;
+
+  .unblock-contact-dialog-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    p {
+      color: #d1d7db;
+      font-size: 14.2px;
+      line-height: 20px;
+    }
+  }
+
+  .unblock-contaction-buttons-container {
+    width: 100%;
+    display: flex;
+    height: auto;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    button {
+      margin-right: 5px;
+    }
+
+    .MuiButton-outlined {
+      border-color: $darkBorderColor;
+      color: #00a884;
+      font-weight: 600;
+    }
+
+    .MuiButton-outlined:hover {
+      background-color: #495b66;
+      border-color: $darkBorderColor;
+    }
+
+    .MuiButton-contained {
+      background-color: #00a884;
+      color: #111b21;
+      letter-spacing: 1.25px;
+      white-space: pre-wrap;
+      font-weight: 600;
+    }
+
+    .MuiButton-contained:hover {
+      background-color: #4ac7ac;
+    }
+  }
+}

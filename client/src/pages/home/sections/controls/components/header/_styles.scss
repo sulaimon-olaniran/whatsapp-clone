@@ -1,0 +1,103 @@
+.controls-header-component-dark-theme {
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid $darkBorderColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: $headerDarkBackground;
+  //background-color: red;
+
+  .MuiAvatar-root {
+    cursor: pointer;
+  }
+
+  .controls-header-button-actions-container {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      color: $primaryIconColor;
+    }
+  }
+}
+
+.controls-header-menu-options-container-dark-theme {
+  background-color: $subPrimaryDarkBackground;
+  width: 200px;
+  height: auto;
+  padding: 10px 0;
+
+  button {
+    min-width: 100%;
+    height: 46px;
+    color: #d1d7db;
+    justify-content: flex-start;
+    border-radius: 0;
+    text-transform: initial;
+
+    p {
+      padding-left: 15px;
+    }
+  }
+
+  button:hover {
+    background-color: $secondaryDarkBackground;
+  }
+}
+
+//**************************************************** LIGHT THEME STYLES *********************************************//
+
+.controls-header-component-light-theme {
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid $lightBorderColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: $headerLightBackground;
+  //background-color: red;
+
+  .MuiAvatar-root {
+    cursor: pointer;
+  }
+
+  .controls-header-button-actions-container {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      color: $secondaryIconColor;
+    }
+  }
+}
+
+.controls-header-menu-options-container-light-theme {
+  background-color: #fff;
+  width: 200px;
+  height: auto;
+  padding: 10px 0;
+
+  button {
+    min-width: 100%;
+    height: 46px;
+    color: $lightButtonColor;
+    justify-content: flex-start;
+    border-radius: 0;
+    text-transform: initial;
+
+    p {
+      padding-left: 15px;
+    }
+  }
+
+  button:hover {
+    background-color: $subSecondaryLightBackground;
+  }
+}

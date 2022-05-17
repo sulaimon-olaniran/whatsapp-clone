@@ -1,0 +1,140 @@
+.wallpaper-settings-dark-theme-container {
+  width: 100%;
+  min-height: calc(100% - 7rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wallpaper-settings-body-container {
+    width: 100%;
+    overflow-y: scroll;
+
+    .wallpaper-doodle-checkbox-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+
+      .Mui-checked {
+        svg {
+          fill: $primaryGreen;
+        }
+      }
+
+      .MuiSvgIcon-root {
+        fill: #667781;
+      }
+
+      p {
+        color: #8696a0;
+        font-size: 13px;
+        font-weight: 400;
+        display: inline;
+        vertical-align: middle;
+      }
+    }
+
+    .wallpapers-list-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 25px;
+      padding-left: 45px;
+      padding-top: 0;
+
+      .each-wallpaper-container {
+        width: 82px;
+        min-height: 82px;
+        margin: 15px 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          color: #d1d7db;
+          font-size: 0.8rem;
+        }
+      }
+
+      .default,
+      .each-wallpaper-container:hover {
+        border: 4px solid #3b4a54;
+      }
+    }
+  }
+}
+
+//************************************** LIGHT THEME STYLES *****************************
+
+.wallpaper-settings-light-theme-container {
+  width: 100%;
+  min-height: calc(100% - 7rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+
+  .wallpaper-settings-body-container {
+    width: 100%;
+    overflow-y: scroll;
+
+    .wallpaper-doodle-checkbox-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+
+      .Mui-checked {
+        svg {
+          fill: $primaryGreen;
+        }
+      }
+
+      .MuiSvgIcon-root {
+        fill: #667781;
+      }
+
+      p {
+        color: #8696a0;
+        font-size: 13px;
+        font-weight: 400;
+        display: inline;
+        vertical-align: middle;
+      }
+    }
+
+    .wallpapers-list-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 25px;
+      padding-left: 45px;
+      padding-top: 0;
+
+      .each-wallpaper-container {
+        width: 82px;
+        min-height: 82px;
+        margin: 15px 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          color: #d1d7db;
+          font-size: 0.8rem;
+        }
+      }
+
+      .default {
+        border: 4px solid #159cda;
+      }
+      .each-wallpaper-container:hover {
+        border: 4px solid #fff;
+      }
+    }
+  }
+}

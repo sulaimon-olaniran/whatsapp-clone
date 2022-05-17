@@ -1,0 +1,231 @@
+.message-component-container-dark-theme {
+  width: 100%;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+
+  .checkbox-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    width: 0;
+    margin-left: 20px;
+    transform: translateX(-100px);
+
+    .MuiCheckbox-root {
+      color: #d1d7db;
+    }
+
+    .Mui-checked {
+      color: #00a884;
+    }
+
+    span {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .show-checkbox {
+    transform: translate(0);
+    width: 50px;
+  }
+
+  .message-is-sent {
+    justify-content: flex-end;
+
+    .each-message-inner-container {
+      background-color: #005c4b;
+      .tail-out-span {
+        right: -8px;
+        position: absolute;
+        top: 0px;
+        z-index: 100;
+        display: none;
+        width: 8px;
+        height: 13px;
+        color: #005c4b;
+      }
+    }
+  }
+
+  .message-is-received {
+    .each-message-inner-container {
+      background-color: #202c33;
+      .tail-out-span {
+        left: -8px;
+        position: absolute;
+        top: 0px;
+        z-index: 100;
+        display: none;
+        width: 8px;
+        height: 13px;
+        color: #202c33;
+      }
+    }
+  }
+
+  .remove-message-background {
+    .each-message-inner-container {
+      background: none;
+    }
+  }
+
+  .message-component-each-message-container {
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    padding: 0 9%;
+
+    .each-message-inner-container {
+      box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+      border-radius: 7.5px;
+      position: relative;
+
+      .message-options-container {
+        position: absolute;
+        right: 2px;
+        top: 0px;
+        transform: translateX(30px);
+        display: none;
+        transition: transform 0.15s ease-in-out;
+        z-index: 100;
+      }
+    }
+
+    .each-message-inner-container:hover {
+      .message-options-container {
+        display: flex;
+        transform: translateX(0%);
+      }
+    }
+
+    .sent-tail {
+      border-top-right-radius: 0;
+      .tail-out-span {
+        display: flex;
+      }
+    }
+
+    .received-tail {
+      border-top-left-radius: 0;
+      .tail-out-span {
+        display: flex;
+      }
+    }
+
+    .each-message-text-type {
+      max-width: 65%;
+      padding: 6px 7px 8px 9px;
+    }
+
+    .each-message-sticker-type,
+    .each-message-image-type,
+    .each-message-gif-type {
+      max-width: 340px;
+      padding: 3px;
+    }
+
+    .each-message-document-type {
+      width: 330px;
+      padding: 3px;
+    }
+
+    .each-message-contact-type {
+      width: 330px;
+      padding: 10px;
+      padding-bottom: 3px;
+    }
+
+    .message-is-deleted {
+      padding: 6px 7px 8px 9px;
+    }
+  }
+}
+
+.message-is-selected {
+  background-color: #161f24;
+}
+
+.select-is-active {
+  cursor: pointer;
+}
+
+.select-is-active:hover {
+  background-color: #161f24;
+}
+
+//******************************************************************************************************************//
+
+.is-starred-message-dark {
+  .message-is-sent {
+    justify-content: flex-start;
+
+    .each-message-inner-container {
+      background-color: #005c4b;
+      .tail-out-span {
+        left: -8px;
+        position: absolute;
+        top: 0px;
+        z-index: 100;
+        display: none;
+        width: 8px;
+        height: 13px;
+        color: #005c4b;
+      }
+    }
+  }
+
+  .message-component-each-message-container {
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    padding: 0;
+
+    .sent-tail {
+      border-top-left-radius: 0;
+      border-top-right-radius: 7.5px;
+      .tail-out-span {
+        display: flex;
+      }
+    }
+
+    .received-tail {
+      border-top-left-radius: 0;
+    }
+
+    .each-message-text-type {
+      max-width: 90%;
+      padding: 6px 7px 8px 9px;
+    }
+
+    .each-message-sticker-type,
+    .each-message-image-type,
+    .each-message-gif-type {
+      max-width: 340px;
+      padding: 3px;
+    }
+
+    .each-message-document-type {
+      width: 330px;
+      padding: 3px;
+    }
+
+    .each-message-contact-type {
+      width: 330px;
+      padding: 10px;
+      padding-bottom: 3px;
+    }
+
+    .message-is-deleted {
+      padding: 6px 7px 8px 9px;
+    }
+  }
+}
+
+.message-is-cleared {
+  display: none;
+}

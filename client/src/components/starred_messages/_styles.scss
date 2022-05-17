@@ -1,0 +1,290 @@
+.starred-messages-component-dark-theme {
+  width: 100%;
+  height: 100%;
+
+  .starred-messages-header-container {
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5rem 0 0 10px;
+    background-color: $subPrimaryDarkBackground;
+
+    .starred-messages-header-left-section {
+      height: 100%;
+      display: flex;
+      display: flex;
+      align-items: center;
+
+      button {
+        color: #d9dee0;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #d9dee0;
+        margin-left: 20px;
+        text-transform: initial;
+        font-weight: 500;
+      }
+    }
+
+    .starred-messages-header-right-section {
+      button {
+        color: #d9dee0;
+      }
+    }
+  }
+
+  .starred-messages-body-container {
+    width: 100%;
+    height: calc(100% - 7rem);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .each-starred-message-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 5px 5px 0px 20px;
+      cursor: pointer;
+
+      .starred-message-details-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .messaage-users-container {
+          display: flex;
+          align-items: center;
+
+          .MuiAvatar-root {
+            width: 26px;
+            height: 26px;
+            margin-right: 5px;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 26px;
+            color: #d1d7db;
+          }
+
+          span {
+            color: #667781;
+            font-size: 10px;
+            margin: 0 4px;
+          }
+        }
+
+        .starred-message-time-container {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          font-size: 12px;
+          line-height: 14px;
+          color: #667781;
+          vertical-align: initial;
+        }
+      }
+
+      .starred-message-message-container {
+        border-bottom: 1px solid $darkBorderColor;
+      }
+    }
+
+    .each-starred-message-container:hover {
+      background-color: #0c1317;
+    }
+  }
+
+  .no-starred-messages-body-container {
+    width: 100%;
+    height: calc(100% - 7rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: #667781;
+      font-size: 0.875rem;
+      line-height: 20px;
+    }
+  }
+}
+
+.starred-messages-header-menu-container {
+  background-color: $subPrimaryDarkBackground;
+  width: 150px;
+  height: 0;
+  height: auto;
+  padding: 5px 0;
+
+  button {
+    min-width: 100%;
+    height: 40px;
+    text-transform: capitalize;
+    color: #d1d7db;
+    justify-content: center;
+    border-radius: 0;
+
+    p {
+      padding-left: 15px;
+    }
+  }
+
+  button:hover {
+    background-color: $secondaryDarkBackground;
+  }
+}
+
+//******************************************************* LIGHT THEME STYLES ****************************************
+
+.starred-messages-component-light-theme {
+  width: 100%;
+  height: 100%;
+
+  .starred-messages-header-container {
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5rem 0 0 10px;
+    background-color: #008069;
+
+    .starred-messages-header-left-section {
+      height: 100%;
+      display: flex;
+      display: flex;
+      align-items: center;
+
+      button {
+        color: #fff;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #fff;
+        margin-left: 20px;
+        text-transform: initial;
+        font-weight: 500;
+      }
+    }
+
+    .starred-messages-header-right-section {
+      button {
+        color: #fff;
+      }
+    }
+  }
+
+  .starred-messages-body-container {
+    width: 100%;
+    height: calc(100% - 7rem);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #f0f2f5;
+
+    .each-starred-message-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      padding: 5px 5px 0px 20px;
+      cursor: pointer;
+
+      .starred-message-details-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .messaage-users-container {
+          display: flex;
+          align-items: center;
+
+          .MuiAvatar-root {
+            width: 26px;
+            height: 26px;
+            margin-right: 5px;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 26px;
+            color: $darkGrayText;
+          }
+
+          span {
+            color: #667781;
+            font-size: 10px;
+            margin: 0 4px;
+          }
+        }
+
+        .starred-message-time-container {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          font-size: 12px;
+          line-height: 14px;
+          color: #667781;
+          vertical-align: initial;
+        }
+      }
+
+      .starred-message-message-container {
+        border-bottom: 1px solid $lightBorderColor;
+      }
+    }
+
+    .each-starred-message-container:hover {
+      background-color: #ededed;
+    }
+  }
+
+  .no-starred-messages-body-container {
+    width: 100%;
+    height: calc(100% - 7rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: #667781;
+      font-size: 0.875rem;
+      line-height: 20px;
+    }
+  }
+}
+
+.starred-messages-header-menu-container {
+  background-color: $subPrimaryDarkBackground;
+  width: 150px;
+  height: 0;
+  height: auto;
+  padding: 5px 0;
+
+  button {
+    min-width: 100%;
+    height: 40px;
+    text-transform: capitalize;
+    color: #d1d7db;
+    justify-content: center;
+    border-radius: 0;
+
+    p {
+      padding-left: 15px;
+    }
+  }
+
+  button:hover {
+    background-color: $secondaryDarkBackground;
+  }
+}

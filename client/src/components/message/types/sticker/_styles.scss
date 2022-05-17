@@ -1,0 +1,128 @@
+.message-sticker-type-dark-theme {
+  //max-width: 330px;
+  max-width: 190px;
+  border-radius: 7.5px;
+  //padding: 3px;
+  position: relative;
+
+  .sticker-type-sticker-container {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-height: 190px;
+      max-width: 190px;
+      display: block;
+    }
+  }
+
+  .sticker-type-time-container {
+    float: right;
+    position: relative;
+    z-index: 10;
+    color: #ffffff99;
+    min-height: 15px;
+    font-size: 0.6875rem;
+    white-space: nowrap;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    padding: 2px 5px;
+    border-radius: 8px;
+    background-color: #202c33;
+
+    svg {
+      width: 16px;
+      height: 15px;
+      margin-left: 2px;
+    }
+
+    P {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .sender-time {
+    background-color: #005c4b;
+  }
+}
+
+.sticker-is-reply {
+  background-color: #202c33;
+}
+
+.sticker-is-reply-sent {
+  background-color: #005c4b;
+}
+
+// ****************************************** LIGHT THEME STYLES ************************************************
+
+.message-sticker-type-light-theme {
+  //max-width: 330px;
+  max-width: 190px;
+  border-radius: 7.5px;
+  //padding: 3px;
+  position: relative;
+
+  .sticker-type-sticker-container {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-height: 190px;
+      max-width: 190px;
+      display: block;
+    }
+  }
+
+  .sticker-type-time-container {
+    float: right;
+    position: relative;
+    z-index: 10;
+    color: #667781;
+    min-height: 15px;
+    font-size: 0.6875rem;
+    white-space: nowrap;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    padding: 2px 5px;
+    border-radius: 8px;
+    //background-color: #202c33;
+    background-color: #fff;
+
+    svg {
+      width: 16px;
+      height: 15px;
+      margin-left: 2px;
+    }
+
+    P {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .sender-time {
+    background-color: #d9fdd3;
+  }
+}
+
+.sticker-is-reply {
+  //////////////////////// choose one background
+  background-color: #202c33;
+  background-color: #fff;
+}
+
+.sticker-is-reply-sent {
+  //////////////////////// choose one background
+  background-color: #005c4b;
+  background-color: #d9fdd3;
+}

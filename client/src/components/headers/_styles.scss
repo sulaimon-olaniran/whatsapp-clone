@@ -1,0 +1,45 @@
+.control-header-component-dark-theme {
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  background-color: $subPrimaryDarkBackground;
+  padding: 3.5rem 0 0 10px;
+  display: flex;
+  align-items: center;
+
+  button {
+    color: #d9dee0;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #d9dee0;
+    margin-left: 20px;
+    text-transform: initial;
+    font-weight: 500;
+  }
+}
+
+//*************************** STYLES FOR LIGHT THEME BELLOW ***************************** //
+
+.control-header-component-light-theme {
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  background-color: $darkGreen;
+  padding: 3.5rem 0 0 10px;
+  display: flex;
+  align-items: center;
+
+  button {
+    color: #fff;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-left: 20px;
+    text-transform: initial;
+    font-weight: 500;
+  }
+}

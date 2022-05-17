@@ -1,0 +1,61 @@
+.message-options-component-dark-theme {
+  button {
+    color: white;
+  }
+}
+
+.message-options-menu-options-container {
+  width: 200px;
+  background-color: inherit;
+  padding: 10px 0;
+  background-color: $subPrimaryDarkBackground;
+
+  button {
+    min-width: 100%;
+    height: 46px;
+    text-transform: capitalize;
+    color: #d1d7db;
+    justify-content: flex-start;
+    border-radius: 0;
+
+    p {
+      padding-left: 15px;
+    }
+  }
+
+  button:hover {
+    background-color: $secondaryDarkBackground;
+  }
+}
+
+//******************************************* LIGHT THEME STYLES ***********************
+
+.message-options-component-light-theme {
+  button {
+    color: white;
+  }
+}
+
+.message-options-menu-options-container {
+  width: 200px;
+  background-color: inherit;
+  padding: 10px 0;
+  background-color: #fff;
+
+  button {
+    min-width: 100%;
+    height: 46px;
+    text-transform: capitalize;
+    color: $darkText;
+    justify-content: flex-start;
+    border-radius: 0;
+
+    p {
+      padding-left: 15px;
+    }
+  }
+
+  button:hover {
+    background-color: $subSecondaryLightBackground;
+  }
+}

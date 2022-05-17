@@ -1,0 +1,77 @@
+.reply-sticker-type-dark-theme {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  min-height: 42px;
+  max-height: 82px;
+  overflow: hidden;
+  align-items: flex-start;
+  padding: 10px;
+
+  .reply-sticker-type-sender-container {
+    max-width: 100%;
+    font-size: 12.8px;
+    font-weight: 500;
+    line-height: 20px;
+    display: inline-flex;
+    color: #53bdeb;
+  }
+
+  .reply-sticker-type-sticker-container {
+    width: 48px;
+    height: 48px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+.replied-sticker-was-sent {
+  .reply-sticker-type-sender-container {
+    color: #06cf9c;
+  }
+}
+
+// ******************************************* LIGHT THEME STYLES *************************************
+
+.reply-sticker-type-light-theme {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  min-height: 42px;
+  max-height: 82px;
+  overflow: hidden;
+  align-items: flex-start;
+  padding: 10px;
+
+  .reply-sticker-type-sender-container {
+    max-width: 100%;
+    font-size: 12.8px;
+    font-weight: 500;
+    line-height: 20px;
+    display: inline-flex;
+    color: #06cf9c;
+  }
+
+  .reply-sticker-type-sticker-container {
+    width: 48px;
+    height: 48px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+.replied-sticker-was-sent {
+  .reply-sticker-type-sender-container {
+    color: #53bdeb;
+  }
+}

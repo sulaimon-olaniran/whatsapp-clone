@@ -1,0 +1,20 @@
+@import "./universal_styles";
+@import "./animations";
+@import "./auth_pages";
+
+@import "../pages/home/styles";
+
+@import "../components/emoji/styles";
+@import "../components/view_profile_photo/styles";
+@import "../components/headers/styles";
+@import "../components/users_list/styles";
+@import "../components/user/styles";
+@import "../components/search_input/styles";
+//@import "../components/edit_image/styles";
+@import "../components/forward_message/styles";
+@import "../components/message/styles";
+@import "../components/starred_messages/styles";
+@import "../components/medias_dialog/styles";
+@import "../components/loaders/initializing/styles";
+@import "../components/loaders/universal/styles";
+@import "../components/snackbar/styles";

@@ -1,0 +1,155 @@
+.complete-new-group-component-dark-theme {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $subSecondaryDarkBackground;
+  //background-color: #fff;
+
+  .complete-new-group-component-body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .new-group-icon-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px 0;
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .add-group-icon-button-inner-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #d1d7db;
+
+        p {
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          margin-top: 10px;
+          text-align: center;
+        }
+      }
+
+      .add-group-icon-button-container {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: relative;
+        background-color: #222e35;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .MuiSvgIcon-root {
+          width: 140px;
+          height: 140px;
+          color: #2e3e47;
+        }
+      }
+
+      .add-group-icon-avatar-container {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+
+        .add-group-icon-button-inner-container {
+          background-color: rgba(52, 70, 81, 0.3);
+          display: none;
+          color: white;
+        }
+
+        .MuiAvatar-root {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      .add-group-icon-avatar-container:hover {
+        .add-group-icon-button-inner-container {
+          display: flex;
+        }
+      }
+    }
+
+    .new-group-subject-input-container {
+      width: 90%;
+      margin-top: 15px;
+      border-bottom: 2px solid #00a884;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #8696a0;
+
+      .MuiSvgIcon-root {
+        color: #8696a0;
+      }
+
+      .input-container {
+        width: 80%;
+        position: relative;
+        height: 44px;
+        display: flex;
+
+        input {
+          width: 100%;
+          height: 100%;
+          color: #d1d7db;
+          font-size: 17px;
+          line-height: 20px;
+        }
+        span {
+          position: absolute;
+          pointer-events: none;
+          top: 20px;
+          left: 0px;
+          transition: 0.2s ease all;
+          font-size: 16px;
+          color: #8696a0;
+        }
+      }
+
+      .input-focused {
+        span {
+          top: -10px;
+          left: 0px;
+          opacity: 1;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .complete-new-group-component-footer {
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 46px;
+      height: 46px;
+      background-color: #00a884;
+      color: #e9edef;
+    }
+  }
+}

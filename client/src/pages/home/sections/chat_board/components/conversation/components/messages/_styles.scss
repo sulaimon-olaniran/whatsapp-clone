@@ -1,0 +1,111 @@
+.conversation-messages-component-container-dark-theme {
+  flex: 1 1;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px 0;
+  position: relative;
+
+  .each-grouped-messages-container {
+    width: 100%;
+    height: auto;
+
+    .each-grouped-messages-day-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 20px 0;
+
+      p {
+        padding: 5px 12px 6px;
+        box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+        background-color: #182229;
+        border-radius: 7.5px;
+        display: inline-block;
+        flex: none;
+        color: #8696a0;
+        font-weight: 500;
+        text-align: center;
+        font-size: 12.5px;
+        line-height: 21px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.messages-scroll-down-button-container-dark-theme {
+  position: absolute;
+  right: 11px;
+  bottom: 17px;
+
+  button {
+    background-color: #202c33;
+    color: #798287;
+    width: 42px;
+    height: 42px;
+  }
+
+  button:hover {
+    background-color: #202c33;
+  }
+}
+
+//************************************************ LIGHT THEME STYLES **********************************
+
+.conversation-messages-component-container-light-theme {
+  flex: 1 1;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px 0;
+  position: relative;
+
+  .each-grouped-messages-container {
+    width: 100%;
+    height: auto;
+
+    .each-grouped-messages-day-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 20px 0;
+
+      p {
+        padding: 5px 12px 6px;
+        box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+        background-color: #fff;
+        border-radius: 7.5px;
+        display: inline-block;
+        flex: none;
+        font-weight: 500;
+        color: #5a5a5a;
+        text-align: center;
+        font-size: 12.5px;
+        line-height: 21px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.messages-scroll-down-button-container-light-theme {
+  position: absolute;
+  right: 11px;
+  bottom: 17px;
+
+  button {
+    background-color: #fff;
+    color: $darkGrayText;
+    width: 42px;
+    height: 42px;
+  }
+
+  button:hover {
+    background-color: $subSecondaryLightBackground;
+  }
+}
+
+@import "./no_messages/styles";

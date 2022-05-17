@@ -1,0 +1,171 @@
+.shared-contact-info-component-dark-theme {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+
+  .shared-contact-info-header-container {
+    background-color: #202c33;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: #d9dee0;
+
+    button {
+      color: #d9dee0;
+    }
+
+    p {
+      font-size: 19px;
+      font-weight: 500;
+      margin-left: 20px;
+    }
+  }
+
+  .shared-contact-info-body-container {
+    width: 100%;
+    height: calc(100% - 4rem);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #111b21;
+
+    .each-contact-info-container {
+      width: 100%;
+      padding: 25px 15px;
+
+      .each-contact-info-top-section {
+        width: 100%;
+        display: flex;
+        margin-bottom: 25px;
+
+        .MuiAvatar-root {
+          width: 49px;
+          height: 49px;
+        }
+
+        p {
+          margin-top: 7px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21px;
+          color: #d9dee0;
+          margin-left: 15px;
+        }
+      }
+
+      .each-contact-info-bottom-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          color: #8696a0;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            color: #d9dee0;
+          }
+
+          span {
+            line-height: 18px;
+            color: #008069;
+            font-size: 0.875rem;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ************************************************* LIGHT THEME STYLES ***************************************
+
+.shared-contact-info-component-light-theme {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+
+  .shared-contact-info-header-container {
+    background-color: #008069;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: #fff;
+
+    button {
+      color: #d9dee0;
+    }
+
+    p {
+      font-size: 19px;
+      font-weight: 500;
+      margin-left: 20px;
+    }
+  }
+
+  .shared-contact-info-body-container {
+    width: 100%;
+    height: calc(100% - 4rem);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #e7e7e7;
+
+    .each-contact-info-container {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: #fff;
+
+      .each-contact-info-top-section {
+        width: 100%;
+        display: flex;
+        margin-bottom: 25px;
+
+        .MuiAvatar-root {
+          width: 49px;
+          height: 49px;
+        }
+
+        p {
+          margin-top: 7px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21px;
+          color: $darkText;
+          margin-left: 15px;
+        }
+      }
+
+      .each-contact-info-bottom-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          color: #5d686f;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            color: $darkText;
+          }
+
+          span {
+            line-height: 18px;
+            color: #008069;
+            font-size: 0.875rem;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}

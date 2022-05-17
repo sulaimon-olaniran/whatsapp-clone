@@ -1,0 +1,225 @@
+.reply-documenent-type-container-dark-theme {
+  display: flex;
+
+  .reply-documenent-type-details-container {
+    padding: 2px 3px 5px -3px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    //align-items: center;
+    min-height: 42px;
+    max-height: 100px;
+    overflow: hidden;
+    justify-content: center;
+    padding: 8px;
+    //margin-left: 5px;
+
+    .reply-documenent-type-sender-container {
+      max-width: 100%;
+      font-size: 12.8px;
+      font-weight: 500;
+      line-height: 20px;
+      display: inline-flex;
+      color: #53bdeb;
+      margin-bottom: 5px;
+    }
+
+    .reply-documenent-type-caption-container {
+      .reply-documenent-type-caption-text {
+        max-height: 70px;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        -webkit-font-smoothing: antialiased;
+        color: #ffffff99;
+        font-size: 12.6px;
+        line-height: 20px;
+        vertical-align: initial;
+
+        .caption-icon {
+          display: inline-block;
+          flex: none;
+          vertical-align: top;
+          margin-right: 3px;
+          color: #ffffff99;
+        }
+        span {
+          font: inherit;
+          font-size: 100%;
+          vertical-align: initial;
+          outline: none;
+          padding: 0;
+          margin: 0;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .reply-documenent-type-documenent-container {
+    width: 62px;
+    //max-height: 100%;
+    height: 52px;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+    overflow: hidden;
+
+    .react-pdf__Document {
+      width: 100%;
+      height: 100%;
+      .react-pdf__Page {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        canvas {
+          width: 100% !important;
+          height: 100% !important;
+          border-radius: 0;
+          box-shadow: 0 0 6px rgba(11, 20, 26, 0.15);
+          object-fit: cover;
+          //11,20,26
+        }
+
+        .react-pdf__Page__annotations {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.reply-document-type-message-sent-dark {
+  .reply-documenent-type-details-container {
+    .reply-documenent-type-sender-container {
+      color: #06cf9c;
+    }
+  }
+}
+
+.reply-documenent-from-input {
+  height: 100%;
+  .reply-documenent-type-details-container {
+    .reply-documenent-type-caption-container {
+      .reply-documenent-type-caption-text {
+        max-height: 50px;
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+}
+
+//********************************************** LIGHT THEME STYLES ************************************
+
+.reply-documenent-type-container-light-theme {
+  display: flex;
+
+  .reply-documenent-type-details-container {
+    padding: 2px 3px 5px -3px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    //align-items: center;
+    min-height: 42px;
+    max-height: 100px;
+    overflow: hidden;
+    justify-content: center;
+    padding: 8px;
+    //margin-left: 5px;
+
+    .reply-documenent-type-sender-container {
+      max-width: 100%;
+      font-size: 12.8px;
+      font-weight: 500;
+      line-height: 20px;
+      display: inline-flex;
+      color: #06cf9c;
+      margin-bottom: 5px;
+    }
+
+    .reply-documenent-type-caption-container {
+      .reply-documenent-type-caption-text {
+        max-height: 70px;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        -webkit-font-smoothing: antialiased;
+        color: $darkText;
+        font-size: 12.6px;
+        line-height: 20px;
+        vertical-align: initial;
+
+        .caption-icon {
+          display: inline-block;
+          flex: none;
+          vertical-align: top;
+          margin-right: 3px;
+          color: $darkGrayText;
+        }
+        span {
+          font: inherit;
+          font-size: 100%;
+          vertical-align: initial;
+          outline: none;
+          padding: 0;
+          margin: 0;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .reply-documenent-type-documenent-container {
+    width: 62px;
+    //max-height: 100%;
+    height: 52px;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+    overflow: hidden;
+
+    .react-pdf__Document {
+      width: 100%;
+      height: 100%;
+      .react-pdf__Page {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        canvas {
+          width: 100% !important;
+          height: 100% !important;
+          border-radius: 0;
+          box-shadow: 0 0 6px rgba(11, 20, 26, 0.15);
+          object-fit: cover;
+          //11,20,26
+        }
+
+        .react-pdf__Page__annotations {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.reply-document-type-message-sent-light {
+  .reply-documenent-type-details-container {
+    .reply-documenent-type-sender-container {
+      color: #53bdeb;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.users-list-component-dark-theme {
+  width: 100%;
+  height: 100%;
+  //overflow-y: scroll;
+
+  .each-split-users-aphabetic-section {
+    min-height: 10rem;
+    width: 100%;
+
+    .each-split-users-title {
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      padding-left: 40px;
+
+      p {
+        color: #008069;
+      }
+    }
+
+    .each-split-users-listing {
+      width: 100%;
+      min-height: 4rem;
+    }
+  }
+}
+
+//*********************************** LIGHT THEME STYLES *****************************
+
+.users-list-component-light-theme {
+  width: 100%;
+  height: 100%;
+  //overflow-y: scroll;
+
+  .each-split-users-aphabetic-section {
+    min-height: 10rem;
+    width: 100%;
+
+    .each-split-users-title {
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      padding-left: 40px;
+
+      p {
+        color: #008069;
+      }
+    }
+
+    .each-split-users-listing {
+      width: 100%;
+      min-height: 4rem;
+    }
+  }
+}

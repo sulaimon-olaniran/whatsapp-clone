@@ -1,0 +1,112 @@
+.privacy-settings-light-theme {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(228, 228, 228);
+
+  .privacy-settings-sub-header {
+    width: 100%;
+    height: 3rem;
+    padding: 20px;
+    background-color: #fff;
+    h3 {
+      color: #008d6e;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  .privacy-settings-body-container {
+    width: 100%;
+    height: auto;
+
+    .privacy-settings-body-first-section {
+      width: 100%;
+      background-color: #fff;
+      padding: 10px 25px;
+
+      .each-first-section-action-container {
+        width: 100%;
+        min-height: 3rem;
+        border-bottom: 1px solid $lightBorderColor;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+        cursor: pointer;
+
+        .Mui-checked {
+          svg {
+            fill: $primaryGreen;
+          }
+        }
+
+        .MuiSvgIcon-root {
+          fill: #667781;
+        }
+
+        div {
+          text-transform: capitalize;
+          p {
+            color: $darkGrayText;
+            font-size: 0.9375rem;
+            margin-bottom: 3px;
+          }
+
+          span {
+            font-size: 0.875rem;
+            color: #667781;
+            text-transform: initial;
+          }
+        }
+      }
+
+      .each-first-section-action-container:nth-child(4) {
+        border: none;
+      }
+    }
+
+    .privacy-settings-body-second-section {
+      width: 100%;
+      min-height: 10rem;
+      margin-top: 15px;
+      background-color: #fff;
+      padding: 10px 25px;
+
+      .each-second-section-action-container {
+        width: 100%;
+        min-height: 3rem;
+        border-bottom: 1px solid $lightBorderColor;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+        cursor: pointer;
+
+        .MuiSvgIcon-root {
+          fill: #667781;
+        }
+
+        div {
+          text-transform: capitalize;
+          p {
+            color: $darkGrayText;
+            font-size: 0.9375rem;
+            margin-bottom: 3px;
+          }
+
+          span {
+            font-size: 0.875rem;
+            color: #667781;
+            text-transform: initial;
+          }
+        }
+      }
+
+      .each-second-section-action-container:nth-child(2) {
+        border: none;
+      }
+    }
+  }
+}

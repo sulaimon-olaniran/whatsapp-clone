@@ -1,0 +1,129 @@
+.conversation-search-messages-component-dark-theme {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+
+  header {
+    width: 100%;
+    height: 4rem;
+    border-bottom: 1px solid $darkBorderColor;
+    display: flex;
+    background-color: #202c33;
+    align-items: center;
+    padding-left: 20px;
+
+    button {
+      color: #8696a0;
+    }
+
+    p {
+      color: #e9edef;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: normal;
+      margin-left: 30px;
+    }
+  }
+
+  .conversation-search-messages-body-container {
+    width: 100%;
+    height: calc(100% - 4rem);
+    background-color: #111b21;
+
+    .conversation-search-input-container {
+      width: 100%;
+      min-height: 3rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $darkBorderColor;
+      padding: 5px 0;
+
+      .input-inner-container {
+        width: 100%;
+        height: 2.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .searched-messages-result-container {
+      width: 100%;
+      height: calc(100% - 3rem);
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      .each-search-message-container {
+        height: 72px;
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        border-bottom: 1px solid $darkBorderColor;
+
+        span {
+          color: #8696a0;
+          overflow: hidden;
+          line-height: 14px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 100%;
+          font-size: 12px;
+        }
+
+        .search-message-message-container {
+          display: flex;
+          align-items: center;
+          min-height: 20px;
+          font-size: 13px;
+          line-height: 20px;
+          margin-top: 2px;
+
+          // flex-grow: 1;
+          overflow: hidden;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          span {
+            overflow: hidden;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            //margin-left: 2px;
+            color: #8696a0;
+
+            .YourHighlightClass {
+              background-color: transparent !important;
+              font-weight: 600;
+              color: #00a884;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .each-search-message-container:hover {
+        background-color: #202c33;
+      }
+    }
+    .no-searched-message-container {
+      width: 100%;
+      height: 10rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        color: #667781;
+        font-size: 14px;
+      }
+    }
+  }
+}

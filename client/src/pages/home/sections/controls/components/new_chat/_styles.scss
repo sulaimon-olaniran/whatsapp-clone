@@ -1,0 +1,165 @@
+.controls-new-chat-component-dark-theme {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .controls-new-chat-slide-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: $subSecondaryDarkBackground;
+    z-index: 1;
+  }
+
+  .controls-new-chat-search-container {
+    border-bottom: 1px solid $darkBorderColor;
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    input {
+      color: #d1d7db;
+    }
+
+    input::placeholder {
+      color: $universalTextColor;
+    }
+  }
+
+  .controls-new-chat-body-container {
+    width: 100%;
+    height: calc(100% - 10rem);
+    overflow-y: scroll;
+    padding: 10px 0;
+
+    .controls-new-chat-new-group-button {
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding-left: 20px;
+
+      span {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: #00a884;
+        color: #e9edef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div {
+        width: 85%;
+        height: 100%;
+        border-bottom: 1px solid $darkBorderColor;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        color: $lightGrayText;
+      }
+    }
+
+    .controls-new-chat-new-group-button:hover {
+      background-color: $subPrimaryDarkBackground;
+      div {
+        border: none;
+      }
+    }
+  }
+}
+
+//********************************************************** LIGHT THEME STYLES **************************************************
+
+.controls-new-chat-component-light-theme {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .controls-new-chat-slide-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    // background-color: $subSecondaryDarkBackground;
+    z-index: 1;
+  }
+
+  .controls-new-chat-search-container {
+    border-bottom: 1px solid $lightBorderColor;
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    input {
+      color: #d1d7db;
+    }
+
+    input::placeholder {
+      color: $universalTextColor;
+    }
+  }
+
+  .controls-new-chat-body-container {
+    width: 100%;
+    height: calc(100% - 10rem);
+    overflow-y: scroll;
+    padding: 10px 0;
+
+    .controls-new-chat-new-group-button {
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding-left: 20px;
+
+      span {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: #00a884;
+        color: #e9edef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div {
+        width: 85%;
+        height: 100%;
+        border-bottom: 1px solid $lightBorderColor;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        color: $darkText;
+      }
+    }
+
+    .controls-new-chat-new-group-button:hover {
+      background-color: $subSecondaryLightBackground;
+      div {
+        border: none;
+      }
+    }
+  }
+}

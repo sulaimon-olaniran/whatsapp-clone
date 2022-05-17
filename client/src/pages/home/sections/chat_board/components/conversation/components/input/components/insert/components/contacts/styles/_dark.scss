@@ -1,0 +1,208 @@
+.insert-contacts-component-dark-theme {
+  width: 436px;
+  height: 75vh;
+  //background-color: #3b4a54;
+  background-color: #111b21;
+
+  .insert-contacts-component-header-container {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: #202c33;
+
+    button {
+      color: #d9dee0;
+    }
+
+    h1 {
+      margin-left: 20px;
+      color: #d9dee0;
+      font-weight: 500;
+      font-size: 19px;
+    }
+  }
+
+  .insert-contacts-component-search-input-container {
+    width: 100%;
+    height: 4rem;
+    padding: 15px 0;
+    border-bottom: 1px solid $darkBorderColor;
+
+    .search-input-body-container {
+      height: 2.5rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .insert-contacts-component-contacts-list-container {
+    width: 100%;
+    height: calc(100% - 8rem);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 50%;
+
+    .contacts-list-inner-container {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+
+      .contacts-list-listed-container {
+        h1 {
+          text-transform: uppercase;
+          color: #008069;
+          font-weight: 400;
+          font-size: 16px;
+          margin: 30px 5px 30px 24px;
+        }
+
+        .insert-contacts-each-contact-container {
+          width: 100%;
+          height: 4.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 24px;
+          cursor: pointer;
+
+          .checkbox-container {
+            .MuiCheckbox-root {
+              color: #d1d7db;
+            }
+
+            .Mui-checked {
+              color: #00a884;
+            }
+
+            span {
+              padding: 0;
+              margin: 0;
+            }
+          }
+
+          .contact-inforamtion-container {
+            height: 100%;
+            width: calc(100% - 50px);
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+
+            .MuiAvatar-root {
+              width: 49px;
+              height: 49px;
+            }
+
+            .contact-name-about-information-container {
+              margin-left: 15px;
+              width: 100%;
+              height: 100%;
+              border-top: 1px solid $darkBorderColor;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 21px;
+                color: #d1d7db;
+              }
+
+              small {
+                font-size: 13px;
+                line-height: 20px;
+                margin-top: 2px;
+                color: #848488;
+              }
+            }
+          }
+        }
+        .insert-contacts-each-contact-container:hover {
+          background-color: #202c33;
+        }
+      }
+    }
+
+    .insert-contacts-action-container {
+      width: 100%;
+      min-height: 0;
+      flex: 0;
+      height: 0;
+      background-color: #202c33;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .selected-contacts-list-container {
+        max-width: 400px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+
+        .selected-contacts-names-container {
+          width: 320px;
+          height: 20px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          color: #e9edef;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+
+          p {
+            font-size: 16px;
+            font-size: 16px;
+            height: inherit;
+            color: #e9edef;
+            margin-left: 5px;
+            //display: inline;
+
+            span {
+              font-size: 16px;
+              color: inherit;
+              margin-left: 1px;
+            }
+          }
+
+          p:nth-child(1) {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 100px;
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+
+      button {
+        position: absolute;
+        background-color: #00a884;
+        width: 60px;
+        height: 60px;
+        color: #e9edef;
+        bottom: 32px;
+        right: 32px;
+        display: none;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    .insert-contacts-action-active {
+      flex: 10%;
+
+      button {
+        display: flex;
+      }
+    }
+  }
+}

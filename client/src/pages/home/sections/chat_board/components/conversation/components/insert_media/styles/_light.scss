@@ -1,0 +1,191 @@
+.conversation-insert-media-component-light-theme {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  //padding-bottom: 15px;
+
+  #insert_media_input_2 {
+    display: none;
+  }
+
+  .insert-media-component-header-container {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    button {
+      color: #666666;
+      margin: 0 5px;
+    }
+
+    .edit-image-options-container {
+      width: calc(100% - 50px);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .insert-media-component-body-container {
+    width: 100%;
+    height: calc(100% - 16rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 10px;
+
+    .preview-image-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+
+  .insert-media-component-footer-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .insert-media-component-message-input-container {
+      width: 70%;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+
+      button {
+        color: #737373;
+      }
+
+      .message-input-text-container {
+        width: calc(100% - 50px);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 15px;
+        background-color: #fff;
+        border-radius: 8px;
+
+        textarea {
+          height: 100%;
+          width: calc(100% - 50px);
+          font-size: 17px;
+          color: $darkText;
+          outline: none;
+          resize: none;
+          background: none;
+          border: none;
+        }
+      }
+    }
+
+    .insert-media-component-media-selection-container {
+      width: 100%;
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      border-top: 1px solid $lightBorderColor;
+
+      button {
+        background-color: #00a884;
+        height: 60px;
+        width: 60px;
+        color: #e9edef;
+      }
+
+      .media-listed-section-container {
+        width: calc(100% - 80px);
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .selected-images-list-container {
+          height: 100%;
+          max-width: calc(100% - 60px);
+          display: flex;
+          overflow-y: hidden;
+          overflow-x: scroll;
+
+          .each-image-container {
+            width: 52px;
+            height: 52px;
+            margin: 0 5px;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #101a20;
+            position: relative;
+            cursor: pointer;
+
+            button {
+              height: 20px;
+              width: 20px;
+              border-radius: 50%;
+              background-color: transparent;
+              display: none;
+              position: absolute;
+              top: 2px;
+              right: 6px;
+              z-index: 5;
+
+              .MuiSvgIcon-root {
+                width: 16px;
+                height: 16px;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              display: block;
+              object-fit: cover;
+            }
+          }
+
+          .each-image-container:hover {
+            button {
+              display: flex;
+              background-color: green;
+            }
+          }
+
+          .image-selected {
+            border: 3px solid #00a884;
+          }
+        }
+
+        .add-image-button {
+          width: 52px;
+          height: 52px;
+          margin-left: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #959595;
+          border-radius: 5px;
+          color: #8d8d8d;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

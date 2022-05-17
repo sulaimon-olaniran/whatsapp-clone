@@ -1,0 +1,19 @@
+.message-input-insert-popover-component {
+  width: auto;
+  min-height: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: none;
+
+  input {
+    display: none;
+  }
+
+  button {
+    height: 53px;
+    margin-bottom: 20px;
+  }
+}
+
+@import "./components/contacts/styles";

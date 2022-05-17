@@ -1,0 +1,251 @@
+.message-contact-type-dark-theme {
+  width: 100%;
+  border-radius: 7.5px;
+  position: relative;
+
+  .message-contact-options-container {
+    position: absolute;
+    right: 2px;
+    top: 0px;
+    transform: translateX(30px);
+    display: none;
+    transition: transform 0.15s ease-in-out;
+    z-index: 100;
+  }
+
+  .message-contact-type-body-container {
+    width: 100%;
+    padding: 5px;
+
+    .message-contact-type-contact-info-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      .contact-type-contact-avatar-container {
+        .MuiAvatar-root {
+          width: 49px;
+          height: 49px;
+          cursor: pointer;
+        }
+
+        .contact-avatar-multiple-container {
+          display: flex;
+          align-items: center;
+          .each-contact-avatar-container {
+            width: 42px;
+            height: 42px;
+            border: 2px solid #aebac1;
+            border-radius: 50%;
+            margin-left: -33px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .MuiAvatar-root {
+              width: 39px;
+              height: 39px;
+            }
+          }
+
+          .each-contact-avatar-container:nth-child(1) {
+            margin: 0;
+            z-index: 500;
+          }
+          .each-contact-avatar-container:nth-child(2) {
+            z-index: 400;
+          }
+        }
+      }
+
+      .contact-type-contact-name-container {
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #e9edefe0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-left: 15px;
+      }
+    }
+
+    .message-contact-type-time-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .message-time-container {
+        position: relative;
+        z-index: 10;
+        color: #ffffff99;
+        min-height: 15px;
+        font-size: 0.6875rem;
+        white-space: nowrap;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+
+        svg {
+          width: 16px;
+          height: 15px;
+          margin-left: 2px;
+        }
+
+        P {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+
+  .message-contact-type-button-container {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #e9edef1f;
+    display: flex;
+
+    button {
+      flex: 1;
+      flex-grow: 1;
+      text-transform: initial;
+      color: #53bdeb;
+    }
+  }
+}
+
+.message-contact-type-dark-theme:hover {
+  .message-contact-options-container {
+    display: flex;
+    transform: translateX(0%);
+  }
+}
+
+//************************************************* LIGHT THEME STYLES *************************************************
+
+.message-contact-type-light-theme {
+  width: 100%;
+  border-radius: 7.5px;
+  position: relative;
+
+  .message-contact-options-container {
+    position: absolute;
+    right: 2px;
+    top: 0px;
+    transform: translateX(30px);
+    display: none;
+    transition: transform 0.15s ease-in-out;
+    z-index: 100;
+  }
+
+  .message-contact-type-body-container {
+    width: 100%;
+    padding: 5px;
+
+    .message-contact-type-contact-info-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      .contact-type-contact-avatar-container {
+        .MuiAvatar-root {
+          width: 49px;
+          height: 49px;
+          cursor: pointer;
+        }
+
+        .contact-avatar-multiple-container {
+          display: flex;
+          align-items: center;
+          .each-contact-avatar-container {
+            width: 42px;
+            height: 42px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            margin-left: -33px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .MuiAvatar-root {
+              width: 39px;
+              height: 39px;
+            }
+          }
+
+          .each-contact-avatar-container:nth-child(1) {
+            margin: 0;
+            z-index: 500;
+          }
+          .each-contact-avatar-container:nth-child(2) {
+            z-index: 400;
+          }
+        }
+      }
+
+      .contact-type-contact-name-container {
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        color: $darkText;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-left: 15px;
+      }
+    }
+
+    .message-contact-type-time-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .message-time-container {
+        position: relative;
+        z-index: 10;
+        color: #667781;
+        min-height: 15px;
+        font-size: 0.6875rem;
+        white-space: nowrap;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+
+        svg {
+          width: 16px;
+          height: 15px;
+          margin-left: 2px;
+        }
+
+        P {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+
+  .message-contact-type-button-container {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #111b210f;
+    display: flex;
+
+    button {
+      flex: 1;
+      flex-grow: 1;
+      text-transform: initial;
+      color: #53bdeb;
+    }
+  }
+}
+
+.message-contact-type-light-theme:hover {
+  .message-contact-options-container {
+    display: flex;
+    transform: translateX(0%);
+  }
+}
+
+@import "./info/styles";
