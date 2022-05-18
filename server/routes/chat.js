@@ -7,7 +7,7 @@ import {fetchChats} from "../controllers/chat/fetchChats.js";
 import {pinChat} from "../controllers/chat/pinChat.js";
 import {unpinChat} from "../controllers/chat/unpinChat.js";
 import {archiveChat} from "../controllers/chat/archiveChat.js";
-import {unarchiveChat} from "../controllers/chat/unArchiveChat.js";
+import {unarchiveChat} from "../controllers/chat/unarchiveChat.js";
 import {markChatAsUnread} from "../controllers/chat/markAsUnread.js";
 import {markChatAsRead} from "../controllers/chat/markAsRead.js";
 import {unhideChat} from "../controllers/chat/unhideChat.js";
