@@ -2,11 +2,11 @@
   "name": "whatsapp-clone",
   "version": "1.0.0",
   "description": "Whatsapp Web Clone built with the MERN stack",
-  "main": "index.js",
-  "type": "module",
+  "main": "index.mjs",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.mjs"
   },
   "author": "Sulaimon Olaniran",
   "license": "MIT",
