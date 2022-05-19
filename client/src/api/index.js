@@ -15,6 +15,6 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
   message_api = process.env.REACT_APP_MESSAGE_API;
 }
 
-export const userApi = user_api;
-export const chatApi = chat_api;
-export const messagApi = message_api;
+export const userApi = "https://os-whatsapp-clone.herokuapp.com/user";
+export const chatApi = "https://os-whatsapp-clone.herokuapp.com/chat";
+export const messagApi = "https://os-whatsapp-clone.herokuapp.com/message";
