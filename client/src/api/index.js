@@ -1,3 +1,5 @@
+//require("dotenv").config();
+
 let user_api = "";
 let chat_api = "";
 let message_api = "";

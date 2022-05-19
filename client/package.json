@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@toast-ui/react-image-editor": "^3.15.2",
     "axios": "^0.25.0",
+    "dotenv": "^16.0.1",
     "emoji-tree": "^1.1.2",
     "fabric": "^4.6.0",
     "fabricjs-react": "^1.0.8",

@@ -68,7 +68,7 @@ export const signInUser = data => {
         });
       })
       .catch(error => {
-        console.log(error.response.data);
+        //console.log(error.response.data);
         dispatch({
           type: SIGN_IN_USER_FAILED,
           payload: error.response.data.message,
