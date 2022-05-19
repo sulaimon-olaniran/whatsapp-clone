@@ -62,7 +62,7 @@ This is a clone of the popular messager Web Application WhatsApp. It provides si
 
 - Creating and Deleting chats
 
-- Archiving and pinning chats
+- Archiving, unarchiving, pinning and unpinning chats
 
 - Clearing chat messages
 
@@ -122,9 +122,26 @@ At the end of the day, the major technologies implemented in this project are Re
 
 ## 📸 Screenshots
 
+![Alt text](./images/screenshot_8.png "title")
+![Alt text](./images/screenshot_7.png "title")
 ![Alt text](./images/screenshot_1.png "Chat Board")
-![Alt text](./images/screenshot_4.png "OS-WhatsApp-Clone Light Theme")
-![Alt text](./images/screenshot_2.png "OS-WhatsApp-Clone Light Theme")
-![Alt text](./images/screenshot_6.png "OS-WhatsApp-Clone Light Theme")
-![Alt text](./images/screenshot_3.png "OS-WhatsApp-Clone Light Theme")
-![Alt text](./images/screenshot_5.png "OS-WhatsApp-Clone Light Theme")
+![Alt text](./images/screenshot_4.png "title")
+![Alt text](./images/screenshot_2.png "title")
+![Alt text](./images/screenshot_6.png "title")
+![Alt text](./images/screenshot_3.png "title")
+![Alt text](./images/screenshot_5.png "title")
+
+---
+
+## 📝 License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2022 Olaniran Sulaimon
+
+---
+
+## 📩 Contact
+
+- Email : sulaimon.olaniran95@gmail.com
+- Twitter : [sulai_m0n](https://twitter.com/sulai_m0n)

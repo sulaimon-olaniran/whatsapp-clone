@@ -265,6 +265,10 @@
       .each-conversation-account-action:hover {
         background-color: $subSecondaryLightBackground;
       }
+
+      .contact-is-blocked {
+        color: #17ec3b;
+      }
     }
 
     .conversation-delete-action-container {

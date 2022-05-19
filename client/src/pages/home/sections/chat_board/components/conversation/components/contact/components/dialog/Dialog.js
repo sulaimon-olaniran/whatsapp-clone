@@ -1,9 +1,14 @@
 import {forwardRef} from "react";
-import {useSelector} from "react-redux";
+import {useSelector, useDispatch} from "react-redux";
 import Dialog from "@mui/material/Dialog";
 import Zoom from "@mui/material/Zoom";
 import {Button} from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
+import {deleteChat} from "../../../../../../../../../../store/actions/chat";
+import {
+  blockContact,
+  unBlockContact,
+} from "../../../../../../../../../../store/actions/user";
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Zoom direction="up" ref={ref} {...props} />;
@@ -13,11 +18,35 @@ const label = {inputProps: {"aria-label": "Checkbox demo"}};
 
 const ConversationContactActionsDialog = ({open, handleClose, actionType}) => {
   const theme = useSelector(state => state.app.theme);
-  const handleDeleteChat = () => {};
 
-  const handleBlockContact = () => {};
+  const chat = useSelector(state => state.chat.currentChat);
+  const user = useSelector(state => state.user.user);
 
-  const handleReportContact = () => {};
+  const contactIsBlocked = user?.privacy?.blocked_contacts?.includes(
+    chat?.partner
+  );
+
+  const dispatch = useDispatch();
+
+  const handleDeleteChat = () => {
+    dispatch(deleteChat(chat._id));
+    handleClose();
+  };
+
+  const handleBlockContact = () => {
+    dispatch(blockContact(chat.partner));
+    handleClose();
+  };
+
+  const handleUnblockContact = () => {
+    dispatch(unBlockContact(chat.partner));
+    handleClose();
+  };
+
+  const handleReportContact = () => {
+    handleClose();
+  };
+
   return (
     <Dialog
       open={open}
@@ -70,16 +99,23 @@ const ConversationContactActionsDialog = ({open, handleClose, actionType}) => {
             Cancel
           </Button>
 
-          {actionType === "block" && (
-            <Button variant="contained" onClick={handleBlockContact}>
-              Block
-            </Button>
-          )}
+          {actionType === "block" &&
+            (contactIsBlocked ? (
+              <Button variant="contained" onClick={handleUnblockContact}>
+                Unblock
+              </Button>
+            ) : (
+              <Button variant="contained" onClick={handleBlockContact}>
+                Block
+              </Button>
+            ))}
+
           {actionType === "report" && (
             <Button variant="contained" onClick={handleReportContact}>
               Report
             </Button>
           )}
+
           {actionType === "delete" && (
             <Button variant="contained" onClick={handleDeleteChat}>
               Delete chat

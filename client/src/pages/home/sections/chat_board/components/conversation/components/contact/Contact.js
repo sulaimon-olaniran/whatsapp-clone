@@ -32,6 +32,7 @@ const ConversationContactInfoComponent = ({closeSideBar}) => {
   const dispatch = useDispatch();
 
   const theme = useSelector(state => state.app.theme);
+  const user = useSelector(state => state.user.user);
   const currentChat = useSelector(state => state.chat.currentChat);
 
   const messages = currentChat.messages;
@@ -41,6 +42,10 @@ const ConversationContactInfoComponent = ({closeSideBar}) => {
   );
 
   const docs = messages.filter(message => message.type === "document");
+
+  const contactIsBlocked = user?.privacy?.blocked_contacts?.includes(
+    currentChat?.partner
+  );
 
   const handleOpenSlide = component => {
     setSlideComponent(component);
@@ -182,11 +187,16 @@ const ConversationContactInfoComponent = ({closeSideBar}) => {
 
         <div className="conversation-account-actions-container">
           <div
-            className="each-conversation-account-action"
+            className={`each-conversation-account-action ${
+              contactIsBlocked && "contact-is-blocked"
+            }`}
             onClick={() => handleOpenDialog("block")}
           >
             <BlockIcon />
-            <p>Block {currentChat?.partnerData?.username}</p>
+            <p>
+              {contactIsBlocked ? "Unblock" : "Block"}{" "}
+              {currentChat?.partnerData?.username}
+            </p>
           </div>
           <div
             className="each-conversation-account-action"
