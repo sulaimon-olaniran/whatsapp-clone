@@ -1,14 +1,12 @@
 import {useSelector} from "react-redux";
 
-import ControlHeaderComponent from "../../../../../../components/headers/ControlsHeader";
-
+import ProfilePhotoComponent from "./components/photo/Photo";
 import ProfileNameInputComponent from "./components/NameInput";
 import ProfileAboutInputComponent from "./components/AboutInput";
-import ProfilePhotoComponent from "./components/photo/Photo";
+import ControlHeaderComponent from "../../../../../../components/headers/ControlsHeader";
 
 const ControlsProfileComponent = ({deactiveControl}) => {
   const theme = useSelector(state => state.app.theme);
-  //const user = useSelector(state => state.user.user);
 
   return (
     <div className={`controls-profile-component-${theme}-theme-container`}>

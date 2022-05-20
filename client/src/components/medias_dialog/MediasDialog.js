@@ -29,8 +29,6 @@ const MessagesMediasDialogComponent = () => {
 
   const messages = currentChat?.messages;
 
-  //console.log(messagesMediaDialog);
-
   const {open, media} = messagesMediaDialog;
 
   const [selectedMedia, setSelectedMedia] = useState(null);
@@ -58,6 +56,10 @@ const MessagesMediasDialogComponent = () => {
     setSelectedMedia(media);
   }, [media]);
 
+  //CHUNK OF CODES TO CHECK IF TIME MEDIA WAS SENT IS WITHIN A WEEK
+  //IF TIME IS WITHIN A WEEK, SELECT ANY WEEK DAY
+  //IF TIME IS CURRENT DAY, USE TODAY AS TIME
+  //IF TIME IS MORE THAN A WEEK, USE A DAY FORMAT 01/01/2022
   const mediaTime = moment(selectedMedia?.time);
   const currentDay = moment(new Date());
   const prevDay = moment().subtract(1, "day");
@@ -71,7 +73,6 @@ const MessagesMediasDialogComponent = () => {
     <Dialog
       open={open}
       TransitionComponent={Transition}
-      //keepMounted={false}
       onClose={handleCloseDialog}
       aria-describedby="alert-dialog-slide-description"
       fullScreen

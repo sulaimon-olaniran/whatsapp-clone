@@ -32,7 +32,6 @@ export const signinUser = (req, res) => {
           JWT_SECRET,
 
           (err, token) => {
-            //console.log(err)
             if (err) throw err;
 
             return res.status(200).json({

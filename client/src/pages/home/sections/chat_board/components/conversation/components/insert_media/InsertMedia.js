@@ -17,7 +17,6 @@ import {
   PenIcon,
   TextIcon,
 } from "../../../../../../../../icons";
-//import EditImageComponent from "../../../../../../../../components/edit_image/EditImage";
 import InputEmojisComponent from "../../../../../../../../components/emoji/input/Input";
 import {sendNewChatMessage} from "../../../../../../../../store/actions/chat";
 
@@ -104,6 +103,11 @@ const ConversationInsertMediaComponent = ({
         subId: uuidv4(),
         image: mediaExtension.toLowerCase() === "gif" ? null : image,
         gif: mediaExtension.toLowerCase() === "gif" ? image : null,
+        isBlocked: currentChat.partnerData.privacy.blocked_contacts.includes(
+          user._id
+        )
+          ? true
+          : false,
       };
 
       dispatch(sendNewChatMessage(message));

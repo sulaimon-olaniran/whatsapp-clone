@@ -1,11 +1,6 @@
 import {useSelector} from "react-redux";
 
-import {
-  ChatBoardIcon,
-  LaptopIcon,
-  PadlockIcon,
-  LightThemeChatBoardIcon,
-} from "../../../../../../icons";
+import {ChatBoardIcon, LaptopIcon, PadlockIcon} from "../../../../../../icons";
 
 //#F1F1F2
 

@@ -13,7 +13,6 @@ export const fetchChats = (req, res) => {
 
     {
       $set: {
-        //createdAt: moment().format(),
         createdAt: {
           $cond: {
             if: {$eq: ["$partner", id]},

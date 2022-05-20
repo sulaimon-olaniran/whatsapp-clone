@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import {Routes, Route, BrowserRouter as Router} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {usePageVisibility} from "react-page-visibility";
-//import moment from "moment";
 
 import "./styles/styles.scss";
 
@@ -20,6 +19,7 @@ import {
   newChatMessage,
   fetchStarredMessages,
 } from "./store/actions/chat";
+
 import MessagesMediasDialogComponent from "./components/medias_dialog/MediasDialog";
 import {contactIsUpated} from "./store/actions/universal";
 import axios from "axios";
@@ -27,8 +27,10 @@ import {userApi} from "./api";
 import {InitializingAppLoader} from "./components/loaders/initializing/Initializing";
 import SnackbarComponent from "./components/snackbar/Snackbar";
 import UniversalLoader from "./components/loaders/universal/Universal";
+import AvailabilityComponent from "./components/availability/Availability";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
   const [appLoader, setAppLoader] = useState(true);
   const user = useSelector(state => state.user.user);
   const token = useSelector(state => state.user.token);
@@ -40,11 +42,9 @@ function App() {
     state => state.chat.fetchingStaredMessages
   );
 
-  const isVisible = usePageVisibility();
+  const isVisible = usePageVisibility(); //CHECK IF PAGE IS ACTIVE OR NOT
 
   const dispatch = useDispatch();
-
-  //console.log(user);
 
   useEffect(() => {
     if (!token) return;
@@ -54,6 +54,7 @@ function App() {
     dispatch(fetchStarredMessages());
   }, [token, dispatch]);
 
+  //LISTENS TO WHEN MESSAGE IS EDITED SUCH AS WHEN MESSAGE IS DELETED FOR EVERYONE
   useEffect(() => {
     const channel = pusher.subscribe("chat-channel");
 
@@ -66,17 +67,19 @@ function App() {
     };
   }, [dispatch]);
 
+  //LISTENS TO WHEN A NEW MESSAGE IS RECEIVED IN THE SERVER
   useEffect(() => {
     const channel = pusher.subscribe("chat-channel");
 
     channel.bind("new-message", function (data) {
+      //CHECK IF USER IS RECEIVER OF THE MESSAGE AND IF SENDER OF MESSAGE ISN'T BLOCKED
       if (
         data.sender === user?._id ||
         data.receiver !== user?._id ||
         user.privacy.blocked_contacts.includes(data.sender)
       )
         return;
-      console.log(data);
+
       dispatch(newChatMessage(data._id));
     });
 
@@ -85,11 +88,12 @@ function App() {
     };
   }, [user, dispatch]);
 
+  //LISTENS TO WHEN A USER ACCOUNT DATA HAS BEEN UPDATED
   useEffect(() => {
     const channel = pusher.subscribe("user-channel");
 
     channel.bind("user-updated", function (data) {
-      //console.log(data);
+      //UPDATE CONTACT/USER WHEN UPDATE DOESN'T BELONGS TO LOGGED IN USER
       if (data.id === user?._id) return;
       dispatch(contactIsUpated(data.id));
     });
@@ -99,20 +103,21 @@ function App() {
     };
   }, [user, dispatch]);
 
-  // useEffect(() => {
-  //   const config = {
-  //     headers: {
-  //       "content-type": "application/json",
-  //       "oswc-auth-token": token,
-  //     },
-  //   };
+  //HANDLES USER PRESENCE STATUS
+  useEffect(() => {
+    const config = {
+      headers: {
+        "content-type": "application/json",
+        "oswc-auth-token": token,
+      },
+    };
 
-  //   if (isVisible) {
-  //     axios.post(`${userApi}/online`, {}, config);
-  //   } else {
-  //     axios.post(`${userApi}/offline`, {}, config);
-  //   }
-  // }, [isVisible, token]);
+    if (isVisible) {
+      axios.post(`${userApi}/online`, {}, config);
+    } else {
+      axios.post(`${userApi}/offline`, {}, config);
+    }
+  }, [isVisible, token]);
 
   const isFetchingData =
     fetchingAppUsers ||
@@ -124,6 +129,26 @@ function App() {
     setAppLoader(false);
   };
 
+  const handleScreenSize = () => {
+    console.log(window.innerWidth);
+    if (window.innerWidth < 720) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleScreenSize);
+    return () => window.removeEventListener("resize", handleScreenSize);
+  });
+
+  useEffect(() => {
+    window.addEventListener("load", handleScreenSize);
+    return () => window.removeEventListener("load", handleScreenSize);
+  });
+
+  if (isMobile) return <AvailabilityComponent />;
   if (token && appLoader)
     return (
       <InitializingAppLoader

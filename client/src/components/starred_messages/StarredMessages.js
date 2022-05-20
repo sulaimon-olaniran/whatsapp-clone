@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import {Avatar} from "@mui/material";
 import {useSelector, useDispatch} from "react-redux";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -19,14 +19,10 @@ const StarredMessagesComponent = ({goBack, messages}) => {
 
   const dispatch = useDispatch();
 
-  //console.log(messages);
-
   const theme = useSelector(state => state.app.theme);
   const user = useSelector(state => state.user.user);
   const token = useSelector(state => state.user.token);
   const chats = useSelector(state => state.chat.chats);
-
-  // const messages = useSelector(state => state.chat.currentChat.messages);
 
   const sortedMessages = messages.sort((a, b) => {
     const compA = new Date(a.time);
@@ -80,7 +76,6 @@ const StarredMessagesComponent = ({goBack, messages}) => {
             <MoreVertIcon />
           </IconButton>
           <Popover
-            //id={id}
             open={Boolean(menuAnchor)}
             anchorEl={menuAnchor}
             onClose={handleHideMenuOptions}
@@ -107,10 +102,12 @@ const StarredMessagesComponent = ({goBack, messages}) => {
           {sortedMessages.slice(0, 10).map(message => {
             const {sender, time} = message;
 
-            //FETCH THE CHAT THAT THE MESSAGE BELONGS TO
+            //GET THE CHAT THAT THE MESSAGE BELONGS TO
             const chat = chats.find(chat => chat._id === message.chatId);
+            //GET PARTNER'S DATA FROM CHAT
             const {partnerData} = chat;
 
+            //CHECK DAY MESSAGE WAS SENT IS CURRENT DAY, WITHIN A WEEK OR MORE THAN A WEEK
             const messagesDay = moment(time);
             const currentDay = moment(new Date());
             const prevDay = moment().subtract(1, "day");

@@ -3,7 +3,6 @@ import {useSelector, useDispatch} from "react-redux";
 import Dialog from "@mui/material/Dialog";
 import Zoom from "@mui/material/Zoom";
 import {Button} from "@mui/material";
-import axios from "axios";
 
 import {deleteChat} from "../../../../../../../../../../store/actions/chat";
 
@@ -24,7 +23,6 @@ const DeleteChatDialog = ({open, handleClose, chat}) => {
     <Dialog
       open={open}
       TransitionComponent={Transition}
-      //onClose={handleClose}
       aria-describedby="alert-dialog-slide-description"
     >
       <div className={`delete-chat-dialog-${theme}-theme`}>

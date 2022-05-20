@@ -41,6 +41,11 @@ const ConversationInsertStickerComponent = ({
       time: Date.now(),
       subId: uuidv4(),
       sticker: sticker,
+      isBlocked: currentChat.partnerData.privacy.blocked_contacts.includes(
+        user._id
+      )
+        ? true
+        : false,
     };
 
     dispatch(sendNewChatMessage(message));

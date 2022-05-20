@@ -10,7 +10,6 @@ import {
 import {Button, IconButton} from "@mui/material";
 import CloseOutlined from "@mui/icons-material/CloseOutlined";
 import {useDebounce} from "use-debounce";
-//
 
 import ControlHeaderComponent from "../../../../../../../../../../components/headers/ControlsHeader";
 import UsersListComponent from "../../../../../../../../../../components/users_list/UsersList";
@@ -42,8 +41,6 @@ const PrivacyBlockContactsComponent = ({closePrivacy}) => {
   const blockedContacts = users.filter(user =>
     blocked_contacts.includes(user._id)
   );
-
-  // console.log(blocked_contacts);
 
   const dispatch = useDispatch();
 
@@ -128,7 +125,6 @@ const PrivacyBlockContactsComponent = ({closePrivacy}) => {
       <Dialog
         open={contactsDialog}
         TransitionComponent={Transition}
-        //keepMounted
         onClose={handleCloseContactsDialogs}
         aria-describedby="alert-dialog-slide-description"
       >

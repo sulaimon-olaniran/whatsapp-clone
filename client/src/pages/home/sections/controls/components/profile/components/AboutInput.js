@@ -3,7 +3,6 @@ import {IconButton, TextareaAutosize} from "@mui/material";
 import {useSelector, useDispatch} from "react-redux";
 import CreateIcon from "@mui/icons-material/Create";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
-import {CircularProgress} from "@mui/material";
 
 import InputEmojisComponent from "../../../../../../../components/emoji/input/Input";
 import {updateUserData} from "../../../../../../../store/actions/user";
@@ -12,7 +11,6 @@ const ProfileAboutInputComponent = () => {
   const [editAbout, setEditAbout] = useState(false);
 
   const user = useSelector(state => state.user.user);
-  //const updating = useSelector(state => state.user.updatingUser);
 
   const [aboutInputValue, setAboutInputValue] = useState(user?.about);
 
@@ -54,12 +52,6 @@ const ProfileAboutInputComponent = () => {
           editAbout ? "input-active" : ""
         }`}
       >
-        {/* {updating.isUpdating && updating.type === "about" && (
-          <div className="input-textfield-updating-container">
-            <CircularProgress />
-          </div>
-        )} */}
-
         <TextareaAutosize
           aria-label="empty textarea"
           maxRows={5}

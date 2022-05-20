@@ -2,7 +2,7 @@ import {Fragment} from "react";
 import {useSelector} from "react-redux";
 
 import MessageStatusComponent from "../../../../../../../../components/message/components/status/Status";
-//import TextEmojiComponent from "../../../../../../../../components/text_emoji/TextEmoji";
+
 import {
   SmallCameraIcon,
   SmallGifIcon,

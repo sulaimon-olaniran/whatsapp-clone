@@ -8,8 +8,6 @@ import {pdfjs} from "react-pdf";
 import {Document, Page} from "react-pdf";
 import {v4 as uuidv4} from "uuid";
 
-//import {PDFtoIMG} from "react-pdf-to-image";
-
 import {
   SendIcon,
   AdditionIcon,
@@ -52,7 +50,6 @@ const ConversationInsertDocsComponent = ({
   const handleOpenSelectDocs = () => {
     docFileInputRef2.current.click();
   };
-  // console.log(PDFJS);
 
   const handleFileInputChange = event => {
     const selectedDocs = Array.from(event.target.files);
@@ -84,10 +81,14 @@ const ConversationInsertDocsComponent = ({
         time: Date.now(),
         subId: uuidv4(),
         document: doc,
+        isBlocked: currentChat.partnerData.privacy.blocked_contacts.includes(
+          user._id
+        )
+          ? true
+          : false,
       };
 
       dispatch(sendNewChatMessage(message));
-      //console.log(message);
     });
     setReplyMessage(null);
     closeOption();

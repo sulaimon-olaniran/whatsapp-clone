@@ -27,10 +27,12 @@ const ClearMessagesDialog = ({open, handleClose, messages}) => {
       },
     };
 
-    // messages.map(message => {
-    //   const messageId = message._id;
-    //   return axios.patch(`${messagApi}/delete/for/me`, {messageId}, config);
-    // });
+    //DELETE ALL MESSAGES FOR USER ALONE AS CLEARING MESSAGE ONLY REMOVES MESSAGES FROM USER'S SIDE
+    //DUE TO SHARING ONE MESSAGE DOCUMENT BETWEEN THE TWO INTERLOCUTORS, CAN'T SIMPLE CLEAR THE MESSAGE FROM DATABASE, SO DELETE FOR USER REQUESTING IT TO BE CLEARED AND LEAVE IT FOR OTHER USER
+    messages.map(message => {
+      const messageId = message._id;
+      return axios.patch(`${messagApi}/delete/for/me`, {messageId}, config);
+    });
 
     dispatch({
       type: CLEAR_CHAT_MESSAGES_SUCCESSFUL,
@@ -46,15 +48,12 @@ const ClearMessagesDialog = ({open, handleClose, messages}) => {
     });
 
     handleClose();
-
-    //axios.delete(`${messagApi}/clear`, {messageId}, config);
   };
 
   return (
     <Dialog
       open={open}
       TransitionComponent={Transition}
-      //onClose={handleClose}
       aria-describedby="alert-dialog-slide-description"
     >
       <div className={`clear-messages-dialog-${theme}-theme`}>

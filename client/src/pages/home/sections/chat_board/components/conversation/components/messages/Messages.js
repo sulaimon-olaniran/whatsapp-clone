@@ -1,4 +1,4 @@
-import {Fragment, useEffect, useRef, useState, useCallback} from "react";
+import {Fragment, useEffect, useState, useCallback} from "react";
 import {useSelector} from "react-redux";
 import {IconButton} from "@mui/material";
 import Zoom from "@mui/material/Zoom";
@@ -10,7 +10,6 @@ import NoMessagesComponent from "./no_messages/NoMessages";
 import axios from "axios";
 import {messagApi} from "../../../../../../../../api";
 import {groupArrayByDatesFunction} from "../../../../../../../../functions";
-//import messages from "../../../../../../../../jsons/messages.json";
 
 const ConversationMessagesComponent = ({
   setReplyMessage,
@@ -19,7 +18,6 @@ const ConversationMessagesComponent = ({
   messagesContainerRef,
 }) => {
   const [showButton, setShowButton] = useState(false);
-  //const messagesContainerRef = useRef(null);
 
   const theme = useSelector(state => state.app.theme);
   const user = useSelector(state => state.user.user);
@@ -35,7 +33,7 @@ const ConversationMessagesComponent = ({
   });
 
   const groupedMessages = groupArrayByDatesFunction(sortedMessages, "D");
-  //console.log(groupedMessages);
+
   const sortedGroupedMessages = groupedMessages.sort((a, b) => {
     const compA = moment(a[0].time);
     const compB = moment(b[0].time);

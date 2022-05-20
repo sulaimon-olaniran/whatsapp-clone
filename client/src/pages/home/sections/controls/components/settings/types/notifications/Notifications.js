@@ -12,7 +12,6 @@ const NotificationsSettings = ({closeSetting}) => {
   const prevPreviews = localStorage.getItem("previews");
   const prevMuted = localStorage.getItem("muted");
   const muteType = localStorage.getItem("mute_type");
-  //const prevExpiringTime = localStorage.getItem("mute_expires");
 
   const [sounds, setSounds] = useState(
     prevSounds ? JSON.parse(prevSounds) : true

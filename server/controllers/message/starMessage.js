@@ -1,7 +1,5 @@
 import Message from "../../models/message.js";
 
-//import {pusher} from "../../pusher/pusher.js";
-
 export const starMessage = (req, res) => {
   const {id} = req.user;
   const {messageId} = req.body;

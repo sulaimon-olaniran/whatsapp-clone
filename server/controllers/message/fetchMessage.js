@@ -1,5 +1,4 @@
 import Message from "../../models/message.js";
-import mongoose from "mongoose";
 
 export const fetchMessage = (req, res) => {
   const userId = req.user.id;

@@ -36,7 +36,6 @@ export const ConversationMessageInputComponent = ({
 }) => {
   const [expandOptions, setExpandOptions] = useState(false);
   const [currentOption, setCurrentOption] = useState("emojis");
-  //const [inputContainerHeight, setInputContainerHeight] = useState(62);
   const [messageText, setMessageText] = useState("");
 
   const dispatch = useDispatch();
@@ -98,9 +97,12 @@ export const ConversationMessageInputComponent = ({
       starred: [],
       time: moment().format(),
       subId: uuidv4(),
+      isBlocked: currentChat.partnerData.privacy.blocked_contacts.includes(
+        user._id
+      )
+        ? true
+        : false,
     };
-
-    //console.log(message);
 
     dispatch(sendNewChatMessage(message));
     setExpandOptions(false);
@@ -248,7 +250,6 @@ export const ConversationMessageInputComponent = ({
                   minRows={1}
                   onChange={handleMessageInputChange}
                   value={messageText}
-                  // readOnly={!editAbout}
                   maxLength={500}
                   placeholder="Type a message"
                 />

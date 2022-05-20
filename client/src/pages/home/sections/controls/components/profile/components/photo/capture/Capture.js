@@ -13,13 +13,10 @@ import {IconButton} from "@mui/material";
 import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 
 const CaptureProfilePhotoDialog = ({open, handleClose, handleCropPhoto}) => {
-  //const [imgSrc, setImgSrc] = useState(null);
-  //const [imgFile, setImgFile] = useState(null);
   const [streaming, setStreaming] = useState(false);
 
   const theme = useSelector(state => state.app.theme);
 
-  //const {onCapture, onError, width, userMediaConfig} = props;
   const playerRef = createRef();
   const canvasRef = createRef();
   const tracks = useRef();
@@ -98,12 +95,7 @@ const CaptureProfilePhotoDialog = ({open, handleClose, handleCropPhoto}) => {
   }, [handleOnCapture, canvasRef, playerRef]);
 
   return (
-    <Dialog
-      open={open}
-      //onClose={handleClose}
-      aria-labelledby="form-dialog-title"
-      //disableBackdropClick
-    >
+    <Dialog open={open} aria-labelledby="form-dialog-title">
       <div className={`capture-profile-photo-dialog-${theme}-theme`}>
         <div className="capture-profile-photo-dialog-header">
           <h2>Take a photo</h2>

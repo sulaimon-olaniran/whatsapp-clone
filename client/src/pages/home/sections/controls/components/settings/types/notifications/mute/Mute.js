@@ -57,7 +57,6 @@ const MuteNotificationsDialog = ({
 
   const handleRadioInputChange = event => {
     setMuteType(event.target.value);
-    //console.log(event.target.value);
   };
 
   return (
@@ -65,7 +64,6 @@ const MuteNotificationsDialog = ({
       open={open}
       TransitionComponent={Transition}
       keepMounted
-      //onClose={handleClose}
       aria-describedby="alert-dialog-slide-description"
     >
       <div className={`mute-notifications-dialog-${theme}-theme`}>

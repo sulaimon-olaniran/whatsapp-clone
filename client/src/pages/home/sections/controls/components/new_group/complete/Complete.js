@@ -6,7 +6,6 @@ import GroupIcon from "@mui/icons-material/Group";
 import Zoom from "@mui/material/Zoom";
 import CheckIcon from "@mui/icons-material/Check";
 import Popover from "@mui/material/Popover";
-import Grow from "@mui/material/Grow";
 
 import {CameraIcon} from "../../../../../../../icons";
 import InputEmojisComponent from "../../../../../../../components/emoji/input/Input";
@@ -205,7 +204,6 @@ const CompleteNewGroupComponent = ({goBack}) => {
       </Zoom>
 
       <Popover
-        //id={id}
         open={Boolean(optionsAnchor)}
         anchorEl={optionsAnchor}
         onClose={handleHidePhotoOptions}

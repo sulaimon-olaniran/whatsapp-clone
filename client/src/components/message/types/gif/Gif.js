@@ -19,7 +19,7 @@ const MessageGifType = ({message}) => {
   };
 
   const handleOpenMessagesMediaDialog = () => {
-    const data = dispatch({
+    dispatch({
       type: OPEN_MESSAGES_MEDIAS_DIALOG,
       payload: {open: true, media: message},
     });

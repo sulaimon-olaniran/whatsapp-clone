@@ -18,7 +18,7 @@ const MessageOptionsComponent = ({message, selectMessage, setReplyMessage}) => {
   const [menuAnchor, setMenuAnchor] = useState(null);
   const [deleteMessage, setDeleteMessage] = useState(false);
 
-  const {sender, type} = message;
+  const {type} = message;
 
   const isDeleted = message?.delete_everyone;
 
@@ -56,7 +56,6 @@ const MessageOptionsComponent = ({message, selectMessage, setReplyMessage}) => {
     axios
       .patch(`${messagApi}/star`, {messageId}, config)
       .then(res => {
-        //console.log(res.data);
         dispatch(editMessage(res.data));
         dispatch({
           type: ADD_STARRED_MESSAGE,
@@ -120,11 +119,6 @@ const MessageOptionsComponent = ({message, selectMessage, setReplyMessage}) => {
   };
 
   const options = [
-    // {
-    //   title: "Message Info",
-    //   action: () => console.log("hello"),
-    //   style: (isDeleted || !sender) && {display: "none"},
-    // },
     {
       title: "Reply",
       action: () => setReplyMessage(message),
@@ -152,7 +146,6 @@ const MessageOptionsComponent = ({message, selectMessage, setReplyMessage}) => {
     {
       title: "Delete Message",
       action: handleOpenDeleteMessageDialog,
-      //style: isDeleted && {display: "none"},
     },
   ];
   return (
@@ -168,7 +161,6 @@ const MessageOptionsComponent = ({message, selectMessage, setReplyMessage}) => {
       </IconButton>
 
       <Popover
-        //id={id}
         open={Boolean(menuAnchor)}
         anchorEl={menuAnchor}
         onClose={handleHideMenuOptions}

@@ -15,7 +15,6 @@ export const deliverMessage = (req, res) => {
         isDelivered: true,
       };
       pusher.trigger("chat-channel", "message-edited", data);
-      //res.status(200).send()
       res.status(200).json(message);
     })
     .catch(error => {

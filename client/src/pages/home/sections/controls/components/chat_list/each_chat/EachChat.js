@@ -22,6 +22,8 @@ const ChatListEachChat = ({chat, type}) => {
   const [isTyping, setIsTyping] = useState(false);
   const [unReadMessages, setUnreadMessages] = useState([]);
 
+  let isTypingInterval = useRef(null);
+
   const dispatch = useDispatch();
 
   const theme = useSelector(state => state.app.theme);
@@ -50,18 +52,17 @@ const ChatListEachChat = ({chat, type}) => {
 
   const handleSetCurrentChat = () => {
     dispatch(setCurrentChat(chat));
-    console.log(chat);
   };
 
-  let isTypingInterval = useRef(null);
   useEffect(() => {
     const channel = pusher.subscribe("chat-channel");
 
     channel.bind("user-typing", function (data) {
+      //CHECK IF THE USER THAT IS TYPING ISN'T CURRENT LOGGED IN USER, AND ALSO USER IS AN INTERLOCUTOR IN THE CHAT TO PREVENT TYPING SHOWING ON ALL CHATS IN THE CHAT LIST
       if (data?.chatId === chat?._id && data?.userId !== user?._id) {
         setIsTyping(true);
         clearInterval(isTypingInterval.current);
-
+        //WAIT 0.9 SECONDS BEFONE DISPLAYING IF USER IS TYPING
         isTypingInterval.current = setTimeout(() => setIsTyping(false), 900);
       }
     });
@@ -71,6 +72,8 @@ const ChatListEachChat = ({chat, type}) => {
     };
   }, [currentChat, user, chat]);
 
+  //GET AMOUNT OF MESSAGES UNREAD BY THE LOGGED IN USER
+  //TO DISPLAY NEXT TO THE CHAT INFORMATION IN THE CHAT LIST
   useEffect(() => {
     const messages = chat?.messages;
     const unread = messages?.filter(
@@ -79,6 +82,7 @@ const ChatListEachChat = ({chat, type}) => {
     setUnreadMessages(unread);
   }, [chat, user]);
 
+  //UPDATE ALL UNDELIVERED MESSAGE AS DELIVERED
   const handleUnDeliveredMessages = useCallback(() => {
     const unDeliveredMessages = chat?.messages?.filter(
       message => message?.sender !== user?._id && message?.isDelivered === false
@@ -204,6 +208,20 @@ const ChatListEachChat = ({chat, type}) => {
       .patch(`${chatApi}/mark/unread`, {chatId}, config)
       .then(res => {
         dispatch(editChat(res.data));
+
+        dispatch({
+          type: OPEN_SNACKBAR,
+          payload: {
+            message: "Chat marked as unread",
+            undoAction: () => {
+              axios
+                .patch(`${chatApi}/mark/read`, {chatId}, config)
+                .then(res => {
+                  dispatch(editChat(res.data));
+                });
+            },
+          },
+        });
       })
       .catch(error => {
         console.log(error);
@@ -216,6 +234,20 @@ const ChatListEachChat = ({chat, type}) => {
       .patch(`${chatApi}/mark/read`, {chatId}, config)
       .then(res => {
         dispatch(editChat(res.data));
+
+        dispatch({
+          type: OPEN_SNACKBAR,
+          payload: {
+            message: "Chat marked as read",
+            undoAction: () => {
+              axios
+                .patch(`${chatApi}/mark/unread`, {chatId}, config)
+                .then(res => {
+                  dispatch(editChat(res.data));
+                });
+            },
+          },
+        });
       })
       .catch(error => {
         console.log(error);
@@ -264,6 +296,7 @@ const ChatListEachChat = ({chat, type}) => {
     },
   ];
 
+  //OPTIONS TO DISPLAY IF CHAT HAS BEEN ARCHIVED
   const archivedOptions = [
     {
       option: "Unarchive chat",
@@ -283,8 +316,10 @@ const ChatListEachChat = ({chat, type}) => {
     },
   ];
 
+  //GET THE MOST RECENT MESSAGE IN THE CHAT
   const recentMessage = chat.messages[chat.messages.length - 1];
 
+  //GET TIME OF THE MOST RECENT MESSAGE
   const messagesDay = recentMessage
     ? moment(recentMessage.time)
     : moment(chat.createdAt);
@@ -300,7 +335,6 @@ const ChatListEachChat = ({chat, type}) => {
     <div
       className={`chat-list-each-chat-${theme}-theme`}
       onContextMenu={handleShowMenuOptions}
-      //onClick={handleSetCurrentChat}
     >
       <div className="action-button" onClick={handleSetCurrentChat} />
       <Avatar src={chat?.partnerData?.profile_photo} />
@@ -364,7 +398,6 @@ const ChatListEachChat = ({chat, type}) => {
 
       {Boolean(optionsAnchor) && (
         <Popover
-          //id={id}
           open={Boolean(optionsAnchor)}
           anchorEl={optionsAnchor}
           onClose={handleHideMenuOptions}

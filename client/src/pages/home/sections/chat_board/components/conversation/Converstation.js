@@ -8,24 +8,21 @@ import ConversationContactInfoComponent from "./components/contact/Contact";
 import ConversationSearchMessagesComponent from "./components/search/Search";
 import ConversationMessageInputCompoent from "./components/input/Input";
 import ConversationInsertCameraComponent from "./components/insert_camera/InsertCamera";
-//import EditImageComponent from "../../../../../../components/edit_image/EditImage";
 import ConversationInsertMediaComponent from "./components/insert_media/InsertMedia";
 import ConversationInsertDocsComponent from "./components/insert_docs/InsertDocs";
 import ConversationInsertStickerComponent from "./components/insert_sticker/InsertSticker";
 import chatBgImg from "../../../../../../images/whatsapp_chat_bg_image.png";
 
 const ChatBoardConversation = () => {
-  const [sideBar, setSideBar] = useState(false);
-  const [sideBarContent, setSideBarContent] = useState("");
-  // const [hasDropped, setHasDropped] = useState(false);
-  // const [hasDroppedOnChild, setHasDroppedOnChild] = useState(false);
-  const [insertOption, setInsertOption] = useState(false);
-  const [insertOptionType, setInsertOptionType] = useState("");
-  const [insertedMedias, setInsertedMedias] = useState([]);
-  const [insertedDocs, setInsertedDocs] = useState([]);
-  const [insertedSticker, setInsertedSticker] = useState("");
-  const [replyMessage, setReplyMessage] = useState(null);
-  const [selectedMessages, setSelectedMessages] = useState([]);
+  const [sideBar, setSideBar] = useState(false); //HANDLES SIDEBAR VISIBILITY, SIDEBAR SHOWS CHAT CONTACT INFORMATION AND OTHER ACTIONS
+  const [sideBarContent, setSideBarContent] = useState(""); //SIDEBAR CONTENT CAN EITHER BE CHAT CONTACT OR SEARCH COMPONENT
+  const [insertOption, setInsertOption] = useState(false); //TO SHOW OPTIONS ON BOTTOM OF CONVERSATION, SUCH OPTIONS INCLUDES EMOJIS AND STICKERS AND TO SHOW A MODAL SUCH FOR IMAGES
+  const [insertOptionType, setInsertOptionType] = useState(""); //OPTIONS TYPE IS EITHER EMOJI, STICKER, PHOTOS & VIDEOS
+  const [insertedMedias, setInsertedMedias] = useState([]); //HOLDS NUMBER OF MEDIAS(IMAGES) SELECTED BY THE USER
+  const [insertedDocs, setInsertedDocs] = useState([]); //HOLDS NUMBER OF DOCUMENTS(PDF OR DOC FILES) SELECTED BY THE USER
+  const [insertedSticker, setInsertedSticker] = useState(""); //IN CASE USER CHOSES TO UPLOAD STICKER, HOLDS THE STICKER IMAGE SOURCE
+  const [replyMessage, setReplyMessage] = useState(null); //HOLDS THE MESSAGE A USER HAS CHOSEN TO REPLY TO
+  const [selectedMessages, setSelectedMessages] = useState([]); //HOLDS ALL MESSAGES A USER AS SELECTED, USER CAN SELECT MESSAGE FROM THE MESSAGE COMPONENT, BUT STATE IS DECLARED HERE SO IT CAN BE EASILY PASSED DOWN TO OTHER MULTIPLE COMPONENTS SUCH HAS INPUT COMPOENT
 
   const containerRef = useRef(null);
   const messagesContainerRef = useRef(null);
@@ -47,8 +44,6 @@ const ChatBoardConversation = () => {
   const handleShowInsertOption = option => {
     setInsertOptionType(option);
     setInsertOption(true);
-
-    // console.log(option);
   };
 
   const handleHideInsertOption = () => {

@@ -1,5 +1,5 @@
-import {useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
+import Checkbox from "@mui/material/Checkbox";
 
 import dark_wallpapers from "../../../../../../../../jsons/dark_wallpapers.json";
 import light_wallpapers from "../../../../../../../../jsons/light_wallpapers.json";
@@ -8,7 +8,6 @@ import {
   SET_CHAT_WALLPAPER,
   TOGGLE_CHAT_DOODLES,
 } from "../../../../../../../../store/types/app";
-import Checkbox from "@mui/material/Checkbox";
 
 const WallPaperSettings = ({closeSetting}) => {
   const theme = useSelector(state => state.app.theme);
@@ -30,6 +29,7 @@ const WallPaperSettings = ({closeSetting}) => {
     });
   };
 
+  //DISPLAY WALLPAPERS TYPE ACCORDING TO THEME TYPE
   const wallpapers = theme === "dark" ? dark_wallpapers : light_wallpapers;
 
   return (

@@ -20,7 +20,6 @@ const ProfilePhotoComponent = () => {
   const inputFileRef = useRef(null);
 
   const user = useSelector(state => state.user.user);
-  // const updating = useSelector(state => state.user.updatingUser);
 
   const dispatch = useDispatch();
 
@@ -164,16 +163,8 @@ const ProfilePhotoComponent = () => {
               photo
             </p>
           </div>
-          {/* // )} */}
-
-          {/* {updating.isUpdating && updating.type === "photo" && (
-            <div className="avatar-update-loader-container">
-              <CircularProgress />
-            </div>
-          )} */}
 
           <Popover
-            //id={id}
             open={Boolean(photoAnchor)}
             anchorEl={photoAnchor}
             onClose={handleHidePhotoOptions}

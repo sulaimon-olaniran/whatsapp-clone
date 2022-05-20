@@ -85,9 +85,13 @@
         padding: 0 8px;
 
         button {
-          color: white;
+          color: $primaryIconColor;
           font-size: 1.7rem;
           margin: 2px 4px;
+        }
+
+        button:hover {
+          background: none;
         }
       }
     }
@@ -132,6 +136,10 @@
       button {
         color: $secondaryIconColor;
         padding: 3px 8px;
+      }
+
+      button:hover {
+        background: none;
       }
 
       .active-emoji-header {
@@ -193,9 +201,13 @@
         padding: 0 8px;
 
         button {
-          color: white;
+          color: $secondaryIconColor;
           font-size: 1.7rem;
           margin: 2px 4px;
+        }
+
+        button:hover {
+          background: none;
         }
       }
     }

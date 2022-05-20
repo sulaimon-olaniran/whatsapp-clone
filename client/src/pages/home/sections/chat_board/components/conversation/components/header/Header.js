@@ -3,17 +3,15 @@ import {useSelector, useDispatch} from "react-redux";
 import {Avatar, Button, IconButton} from "@mui/material";
 import Popover from "@mui/material/Popover";
 import moment from "moment";
-//import axios from "axios";
 
 import {MenuIcon, SearchIcon} from "../../../../../../../../icons";
-//import {messagApi} from "../../../../../../../../api";
 import {pusher} from "../../../../../../../../constants";
 
 import {closeCurrentChat} from "../../../../../../../../store/actions/chat";
 import ClearMessagesDialog from "./components/clear/ClearMessages";
 import DeleteChatDialog from "./components/delete/DeleteChat";
 
-const ConversationHeaderComponent = ({showSideBar, showSearch}) => {
+const ConversationHeaderComponent = ({showSideBar}) => {
   const [menuAnchor, setMenuAnchor] = useState(null);
   const [isTyping, setIsTyping] = useState(false);
   const [isOnline, setIsOnline] = useState(false);
@@ -25,7 +23,6 @@ const ConversationHeaderComponent = ({showSideBar, showSearch}) => {
 
   const theme = useSelector(state => state.app.theme);
   const user = useSelector(state => state.user.user);
-  //const token = useSelector(state => state.user.token);
   const currentChat = useSelector(state => state.chat.currentChat);
 
   const handleShowMenuOptions = event => {
@@ -118,21 +115,6 @@ const ConversationHeaderComponent = ({showSideBar, showSearch}) => {
 
     channel.bind("user-online", function (data) {
       if (data?.userId === chatPartner?._id && data?.userId !== user._id) {
-        setIsOnline(true);
-      }
-    });
-
-    return () => {
-      channel.unbind("user-online");
-    };
-  }, [chatPartner, user]);
-
-  useEffect(() => {
-    const channel = pusher.subscribe("user-channel");
-
-    channel.bind("user-online", function (data) {
-      if (data?.userId === chatPartner?._id && data?.userId !== user._id) {
-        //console.log(data);
         setIsOnline(true);
       }
     });

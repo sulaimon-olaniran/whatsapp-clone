@@ -30,7 +30,6 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
 
 const MessageFailedComponent = ({message}) => {
-  // console.log(message);
   const [openDialog, setOpenDialog] = useState(false);
 
   const theme = useSelector(state => state.app.theme);
@@ -52,7 +51,6 @@ const MessageFailedComponent = ({message}) => {
 
   return (
     <Fragment>
-      {" "}
       <Dialog
         open={openDialog}
         TransitionComponent={Transition}

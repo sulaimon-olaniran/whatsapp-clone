@@ -1,6 +1,7 @@
 import {useSelector} from "react-redux";
 import moment from "moment";
 import {SmallStarIcon} from "../../../../icons";
+
 import MessageStatusComponent from "../../components/status/Status";
 
 const MessageStickerType = ({message}) => {

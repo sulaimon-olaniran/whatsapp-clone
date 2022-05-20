@@ -15,7 +15,6 @@ export const deleteMessageForMe = (req, res) => {
     {new: true}
   )
     .then(message => {
-      //pusher.trigger("chat-channel", "message-edited", message);
       res.status(200).json(message);
     })
     .catch(error => {

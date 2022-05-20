@@ -22,7 +22,6 @@ const HomepageControlsSection = () => {
   const user = useSelector(state => state.user.user);
   const theme = useSelector(state => state.app.theme);
   const chats = useSelector(state => state.chat.chats);
-  //const token = useSelector(state => state.user.token);
   const starredMessages = useSelector(state => state.chat.starredMessages);
 
   const handleSetActiveControl = control => {
@@ -35,6 +34,8 @@ const HomepageControlsSection = () => {
     setShowControl(false);
   };
 
+  //GET NUMBER OF MESSAGES USER HAVEN'T READ
+  //THE NUMBER WILL BE SHOWN ON PAGE TITLE
   const getNumberOfUnseenMessages = useCallback(() => {
     const messages = [];
     chats.map(chat => {

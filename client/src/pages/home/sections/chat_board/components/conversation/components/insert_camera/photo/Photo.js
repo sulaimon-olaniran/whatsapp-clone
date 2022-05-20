@@ -13,7 +13,6 @@ import {
   PenIcon,
   TextIcon,
 } from "../../../../../../../../../icons";
-//import EditImageComponent from "../../../../../../../../components/edit_image/EditImage";
 import InputEmojisComponent from "../../../../../../../../../components/emoji/input/Input";
 import {sendNewChatMessage} from "../../../../../../../../../store/actions/chat";
 
@@ -50,10 +49,14 @@ const InsertCameraCapturedPhoto = ({
       time: Date.now(),
       subId: uuidv4(),
       image: photo,
+      isBlocked: currentChat.partnerData.privacy.blocked_contacts.includes(
+        user._id
+      )
+        ? true
+        : false,
     };
 
     dispatch(sendNewChatMessage(message));
-    //console.log(message);
 
     setReplyMessage(null);
     setCapturedPhoto(null);

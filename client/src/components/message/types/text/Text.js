@@ -1,3 +1,4 @@
+import {Fragment} from "react";
 import {useSelector} from "react-redux";
 import moment from "moment";
 import emojiTree from "emoji-tree";
@@ -5,17 +6,16 @@ import emojiTree from "emoji-tree";
 import MessageStatusComponent from "../../components/status/Status";
 import {SmallStarIcon} from "../../../../icons";
 import TextEmojiComponent from "../../../text_emoji/TextEmoji";
-import {Fragment} from "react";
 
 const MessageTextType = ({message}) => {
+  //CHECK IF MESSAGE TEXT TYPE IS ONLY EMOJI
+  //IF IT'S ONLY EMOJI, CHANGE FONT SIZE OF TEXT TO MAKE EMOJI BOLDER
   const checkMessagesType = emojiTree(message.message);
 
   const theme = useSelector(state => state.app.theme);
   const user = useSelector(state => state.user.user);
 
   const isOnlyEmoji = checkMessagesType.every(msg => msg.type === "emoji");
-
-  //checkMessageEmoji.map()
 
   return (
     <div className={`message-text-type-${theme}-theme`}>
@@ -26,6 +26,7 @@ const MessageTextType = ({message}) => {
           <p
             id="message-text-emoji-only-text"
             className={
+              //IF EMOJI IS ONE AND IS AN HEART EMOJI, ANIMATE EMOJI TO A BEATING HEART
               checkMessagesType.length < 2 && message.message === "❤️"
                 ? "animate-emoji-text"
                 : ""

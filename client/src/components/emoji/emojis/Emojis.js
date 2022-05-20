@@ -19,12 +19,16 @@ import {
 } from "../../../icons";
 
 const EmojisComponent = ({setState, type}) => {
+  //CHECK IF THERE ARE RECENTLY USED EMOJIS IN THE LOCAL STORAGE
   const recentlyUsedEmojis =
     JSON.parse(localStorage.getItem("recent_emojis")) || [];
+
   const [searchInput, setSearchInput] = useState("");
   const [activeEmoji, setActiveEmoji] = useState(
     recentlyUsedEmojis.length > 0 ? "Recently Used" : "Smileys & People"
   );
+
+  //(type) IF TYPE RESULTS IN TRUE? MEANS THE COMPONENT WAS USED IN MESSAGE INPUT AND NOT AS POPUP FOR UPDATING USERNAME
   const [displayNumber, setDisplayNumber] = useState(type ? 100 : 48);
 
   const [searchValue] = useDebounce(searchInput, 500);
@@ -123,6 +127,7 @@ const EmojisComponent = ({setState, type}) => {
     );
   };
 
+  //TO ADD MORE EMOJIS TO SCREEN TO PREVENT APP FROM HANGING BY DISPLAYING SO MANY EMOJIS AT ONCE
   const handleOnScroll = () => {
     if (containerRef.current) {
       const {scrollTop, scrollHeight, clientHeight} = containerRef.current;

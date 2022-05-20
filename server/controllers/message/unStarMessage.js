@@ -1,5 +1,4 @@
 import Message from "../../models/message.js";
-//import {pusher} from "../../pusher/pusher.js";
 
 export const unStarMessage = (req, res) => {
   const {id} = req.user;
@@ -15,8 +14,6 @@ export const unStarMessage = (req, res) => {
     {new: true}
   )
     .then(message => {
-      //pusher.trigger("chat-channel", "message-edited", message);
-      //res.status(200).send()
       res.status(200).json(message);
     })
     .catch(error => {

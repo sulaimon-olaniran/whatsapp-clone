@@ -25,8 +25,11 @@ const ThemeSettings = ({open, handleClose}) => {
 
   const dispatch = useDispatch();
 
+  //FUNCTION TO RUN IF THEME IS SET TO DEFAULT
   const handleDefaultThemeType = () => {
+    //GET DEFAULT THEME OF THE DEVICE
     const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+    //CHECK IF DEFAULT THEME OF DEVICE IS DARK OR LIGHT THEME
     const themeType = darkThemeMq.matches ? "dark" : "light";
 
     dispatch({
@@ -75,8 +78,6 @@ const ThemeSettings = ({open, handleClose}) => {
       handleClose();
     }
   };
-
-  //const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 
   return (
     <Dialog

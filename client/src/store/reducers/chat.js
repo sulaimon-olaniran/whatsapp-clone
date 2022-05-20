@@ -176,7 +176,9 @@ const chat = (state = initState, action) => {
       return {
         ...state,
         chats: editChatInChatsList(state.chats, action.payload),
-        currentChat: editChatInCurrentChat(state.currentChat, action.payload),
+        currentChat: state.currentChat
+          ? editChatInCurrentChat(state.currentChat, action.payload)
+          : null,
       };
 
     case SET_CURRENT_CHAT:

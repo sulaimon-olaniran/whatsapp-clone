@@ -25,11 +25,9 @@ const ViewProfilePhotoDialogComponent = () => {
     <Dialog
       open={data.open}
       TransitionComponent={Transition}
-      //keepMounted
       onClose={handleClose}
       aria-describedby="alert-dialog-slide-description"
       fullScreen
-      //BackdropComponent=""
     >
       <div
         className={`view-profile-photo-dialog-component-${theme}-theme`}

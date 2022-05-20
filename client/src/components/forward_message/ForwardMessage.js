@@ -52,6 +52,7 @@ const ForwardMessageComponent = ({
   const handleForwardMessageToSelectedContacts = () => {
     selectedContacts.map(contact => {
       //CHECK IF  THERE IS AN EXISTING CHAT BETWEEN SELECTED CHAT AND LOGGED IN USER
+      //IF CHAT EXISTS ? SEND MESSAGE, ELSE CREATE A NEW CHAT BEFORE SENDING MESSAGE
       if (chats.some(chat => chat.partnerData._id === contact._id)) {
         //FIND THE CURRENT CHAT DATA BETWEEN BOTH INTERLOCUTORS
         const contactChat = chats.find(
@@ -68,6 +69,15 @@ const ForwardMessageComponent = ({
             isDelivered: false,
             isSent: false,
             isSeen: false,
+            //CHECK IF CONTACT THE MESSAGE IS BEING SENT TO HASN'T BLOCKED USER SENDING THE MESSAGE
+            //IF USER IS BLOCKED, ADD MESSAGE AS MESSAGE SENT WHILST USER WAS ON BLOCKLIST
+            //THIS PREVENTS THE CONTACT THAT BLOCKED THE USER FROM SEEING THE SENT MESSAGE
+            isBlocked:
+              contactChat?.partnerData?.privacy?.blocked_contacts?.includes(
+                user._id
+              )
+                ? true
+                : false,
           };
           delete forwardMessage._id;
           dispatch(sendNewChatMessage(forwardMessage));
@@ -83,7 +93,7 @@ const ForwardMessageComponent = ({
         const data = {partner: contact._id};
         axios.post(`${chatApi}/create/chat`, data, config).then(res => {
           const chat = res.data;
-          console.log(chat);
+
           dispatch({
             type: CREATE_NEW_CHAT_SUCCESSFUL,
             payload: chat,
@@ -98,7 +108,16 @@ const ForwardMessageComponent = ({
               isDelivered: false,
               isSent: false,
               isSeen: false,
+              //CHECK IF CONTACT THE MESSAGE IS BEING SENT TO HASN'T BLOCKED USER SENDING THE MESSAGE
+              //IF USER IS BLOCKED, ADD MESSAGE AS MESSAGE SENT WHILST USER WAS ON BLOCKLIST
+              //THIS PREVENTS THE CONTACT THAT BLOCKED THE USER FROM SEEING THE SENT MESSAGE
+              isBlocked: chat?.partnerData?.privacy?.blocked_contacts?.includes(
+                user._id
+              )
+                ? true
+                : false,
             };
+            //DELETE PREVIOUS MESSAGE _ID AND LET MONGODB GENERATE A NEW ID TO TREAT MESSAGE AS A NEW MESSAGE
             delete forwardMessage._id;
             dispatch(sendNewChatMessage(forwardMessage));
           });
@@ -110,9 +129,12 @@ const ForwardMessageComponent = ({
     closeSelectedMessages();
   };
 
+  //RETURNS CONTACTS THE USER HAD RECENTLY HAD A CHAT WITH
   const recentChats = users.filter(user =>
     chats.find(({partnerData}) => user._id === partnerData._id)
   );
+
+  //RETURNS CONTACTS THE USER HAVEN'T CHATTED WITH
   const otherUsers = users.filter(
     user => !chats.find(({partnerData}) => user._id === partnerData._id)
   );

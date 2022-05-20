@@ -9,7 +9,6 @@ import {AddPeopleIcon} from "../../../../../../icons";
 import SearchInputComponent from "../../../../../../components/search_input/SearchInput";
 
 import ControlsNewGroupComponent from "../new_group/NewGroup";
-//import ControlsUsersComponent from "../users/Users";
 import {createChat, setCurrentChat} from "../../../../../../store/actions/chat";
 
 const ControlsNewChatComponent = ({deactiveControl}) => {
@@ -68,9 +67,6 @@ const ControlsNewChatComponent = ({deactiveControl}) => {
           {showSlide && showSlide === "group" && (
             <ControlsNewGroupComponent deactiveControl={handleHideSlide} />
           )}
-          {/* {showSlide && showSlide === "users" && (
-            <ControlsUsersComponent deactiveControl={handleHideSlide} />
-          )} */}
         </div>
       </Slide>
       <ControlHeaderComponent action={deactiveControl} title="New chat" />

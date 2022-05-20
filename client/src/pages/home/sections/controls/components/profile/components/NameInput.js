@@ -3,7 +3,6 @@ import {useSelector, useDispatch} from "react-redux";
 import {IconButton} from "@mui/material";
 import CreateIcon from "@mui/icons-material/Create";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
-import {CircularProgress} from "@mui/material";
 
 import InputEmojisComponent from "../../../../../../../components/emoji/input/Input";
 
@@ -13,7 +12,6 @@ const ProfileNameInputComponent = () => {
   const [editName, setEditName] = useState(false);
 
   const user = useSelector(state => state.user.user);
-  //const updating = useSelector(state => state.user.updatingUser);
 
   const [nameInputValue, setNameInputValue] = useState(user?.username);
 
@@ -55,11 +53,6 @@ const ProfileNameInputComponent = () => {
           editName ? "input-active" : ""
         }`}
       >
-        {/* {updating.isUpdating && updating.type === "name" && (
-          <div className="input-textfield-updating-container">
-            <CircularProgress />
-          </div>
-        )} */}
         <input
           value={nameInputValue}
           readOnly={!editName}

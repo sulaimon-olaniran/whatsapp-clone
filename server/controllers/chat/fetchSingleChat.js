@@ -1,12 +1,8 @@
-import moment from "moment";
 import Chat from "../../models/chat.js";
-import mongoose from "mongoose";
 
 export const fetchSingleChat = (req, res) => {
   const {id} = req.user;
   const partner = req.params.id;
-
-  const ObjectId = mongoose.Types.ObjectId;
 
   Chat.aggregate([
     {
@@ -72,11 +68,6 @@ export const fetchSingleChat = (req, res) => {
           {
             $sort: {time: +1},
           },
-          // {
-          //   $set: {
-          //     time: "Modified",
-          //   },
-          // },
         ],
         as: "messages",
       },

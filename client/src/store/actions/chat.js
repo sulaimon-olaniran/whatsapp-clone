@@ -78,12 +78,15 @@ export const createChat = (partner, closeContactsList) => {
 
     const data = {partner: partner};
 
+    //CHECK IF THERE IS AN EXISTING CHAT BETWEEN BOTH PARTIES
     axios
       .get(`${chatApi}/fetch/single/chat/${partner}`, config)
       .then(res => {
         const existingChat = res.data;
         if (existingChat) {
-          console.log(existingChat);
+          //console.log(existingChat);
+          //IF CHAT EXIST AND WASN'T IN THE CHATLIST, MEANS CHAT HAD BEAN DELETED BY THE LOGGED IN USER AND HAS BEEN HIDDEN FROM THE USER
+          //UPDATE THE EXISTING CHAT BY UNHIDING THE CHAT FROM THE LOGGED IN USER REQUESTING A NEW CHAT
           return axios
             .patch(`${chatApi}/unhide`, {chatId: existingChat._id}, config)
             .then(res => {
@@ -100,6 +103,7 @@ export const createChat = (partner, closeContactsList) => {
               closeContactsList();
             });
         } else {
+          //IF THERE IS NO EXISTING CHAT, JUST SIMPLY CREATE THE CHAT
           return axios
             .post(`${chatApi}/create/chat`, data, config)
             .then(res => {
@@ -186,7 +190,7 @@ export const resendChatMessage = message => {
 };
 
 export const editChat = data => {
-  return (dispatch, getState) => {
+  return dispatch => {
     dispatch({
       type: EDIT_CHAT_SUCCESSFUL,
       payload: data,
@@ -215,8 +219,6 @@ export const newChatMessage = id => {
 
       const message = res.data;
 
-      //console.log(message);
-
       const chatId = message.chatId;
 
       //GET THE CHAT THAT THE MESSAGE BELONGS TO
@@ -224,19 +226,6 @@ export const newChatMessage = id => {
 
       //IF THE CHAT EXISTS IN THE USER'S CHAT LIST, SIMPLY ADD THE MESSAGE TO THE CHAT
       if (chat) {
-        //console.log("chat does exist");
-        // const newChats = chats.map(chat => {
-        //   if (chat._id === message.chatId) {
-        //     return {...chat, messages: [...chat.messages, message]};
-        //   }
-        //   return chat;
-        // });
-
-        // const newCurrentChat =
-        //   currentChat && currentChat._id === message.chatId
-        //     ? newChats.find(chat => chat._id === currentChat._id)
-        //     : null;
-
         dispatch({
           type: RECEIVED_NEW_CHAT_MESSAGE,
           payload: message,
@@ -244,13 +233,11 @@ export const newChatMessage = id => {
       }
       //IF CHAT DOESN'T EXIST, MEANS IT'S HIDDEN FOR USER, UNHIDE THE CHAT, GET THE CHAT AND UPDATE IT WITH THE NEW MESSAGE
       else {
-        console.log("chat does not exist");
-        //UNHIDE CHAT
+        //THE FACT THAT ONE USER WAS ABLE TO SEND A CHAT MESSAGE MEANS THE CHAT ALREADY EXISTS AND IS HIDDEN TO THE OTHER PARTY
+        //SO UNHIDE CHAT AND ADD IT TO THE CHAT LIST OF THE PARTY THAT THE CHAT WAS PREVIOUSLY HIDDEN TO
         return axios.patch(`${chatApi}/unhide`, {chatId}, config).then(res => {
           //UPDATED CHAT DATA
           const chat = res.data;
-
-          // console.log("updated chat", chat);
 
           //RETURNS ID OF PARTNER MAKING SURE THE ID ISN'T THE LOGGED IN USER
           const partnerId =
@@ -268,26 +255,10 @@ export const newChatMessage = id => {
             partnerData: partnerData,
           };
 
-          // console.log("new chat", newChat);
-
-          // ADD THE NEW CHAT TO THE LIST OF CHATS LIST
-          // const newChats = [...chats, newChat];
-
           dispatch({
             type: CREATE_NEW_CHAT_SUCCESSFUL,
             payload: newChat,
           });
-
-          //console.log("new chats all", newChats);
-
-          // //DISPATCH UPDATES STATE
-          // dispatch({
-          //   type: RECEIVED_NEW_CHAT_MESSAGE,
-          //   payload: {
-          //     chats: newChats,
-          //     currentChat: currentChat,
-          //   },
-          // });
         });
       }
     });
@@ -295,25 +266,7 @@ export const newChatMessage = id => {
 };
 
 export const editMessage = data => {
-  return (dispatch, getState) => {
-    // const chats = getState().chat.chats;
-    // const currentChat = getState().chat.currentChat;
-
-    // const newChats = chats.map(chat => {
-    //   if (chat._id === data.chatId) {
-    //     const newMessages = chat.messages.map(message => {
-    //       return message._id === data._id ? {...message, ...data} : message;
-    //     });
-    //     return {...chat, messages: newMessages};
-    //   }
-    //   return chat;
-    // });
-
-    // const newCurrentChat =
-    //   currentChat && currentChat._id === data.chatId
-    //     ? newChats.find(chat => chat._id === currentChat._id)
-    //     : null;
-
+  return dispatch => {
     dispatch({
       type: MESSAGE_IS_EDITED,
       payload: data,

@@ -7,7 +7,6 @@ import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import {
   ForwardIcon,
   DeleteIcon,
-  StarIcon,
   CancelStarIcon,
 } from "../../../../../../../../../../icons";
 import MediaComponent from "./components/media/Media";

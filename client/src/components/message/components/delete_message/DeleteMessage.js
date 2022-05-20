@@ -15,7 +15,7 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
 
 const DeleteMessageDialogComponent = ({open, handleClose, message}) => {
-  const [pastTime, setPastTime] = useState(false);
+  const [pastTime, setPastTime] = useState(false); // DECIDES IF MESSAGE CAN STILL BE DELETED FOR EVERYONE
 
   const dispatch = useDispatch();
 
@@ -37,8 +37,7 @@ const DeleteMessageDialogComponent = ({open, handleClose, message}) => {
   const handleDeleteMessageForEveryone = () => {
     axios
       .patch(`${messagApi}/delete/for/everyone`, {messageId}, config)
-      .then(res => {
-        //console.log(res.data);
+      .then(() => {
         handleClose();
         dispatch({
           type: OPEN_SNACKBAR,
@@ -56,7 +55,7 @@ const DeleteMessageDialogComponent = ({open, handleClose, message}) => {
   const handleDeleteMessageForMe = () => {
     axios
       .patch(`${messagApi}/delete/for/me`, {messageId}, config)
-      .then(res => {
+      .then(() => {
         dispatch({
           type: DELETE_MESSAGE_SUCCESSFUL,
           payload: message,
@@ -76,9 +75,12 @@ const DeleteMessageDialogComponent = ({open, handleClose, message}) => {
   };
 
   useEffect(() => {
+    //30 MINUTES FROM CURRENT
     const halfAnHourAgo = moment().subtract(30, "minutes").toDate().getTime();
+    //TIME THE MESSAGE WAS SENT
     const messageTime = moment(message.time).toDate().getTime();
 
+    //CHECK IF TIME MESSAGE WAS SENT IS MORE THAN 30MINS AGO
     if (halfAnHourAgo > messageTime) {
       setPastTime(true);
     } else {

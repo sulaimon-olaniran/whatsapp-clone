@@ -1,8 +1,6 @@
 import Chat from "../../models/chat.js";
 import moment from "moment";
 
-import {pusher} from "../../pusher/pusher.js";
-
 export const unhideChat = (req, res) => {
   const {id} = req.user;
   const {chatId} = req.body;

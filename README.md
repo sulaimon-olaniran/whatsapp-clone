@@ -18,15 +18,18 @@ This is a clone of the popular messager Web Application WhatsApp. It provides si
 - Redux 4.1.2
 - Axios 0.25.0
 - Formik 2.2.9
+- Emoji-Tree 1.1.2
 - Yup 0.32.11
 - UUID 8.3.2
 - Use-debounce 7.0.1
+- React-PDF 5.7.1
 - React-cropper 2.1.8
 - React-highlight-words 0.18.0
 - Material-ui 5.3.1
 - React-Router-dom 6.2.1
 - Moment 2.29.1
 - React-phone-number-input 3.1.44
+- React-page-visibility 7.0.0
 
 ### Back End
 
@@ -130,6 +133,12 @@ At the end of the day, the major technologies implemented in this project are Re
 ![Alt text](./images/screenshot_6.png "title")
 ![Alt text](./images/screenshot_3.png "title")
 ![Alt text](./images/screenshot_5.png "title")
+
+---
+
+## ✅ Acknowledgements
+
+- Neetigya Chahar - [Handling accessibility of emojis from user input in React](https://medium.com/@neetigyachahar784/handling-emojis-from-user-input-in-react-step-by-step-fully-explained-7c8dde6e62d9)
 
 ---
 

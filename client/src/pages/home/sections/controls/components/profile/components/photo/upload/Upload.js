@@ -5,7 +5,6 @@ import Dialog from "@mui/material/Dialog";
 import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-//import Slider from '@material-ui/core/Slider'
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import CheckIcon from "@mui/icons-material/Check";
@@ -23,13 +22,10 @@ const UploadProfilePhotoDialog = ({
 
   const theme = useSelector(state => state.app.theme);
 
-  const dispatch = useDispatch();
-
   const handleOnCrop = () => {
     const imageElement = cropperRef?.current;
     const cropper = imageElement?.cropper;
     const croppedImage = cropper.getCroppedCanvas().toDataURL();
-    //console.log(imageSource);
     setCroppedImage(croppedImage);
   };
 
@@ -40,13 +36,11 @@ const UploadProfilePhotoDialog = ({
 
   const handleZoomInImage = () => {
     setCropZoom(prev => prev + 0.5);
-    //console.log(cropZoom);
   };
 
   const handleZoomOutImage = () => {
     if (cropZoom < 0.1) return;
     setCropZoom(prev => prev - 0.5);
-    //console.log(cropZoom);
   };
 
   const handleCloseDialog = () => {
@@ -59,7 +53,6 @@ const UploadProfilePhotoDialog = ({
       open={open}
       //onClose={handleClose}
       aria-labelledby="form-dialog-title"
-      //disableBackdropClick
     >
       <div className={`upload-profile-photo-dialog-${theme}-theme`}>
         <div className="upload-profile-photo-dialog-header">
@@ -82,7 +75,6 @@ const UploadProfilePhotoDialog = ({
           </div>
           <Cropper
             src={imageSource}
-            //style={{ height: 400, width: "100%" }}
             zoomTo={cropZoom}
             className="cropper-component-container"
             viewMode={1}

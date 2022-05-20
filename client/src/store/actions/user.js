@@ -23,12 +23,11 @@ import {
   BLOCK_CONTACT_SUCCESS,
   UNBLOCKING_CONTACT,
   UNBLOCK_CONTACT_SUCCESS,
-  USER_DATA_IS_UPDATED,
 } from "../types/user";
 
 //CREATE NEW USER ACCOUNT**************
 export const signUpUser = data => {
-  return (dispatch, getState) => {
+  return dispatch => {
     dispatch({
       type: SIGNING_UP_USER,
     });
@@ -36,7 +35,6 @@ export const signUpUser = data => {
     axios
       .post(`${userApi}/signup`, data)
       .then(res => {
-        //console.log(res.data);
         dispatch({
           type: SIGN_UP_USER_SUCCESS,
           payload: res.data,
@@ -54,7 +52,7 @@ export const signUpUser = data => {
 
 //SIGN IN USER INTO HIS/HER ACCOUNT**********
 export const signInUser = data => {
-  return (dispatch, getState) => {
+  return dispatch => {
     dispatch({
       type: SIGNING_IN_USER,
     });
@@ -101,8 +99,6 @@ export const fetchAccountData = () => {
       },
     };
 
-    //console.log(config);
-
     axios
       .get(`${userApi}/fetch/account/data`, config)
       .then(res => {
@@ -139,8 +135,6 @@ export const updateUserData = (data, closeUpdate) => {
       ...data.update,
     };
 
-    //console.log(update);
-
     axios
       .patch(`${userApi}/update/user/data`, update, config)
       .then(res => {
@@ -156,7 +150,7 @@ export const updateUserData = (data, closeUpdate) => {
         console.log(error);
         dispatch({
           type: UPDATE_USER_DATA_FAILED,
-          // payload: error.response.data.message,
+          payload: error.response.data.message,
         });
       });
   };
@@ -176,8 +170,6 @@ export const updateUserPrivacySettings = data => {
     const settings = {
       privacy: {...data},
     };
-
-    //console.log(settings.privacy);
 
     axios
       .patch(`${userApi}/update/user/privacy/settings`, settings, config)
@@ -217,7 +209,6 @@ export const blockContact = contactId => {
     axios
       .patch(`${userApi}/block/contact`, {contactId}, config)
       .then(res => {
-        //console.log(res.data);
         dispatch({
           type: BLOCK_CONTACT_SUCCESS,
           payload: contactId,
@@ -266,7 +257,6 @@ export const unBlockContact = contactId => {
     axios
       .patch(`${userApi}/unblock/contact`, {contactId}, config)
       .then(res => {
-        //console.log(res.data);
         dispatch({
           type: UNBLOCK_CONTACT_SUCCESS,
           payload: contactId,

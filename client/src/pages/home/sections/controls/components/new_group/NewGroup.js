@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect, Fragment} from "react";
+import {useState, useRef, useEffect} from "react";
 import {useSelector} from "react-redux";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {Avatar, IconButton} from "@mui/material";
@@ -8,7 +8,6 @@ import Slide from "@mui/material/Slide";
 import ControlHeaderComponent from "../../../../../../components/headers/ControlsHeader";
 import UsersListComponent from "../../../../../../components/users_list/UsersList";
 
-//import contacts from "../../../../../../jsons/contacts.json";
 import CompleteNewGroupComponent from "./complete/Complete";
 
 const ControlsNewGroupComponent = ({deactiveControl}) => {
