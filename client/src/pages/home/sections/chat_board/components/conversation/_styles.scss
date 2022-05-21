@@ -90,7 +90,7 @@
     .conversation-main-section-header-container {
       width: 100%;
       height: 4rem;
-      // z-index: 9999;
+      z-index: 999;
     }
 
     .conversation-main-section-messages-container {
@@ -124,7 +124,7 @@
       top: 0;
       background-color: $subSecondaryLightBackground;
       padding-top: 4rem;
-      z-index: 999;
+      z-index: 997;
     }
   }
 

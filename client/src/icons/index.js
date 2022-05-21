@@ -326,8 +326,8 @@ export const MessageSentIcon = () => (
 export const MessageDeletedIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M7.759 6.43a7 7 0 0 1 9.81 9.81l-9.81-9.81ZM6.357 7.858a7 7 0 0 0 9.786 9.786L6.357 7.857ZM12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z"
       fill="currentColor"
     ></path>
@@ -521,7 +521,6 @@ export const ViewOnceIcon = () => (
     viewBox="0 0 72 72"
     fill="none"
     preserveAspectRatio="xMidYMid meet"
-    class=""
   >
     <path
       fillRule="evenodd"
@@ -541,8 +540,8 @@ export const ViewOnceIcon = () => (
 export const PenIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M1.36 18.034v4.605h4.633L18.914 9.665l-4.632-4.604L1.36 18.034Zm14.798-8.361L5.184 20.69H3.308V18.84l10.98-11.024 1.87 1.858ZM17.575 1.79l-2.187 2.173 4.633 4.605 2.186-2.173c.281-.28.432-.605.432-.941 0-.336-.15-.662-.432-.942l-2.74-2.722c-.281-.28-.609-.43-.946-.43-.337 0-.665.15-.946.43Zm2.446 4.03-1.87-1.857.37-.367 1.87 1.858-.37.367Z"
       fill="currentColor"
     ></path>
@@ -584,8 +583,8 @@ export const ResizeIcon = () => (
 export const UndoIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M7.749 9.632c.605 0 1.076-.513 1.076-1.12V6.653h5.49c3.321 0 6.143 2.972 6.143 6.73 0 3.77-2.827 6.978-6.142 6.978h-9.49a.86.86 0 0 0-.87.873v.248c0 .488.38.904.87.904h9.49c4.65 0 8.07-3.88 8.07-9.003 0-5.15-3.956-8.748-8.575-8.748H8.824V2.73c0-.185-.043-.366-.127-.53-.28-.542-.935-.754-1.465-.452l-5.056 2.88a1.112 1.112 0 0 0-.437.458c-.28.543-.092 1.227.437 1.529l5.056 2.879c.158.09.336.138.517.138Z"
       fill="currentColor"
     ></path>
@@ -595,8 +594,8 @@ export const UndoIcon = () => (
 export const RedoIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M15.171 6.653v1.86c0 .606.47 1.119 1.075 1.119.181 0 .359-.048.517-.138l5.056-2.88c.53-.3.717-.985.437-1.528-.1-.193-.25-.353-.437-.459l-5.056-2.88c-.53-.301-1.185-.089-1.465.454a1.156 1.156 0 0 0-.127.529v1.905h-4.987c-4.619 0-8.574 3.598-8.574 8.748 0 5.123 3.42 9.003 8.07 9.003h9.489c.491 0 .87-.416.87-.904v-.248a.86.86 0 0 0-.87-.873h-9.49c-3.314 0-6.142-3.207-6.142-6.978 0-3.758 2.822-6.73 6.143-6.73h5.491Z"
       fill="currentColor"
     ></path>
@@ -1561,7 +1560,7 @@ export const WhatsAppSVGIcon = ({height, width}) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      class="_35GDA"
+      className="_35GDA"
       d="M37.7314595,31.1612046 C37.0876293,30.8391042 33.9223475,29.2816062 33.332139,29.0666255 C32.7419305,28.8517683 32.3127104,28.7444016 31.8834903,29.3887258 C31.4542703,30.0332973 30.2204788,31.4835521 29.8447567,31.91339 C29.4692818,32.3428571 29.0936834,32.3968494 28.4499768,32.0745019 C27.8060232,31.7521544 25.7314595,31.0723707 23.272278,28.8787027 C21.3582085,27.171583 20.0661004,25.0632896 19.6905019,24.4185946 C19.315027,23.7741467 19.6505946,23.4257297 19.9729421,23.1046178 C20.2625483,22.8161235 20.6167722,22.352556 20.9386255,21.9767104 C21.2606023,21.6007413 21.3678456,21.3320154 21.5824556,20.9026718 C21.7970657,20.472834 21.6898224,20.0968649 21.528834,19.7746409 C21.3678456,19.452417 20.0801853,16.2831815 19.543722,14.993915 C19.0210965,13.7387491 18.4903166,13.9087567 18.0950733,13.8887413 C17.7199691,13.870085 17.2902548,13.8661313 16.8611583,13.8661313 C16.4319382,13.8661313 15.7343629,14.0272433 15.144278,14.6716911 C14.5540695,15.3163861 12.8908108,16.8740077 12.8908108,20.0429961 C12.8908108,23.2121081 15.1978996,26.2734826 15.5198765,26.7031969 C15.8417297,27.1330348 20.0597992,33.6360772 26.5184865,36.4250193 C28.05461,37.0883707 29.2539305,37.4846023 30.1888494,37.7811274 C31.7312742,38.2713822 33.1348263,38.2021931 34.2440772,38.0363861 C35.4810811,37.8515521 38.0533127,36.478888 38.5898996,34.9750116 C39.1263629,33.470888 39.1263629,32.1818687 38.9653745,31.91339 C38.8045097,31.6447876 38.3752896,31.4835521 37.7314595,31.1612046 M25.9838765,47.2013591 L25.9752278,47.2013591 C22.1322625,47.1998763 18.3629343,46.1674749 15.0745946,44.2160926 L14.2926332,43.7519074 L6.18674906,45.8782394 L8.35027028,37.9751042 L7.84111198,37.1648494 C5.69723552,33.7549343 4.56500386,29.8139923 4.56660833,25.767166 C4.57130502,13.9587954 14.1789652,4.35187645 25.9924016,4.35187645 C31.7128649,4.35385328 37.0902239,6.58458689 41.1338378,10.6327722 C45.1773282,14.680834 47.4028724,20.0618996 47.4007737,25.7843398 C47.3959539,37.5936988 37.7882934,47.2013591 25.9838765,47.2013591 M44.2112742,7.556695 C39.3464092,2.68614672 32.8767258,0.00271814672 25.9836293,0 C11.7809421,0 0.221652509,11.5584247 0.215969112,25.7654363 C0.21411583,30.3069652 1.40058687,34.7397683 3.65553668,38.6475984 L-4.61852778e-14,52 L13.6596757,48.4167413 C17.4233205,50.4695597 21.6607876,51.5516293 25.9733745,51.5531121 L25.9838765,51.5531121 L25.984,51.5531121 C40.1852046,51.5531121 51.7456062,39.9934517 51.7512912,25.7860695 C51.7538842,18.9011274 49.0761392,12.4271197 44.2112742,7.556695"
       fill="currentColor"
     ></path>
@@ -1592,17 +1591,7 @@ export const WhatsAppInitializingIcon = () => (
         cy="21.1046108"
         r="3.65625"
         className="circle1"
-      >
-        {/* <animate
-          attributeName="fill"
-          attributeType="XML"
-          dur=".5s"
-          values="green"
-          repeatCount="1"
-          restart="whenNotActive"
-          begin="0s"
-        /> */}
-      </circle>
+      ></circle>
 
       <circle
         fill="#B6B6B6"
@@ -1610,16 +1599,7 @@ export const WhatsAppInitializingIcon = () => (
         cy="19.3283142"
         r="3.65625"
         className="circle2"
-      >
-        {/* <animate
-          attributeName="fill"
-          attributeType="XML"
-          dur=".5s"
-          values="green;"
-          repeatCount="whenNotActive"
-          begin="0.5s"
-        /> */}
-      </circle>
+      ></circle>
 
       <circle
         fill="#B6B6B6"
@@ -1627,16 +1607,7 @@ export const WhatsAppInitializingIcon = () => (
         cy="17.7846275"
         r="3.65625"
         className="circle3"
-      >
-        {/* <animate
-          attributeName="fill"
-          attributeType="XML"
-          dur="1s"
-          values="green;"
-          repeatCount="indefinite"
-          begin="1s"
-        /> */}
-      </circle>
+      ></circle>
 
       <circle
         fill="#B6B6B6"
@@ -1644,16 +1615,7 @@ export const WhatsAppInitializingIcon = () => (
         cy="17.5274031"
         r="3.65625"
         className="circle4"
-      >
-        {/* <animate
-          attributeName="fill"
-          attributeType="XML"
-          dur="1s"
-          values="green"
-          repeatCount="indefinite"
-          begin="1.5s"
-        /> */}
-      </circle>
+      ></circle>
 
       <circle
         fill="#B6B6B6"
@@ -1661,16 +1623,7 @@ export const WhatsAppInitializingIcon = () => (
         cy="17.6118619"
         r="3.65625"
         className="circle5"
-      >
-        {/* <animate
-          attributeName="fill"
-          attributeType="XML"
-          dur="1s"
-          values="green"
-          repeatCount="indefinite"
-          begin="2s"
-        /> */}
-      </circle>
+      ></circle>
 
       <circle
         fill="#B6B6B6"
@@ -1678,16 +1631,7 @@ export const WhatsAppInitializingIcon = () => (
         cy="18.4196288"
         r="3.65625"
         className="circle6"
-      >
-        {/* <animate
-          attributeName="fill"
-          attributeType="XML"
-          dur="1s"
-          values="green"
-          repeatCount="indefinite"
-          begin="2.5s"
-        /> */}
-      </circle>
+      ></circle>
 
       <circle
         fill="#B6B6B6"
@@ -1695,16 +1639,7 @@ export const WhatsAppInitializingIcon = () => (
         cy="19.9893339"
         r="3.65625"
         className="circle7"
-      >
-        {/* <animate
-          attributeName="fill"
-          attributeType="XML"
-          dur="1s"
-          values="green"
-          repeatCount="indefinite"
-          begin="3s"
-        /> */}
-      </circle>
+      ></circle>
 
       <circle
         fill="#B6B6B6"
@@ -1712,16 +1647,7 @@ export const WhatsAppInitializingIcon = () => (
         cy="22.0657859"
         r="3.65625"
         className="circle8"
-      >
-        {/* <animate
-          attributeName="fill"
-          attributeType="XML"
-          dur="1s"
-          values="green"
-          repeatCount="indefinite"
-          begin="3.5s"
-        /> */}
-      </circle>
+      ></circle>
     </g>
     <path
       className="_1JPfm"

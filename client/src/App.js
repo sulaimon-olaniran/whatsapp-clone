@@ -130,7 +130,6 @@ function App() {
   };
 
   const handleScreenSize = () => {
-    console.log(window.innerWidth);
     if (window.innerWidth < 720) {
       setIsMobile(true);
     } else {
