@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {Fragment, useEffect, useState} from "react";
 import {Routes, Route, BrowserRouter as Router} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {usePageVisibility} from "react-page-visibility";
@@ -30,7 +30,6 @@ import UniversalLoader from "./components/loaders/universal/Universal";
 import AvailabilityComponent from "./components/availability/Availability";
 
 function App() {
-  const [isMobile, setIsMobile] = useState(false);
   const [appLoader, setAppLoader] = useState(true);
   const user = useSelector(state => state.user.user);
   const token = useSelector(state => state.user.token);
@@ -129,46 +128,33 @@ function App() {
     setAppLoader(false);
   };
 
-  const handleScreenSize = () => {
-    if (window.innerWidth < 720) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleScreenSize);
-    return () => window.removeEventListener("resize", handleScreenSize);
-  });
-
-  useEffect(() => {
-    window.addEventListener("load", handleScreenSize);
-    return () => window.removeEventListener("load", handleScreenSize);
-  });
-
-  if (isMobile) return <AvailabilityComponent />;
-  if (token && appLoader)
-    return (
-      <InitializingAppLoader
-        loading={isFetchingData}
-        closeLoader={handleCloseAppLoader}
-      />
-    );
-
   return (
     <Router>
       <div className="App">
-        <Routes>
-          <Route exact path="/" element={<Homepage />} />
-          <Route exact path="/signin" element={<SigninPage />} />
-          <Route exact path="/signup" element={<SignupPage />} />
-        </Routes>
+        <div className="app-screen-availability-container">
+          <AvailabilityComponent />
+        </div>
+        <div className="main-app-container">
+          {token && appLoader ? (
+            <InitializingAppLoader
+              loading={isFetchingData}
+              closeLoader={handleCloseAppLoader}
+            />
+          ) : (
+            <Fragment>
+              <Routes>
+                <Route exact path="/" element={<Homepage />} />
+                <Route exact path="/signin" element={<SigninPage />} />
+                <Route exact path="/signup" element={<SignupPage />} />
+              </Routes>
 
-        <ViewProfilePhotoDialogComponent />
-        <MessagesMediasDialogComponent />
-        <SnackbarComponent />
-        <UniversalLoader />
+              <ViewProfilePhotoDialogComponent />
+              <MessagesMediasDialogComponent />
+              <SnackbarComponent />
+              <UniversalLoader />
+            </Fragment>
+          )}
+        </div>
       </div>
     </Router>
   );

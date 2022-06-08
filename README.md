@@ -75,7 +75,7 @@ This is a clone of the popular messager Web Application WhatsApp. It provides si
 
 ### Clone and Install
 
-    git clone git@github.com:taniarascia/takenote
+    git clone https://github.com/sulaimon-olaniran/whatsapp-clone.git
 
 ### Open two terminals, one for the client, other for the server
 
@@ -150,7 +150,7 @@ Copyright (c) 2022 Olaniran Sulaimon
 
 ---
 
-## 📩 Contact
+## 📍 Contact
 
 - Email : sulaimon.olaniran95@gmail.com
 - Twitter : [sulai_m0n](https://twitter.com/sulai_m0n)

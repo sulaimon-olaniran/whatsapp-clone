@@ -1,3 +1,39 @@
+.App {
+  .app-screen-availability-container {
+    display: none;
+  }
+}
+
+body.dark::-webkit-scrollbar {
+  width: 11px;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #111;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 6px;
+  border: 3px solid #111;
+}
+
+@media (max-width: 960px) {
+  .App {
+    .app-screen-availability-container {
+      display: block;
+    }
+
+    .main-app-container {
+      display: none;
+    }
+  }
+}
+
 @import "./universal_styles";
 @import "./animations";
 @import "./auth_pages";

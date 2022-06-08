@@ -13,14 +13,12 @@
   //****************************************************** LIGHT THEME STYLES **************************************
 
   .chat-board-conversation-light-theme {
-    .chat-board-conversation-dark-theme {
-      .sidebar-active-main-section {
-        display: none;
-      }
+    .sidebar-active-main-section {
+      display: none;
+    }
 
-      .side-bar-is-active {
-        flex: 100%;
-      }
+    .side-bar-is-active {
+      flex: 100%;
     }
   }
 }
