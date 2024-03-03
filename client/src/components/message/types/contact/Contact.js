@@ -10,7 +10,7 @@ import {SmallStarIcon} from "../../../../icons";
 
 const MessageContactType = ({message}) => {
   const [showInfo, setShowInfo] = useState(false);
-  const {sender, contacts} = message;
+  const {contacts} = message;
 
   const theme = useSelector(state => state.app.theme);
   const user = useSelector(state => state.user.user);

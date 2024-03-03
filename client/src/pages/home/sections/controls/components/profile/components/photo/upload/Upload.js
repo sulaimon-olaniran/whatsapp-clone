@@ -1,5 +1,5 @@
 import {useState, useRef} from "react";
-import {useSelector, useDispatch} from "react-redux";
+import {useSelector} from "react-redux";
 import {IconButton} from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import CloseIcon from "@mui/icons-material/Close";

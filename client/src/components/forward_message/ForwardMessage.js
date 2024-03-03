@@ -80,7 +80,7 @@ const ForwardMessageComponent = ({
                 : false,
           };
           delete forwardMessage._id;
-          dispatch(sendNewChatMessage(forwardMessage));
+          return dispatch(sendNewChatMessage(forwardMessage));
         });
       } else {
         const config = {
@@ -91,7 +91,7 @@ const ForwardMessageComponent = ({
         };
 
         const data = {partner: contact._id};
-        axios.post(`${chatApi}/create/chat`, data, config).then(res => {
+        return axios.post(`${chatApi}/create/chat`, data, config).then(res => {
           const chat = res.data;
 
           dispatch({
@@ -119,7 +119,7 @@ const ForwardMessageComponent = ({
             };
             //DELETE PREVIOUS MESSAGE _ID AND LET MONGODB GENERATE A NEW ID TO TREAT MESSAGE AS A NEW MESSAGE
             delete forwardMessage._id;
-            dispatch(sendNewChatMessage(forwardMessage));
+            return dispatch(sendNewChatMessage(forwardMessage));
           });
         });
       }

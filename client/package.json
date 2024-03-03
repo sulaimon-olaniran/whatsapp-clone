@@ -20,7 +20,6 @@
     "jwt-decode": "^3.1.2",
     "material-ui-phone-number": "^3.0.0",
     "moment": "^2.29.1",
-    "node-sass": "^7.0.1",
     "pdfjs-dist": "^2.13.216",
     "pintura": "^0.3.10",
     "pusher-js": "^7.1.0-beta",
@@ -41,7 +40,6 @@
     "react-scripts": "5.0.0",
     "react-scroll-into-view": "^1.12.0",
     "react-textarea-autosize": "^8.3.3",
-    "react-virtualized": "^9.22.3",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
     "use-debounce": "^7.0.1",
@@ -74,6 +72,7 @@
     ]
   },
   "devDependencies": {
-    "@types/pdfjs-dist": "^2.10.378"
+    "@types/pdfjs-dist": "^2.10.378",
+    "node-sass": "npm:sass@^1.71.1"
   }
 }

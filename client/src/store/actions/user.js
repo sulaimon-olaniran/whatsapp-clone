@@ -75,6 +75,31 @@ export const signInUser = data => {
   };
 };
 
+//SIGN IN USER INTO HIS/HER ACCOUNT**********
+export const guestSignIn = data => {
+  return dispatch => {
+    dispatch({
+      type: SIGNING_IN_USER,
+    });
+
+    axios
+      .post(`${userApi}/signin`, data)
+      .then(res => {
+        dispatch({
+          type: SIGN_IN_USER_SUCCESS,
+          payload: res.data,
+        });
+      })
+      .catch(error => {
+        //console.log(error.response.data);
+        dispatch({
+          type: SIGN_IN_USER_FAILED,
+          payload: error.response.data.message,
+        });
+      });
+  };
+};
+
 //LOG USER ACCOUNT OUT OF THE APP************
 export const logoutUser = () => {
   return dispatch => {

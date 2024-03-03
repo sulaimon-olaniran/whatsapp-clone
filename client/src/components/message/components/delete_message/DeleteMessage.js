@@ -86,7 +86,7 @@ const DeleteMessageDialogComponent = ({open, handleClose, message}) => {
     } else {
       setPastTime(false);
     }
-  }, []);
+  }, [message]);
 
   return (
     <Dialog

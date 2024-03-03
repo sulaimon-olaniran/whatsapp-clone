@@ -52,7 +52,9 @@ const LinksComponentEachLink = ({link, setSelected}) => {
         </div>
         {""}
         <div className="actual-link-container">
-          <a>https://www.youtube.com/watch?v=AaocZ-zSq2U</a>
+          <a href="https://www.youtube.com/watch?v=AaocZ-zSq2U">
+            https://www.youtube.com/watch?v=AaocZ-zSq2U
+          </a>
         </div>
       </div>
     </div>

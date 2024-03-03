@@ -20,7 +20,6 @@ const MessageInputInsertGifsComponent = ({
   const [searchValue] = useDebounce(searchInput, 1000);
 
   const scrollRef = useRef(null);
-  const slideContainerRef = useRef(null);
 
   const theme = useSelector(state => state.app.theme);
 
@@ -167,8 +166,8 @@ const MessageInputInsertGifsComponent = ({
         >
           {gifs.map((gif, index) => {
             const gifFile = gif.images.downsized.url;
-            const ext = gifFile.split(".").pop();
-            const exx = ext.split("&");
+            //const ext = gifFile.split(".").pop();
+            //const exx = ext.split("&");
             return (
               <div
                 key={index}

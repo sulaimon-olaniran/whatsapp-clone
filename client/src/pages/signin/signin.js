@@ -12,7 +12,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 import {WhatsappIcon} from "../../icons";
 import {SigninValidationSchema} from "../../yup/yup";
-import {signInUser} from "../../store/actions/user";
+import {signInUser, guestSignIn} from "../../store/actions/user";
 import {CLEAR_USER_ERROR} from "../../store/types/user";
 
 const CssTextField = styled(TextField)({
@@ -74,6 +74,15 @@ const SigninPage = ({
       type: CLEAR_USER_ERROR,
     });
   }, [dispatch]);
+
+  const handleGuestSignIn = () => {
+    const data = {
+      phone_number: "+2349035793269",
+      password: "12345678",
+    };
+
+    dispatch(guestSignIn(data));
+  };
 
   if (token) return <Navigate to="/" />;
   return (
@@ -150,6 +159,19 @@ const SigninPage = ({
             </p>
           </div>
 
+          <Button
+            style={{
+              width: "65%",
+              height: "45px",
+            }}
+            disabled={signingIn}
+            variant="contained"
+            color="secondary"
+            onClick={handleGuestSignIn}
+          >
+            {signingIn ? <CircularProgress size="small" /> : "Sign In As Guest"}
+          </Button>
+
           {authError && (
             <div className="auth-pages-error-container">
               <small>{authError}</small>
@@ -173,6 +195,7 @@ const FormikSigninPage = withFormik({
 
   handleSubmit(values, {props}) {
     const {signInUser} = props;
+
     signInUser(values);
   },
 })(SigninPage);
